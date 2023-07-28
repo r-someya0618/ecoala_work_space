@@ -1,0 +1,10 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.c-txt {
+  &-h1 {
+    font-size: rem(45);
+  }
+}

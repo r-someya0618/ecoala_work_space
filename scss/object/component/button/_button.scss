@@ -1,0 +1,18 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.c-button {
+  color: $text_color;
+  border: 1px solid $text_color;
+  &--square {
+    padding: 25px;
+    font-size: rem(25);
+    text-align: center;
+    @include tablet {
+      padding: 15px;
+      font-size: rem(14);
+    }
+  }
+}

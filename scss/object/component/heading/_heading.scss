@@ -1,0 +1,15 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.c-heading {
+  font-size: rem(45);
+  @include tablet {
+    font-size: rem(22.5);
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

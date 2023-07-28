@@ -1,0 +1,56 @@
+@use "../../foundation/_color" as *;
+@use "../../foundation/_font" as *;
+@use "../../foundation/_variables" as *;
+@use "../../foundation/_mixin" as *;
+
+.pc {
+  display: block !important;
+
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.sp {
+  display: none !important;
+
+  @include tablet {
+    display: block !important;
+  }
+}
+
+.pc-flex {
+  display: flex !important;
+
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.sp-flex {
+  display: none !important;
+
+  @include tablet {
+    display: flex !important;
+  }
+}
+
+.pc-inbl {
+  display: inline-block !important;
+
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.sp-inbl {
+  display: none !important;
+
+  @include tablet {
+    display: inline-block !important;
+  }
+}
+
+.u-inline-block {
+  display: inline-block;
+}

@@ -1,0 +1,7 @@
+@use "sass:math";
+
+// font
+// ---------------------
+@function rem($remFz) {
+  @return math.div($remFz, 16) * 1rem;
+}

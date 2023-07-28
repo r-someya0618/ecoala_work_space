@@ -1,0 +1,21 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.c-list {
+    &-brackets {
+        > li {
+            list-style-type: none;
+            counter-increment: brackets-cnt;
+            margin: 10px 0;
+
+            &::before {
+                content: "(" counter(brackets-cnt) ") ";
+                display: inline-block;
+                margin-left: -2em;
+                width: 2em;
+            }
+        }
+    }
+}

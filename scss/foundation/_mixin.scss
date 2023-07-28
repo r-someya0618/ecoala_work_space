@@ -1,0 +1,37 @@
+//**********************************************************
+// Mixin
+//**********************************************************
+
+//*******************************************
+//	ブレイクポイント
+//*******************************************
+@mixin pc {
+    @media only screen and (min-width: 769px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobile-l1 {
+    @media only screen and (max-width: 390px) {
+        @content;
+    }
+}
+@mixin mobile-l2 {
+    @media only screen and (max-width: 450px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media only screen and (max-width: 350px) {
+        @content;
+    }
+}
+@mixin mobile-s {
+    @media only screen and (max-width: 330px) {
+        @content;
+    }
+}
