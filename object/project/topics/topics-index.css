@@ -1,0 +1,17 @@
+.p-topics-index {
+  margin: 130px 0 250px;
+}
+@media only screen and (max-width: 768px) {
+  .p-topics-index {
+    margin: 60px 0 80px;
+    padding: 0 32px;
+  }
+}
+.p-topics-index__pagination {
+  margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+  .p-topics-index__pagination {
+    margin-top: 36px;
+  }
+}

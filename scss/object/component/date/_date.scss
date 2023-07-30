@@ -1,0 +1,12 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.c-date {
+  font-size: rem(20);
+  color: $text_gray_color;
+  @include tablet {
+    font-size: rem(12);
+  }
+}

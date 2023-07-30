@@ -1,7 +1,7 @@
 <?php
-/**
+/*
 Template Name: company
-***/
+*/
 ?>
   <?php get_header(); ?>
 
@@ -9,7 +9,7 @@ Template Name: company
     <?php the_content(); ?>
     <!-- 固定ページ投稿コンテンツここから -->
     <!-- <section class="p-company">
-      <h1 class="c-heading c-heading--center"><?php the_title(); ?></h1>
+      <h1 class="c-section-heading c-section-heading--center"><?php the_title(); ?></h1>
       <div class="p-company__company-info">
         <p>エコアラ株式会社</p>
         <p><span>〒170-0005&emsp;</span><span class="u-inline-block">東京都豊島区南大塚2-25-15&emsp;</span><span class="u-inline-block">South新大塚ビル6F</span></p>
@@ -19,7 +19,7 @@ Template Name: company
       </div>
     </section>
     <section class="p-contact">
-      <h1 class="c-heading c-heading--center">お問い合わせ</h1>
+      <h1 class="c-section-heading c-section-heading--center">お問い合わせ</h1>
       <p class="p-contact__text">
         当社取扱い商品へのご質問やご相談につきましては、</br>
           こちらからお問合わせください。</p>

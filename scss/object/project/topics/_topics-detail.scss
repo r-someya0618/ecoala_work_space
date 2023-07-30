@@ -1,0 +1,39 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-topics-detail {
+  margin: 130px 0 250px;
+  @include tablet {
+    margin: 60px 0 80px;
+    padding: 0 32px;
+  }
+
+  &__heading {
+    margin-top: 70px;
+    border-bottom: 1px solid $black_color;
+  }
+
+  &__date {
+    margin-top: 25px;
+  }
+
+  &__top-image {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  &__content {
+    margin-top: 90px;
+    font-size: rem(20);
+    line-height: 2;
+  }
+
+  &__pagination {
+    margin: 100px auto 0;
+    @include tablet {
+      margin-top: 36px;
+    }
+  }
+}

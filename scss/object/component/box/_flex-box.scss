@@ -1,4 +1,8 @@
 .c-box {
-    &-flex {
+  &-flex {
+    display: flex;
+    &--column {
+      flex-direction: column;
     }
+  }
 }

@@ -3,13 +3,19 @@
 @use "../../../foundation/_variables" as *;
 @use "../../../foundation/_mixin" as *;
 
-.c-heading {
+.c-section-heading {
   font-size: rem(45);
   @include tablet {
     font-size: rem(22.5);
   }
-
   &--center {
     text-align: center;
+  }
+}
+
+.c-post-heading {
+  font-size: rem(30);
+  @include tablet {
+    font-size: rem(22.5);
   }
 }
