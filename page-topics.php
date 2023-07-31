@@ -30,7 +30,7 @@ $the_query = new WP_Query($args);
                 </div>
               <?php else : ?>
 
-                <img class="p-posts-list__thumbnail c-posts-card__thumbnail" src="<?php echo get_template_directory_uri(); ?>/image/thumb.png" alt="">
+                <img class="p-posts-list__thumbnail c-posts-card__thumbnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/thumb.png" alt="">
               <?php endif; ?>
               <div class="p-posts-list__body c-posts-card__body">
                 <time class="p-posts-list__date c-date" datetime="<?php the_time('Y/m/d'); ?>"><?php the_time('Y/m/d'); ?></time>
