@@ -6,13 +6,17 @@
 .c-button {
   color: $text_color;
   border: 1px solid $text_color;
+  text-align: center;
   &--square {
     padding: 25px;
     font-size: rem(25);
-    text-align: center;
     @include tablet {
       padding: 15px;
       font-size: rem(14);
     }
+  }
+  &--round {
+    border-radius: 19px;
+    padding: 10px;
   }
 }

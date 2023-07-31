@@ -1,0 +1,28 @@
+@use "../foundation/_color" as *;
+@use "../foundation/_font" as *;
+@use "../foundation/_variables" as *;
+@use "../foundation/_mixin" as *;
+
+.l-container {
+  width: 1200px;
+  margin: 0 auto;
+  @include tablet {
+    width: 100%;
+  }
+  &--wide {
+    width: 1500px;
+  }
+}
+
+.l-flex-container {
+  display: flex;
+  &--between {
+    justify-content: space-between;
+  }
+  &--center {
+    justify-content: center;
+  }
+  &--right {
+    justify-content: end;
+  }
+}

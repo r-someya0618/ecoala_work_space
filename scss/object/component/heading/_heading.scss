@@ -3,7 +3,7 @@
 @use "../../../foundation/_variables" as *;
 @use "../../../foundation/_mixin" as *;
 
-.c-section-heading {
+.c-heading-section {
   font-size: rem(45);
   @include tablet {
     font-size: rem(22.5);

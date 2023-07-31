@@ -16,9 +16,9 @@ $args = [
 $the_query = new WP_Query($args);
 ?>
 
-<main class="c-section-container">
+<main class="l-container">
   <section class="p-topics-index">
-    <h1 class="c-section-heading c-section-heading--center"><?php the_title(); ?></h1>
+    <h1 class="c-heading-section c-heading-section--center"><?php the_title(); ?></h1>
     <?php if ($the_query->have_posts()) : ?>
       <ul class="p-posts-list">
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
