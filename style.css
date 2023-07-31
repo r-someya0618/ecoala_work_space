@@ -534,13 +534,19 @@ template {
 }
 .p-company__company-info {
   margin-top: 130px;
-  font-size: 1.5625rem;
-  text-align: center;
-  line-height: 2;
 }
 @media only screen and (max-width: 768px) {
   .p-company__company-info {
     margin-top: 50px;
+  }
+}
+.p-company__company-txt {
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 2;
+}
+@media only screen and (max-width: 768px) {
+  .p-company__company-txt {
     font-size: 0.875rem;
   }
 }

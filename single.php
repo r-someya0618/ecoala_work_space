@@ -30,6 +30,7 @@
     endif; ?>
         </section>
         <!-- pagination -->
+
         <ul class="p-topics-detail__pagination c-pagination">
           <li class="c-pagination__item">
             <span class="c-pagination__item-link">

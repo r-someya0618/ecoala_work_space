@@ -12,11 +12,16 @@
 
   &__company-info {
     margin-top: 130px;
+    @include tablet {
+      margin-top: 50px;
+    }
+  }
+
+  &__company-txt {
     font-size: rem(25);
     text-align: center;
     line-height: 2;
     @include tablet {
-      margin-top: 50px;
       font-size: rem(14);
     }
   }
