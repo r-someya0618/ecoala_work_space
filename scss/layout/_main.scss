@@ -2,19 +2,3 @@
 @use "../foundation/_font" as *;
 @use "../foundation/_variables" as *;
 @use "../foundation/_mixin" as *;
-
-.l-main-container {
-  width: 1200px;
-  margin: 0 auto;
-  @include tablet {
-    width: 100%;
-  }
-
-  &--wide {
-    width: 1500px;
-    margin: 0 auto;
-    @include tablet {
-      width: 100%;
-    }
-  }
-}

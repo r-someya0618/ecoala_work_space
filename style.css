@@ -306,25 +306,6 @@ template {
   display: none;
 }
 
-.l-main-container {
-  width: 1200px;
-  margin: 0 auto;
-}
-@media only screen and (max-width: 768px) {
-  .l-main-container {
-    width: 100%;
-  }
-}
-.l-main-container--wide {
-  width: 1500px;
-  margin: 0 auto;
-}
-@media only screen and (max-width: 768px) {
-  .l-main-container--wide {
-    width: 100%;
-  }
-}
-
 .c-box-flex {
   display: flex;
 }
@@ -512,6 +493,25 @@ template {
   width: 20px;
 }
 
+.c-section-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+  .c-section-container {
+    width: 100%;
+  }
+}
+.c-section-container--wide {
+  width: 1500px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+  .c-section-container--wide {
+    width: 100%;
+  }
+}
+
 .c-txt-h1 {
   font-size: 2.8125rem;
 }
@@ -541,7 +541,7 @@ template {
   }
 }
 .p-company__company-txt {
-  font-size: 1.25rem;
+  font-size: 1.5625rem;
   text-align: center;
   line-height: 2;
 }

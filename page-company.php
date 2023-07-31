@@ -5,7 +5,7 @@ Template Name: company
 ?>
   <?php get_header(); ?>
 
-  <main class="l-main-container">
+  <main class="c-section-container">
     <?php the_content(); ?>
     <!-- 固定ページ投稿コンテンツここから -->
     <!-- <section class="p-company">
