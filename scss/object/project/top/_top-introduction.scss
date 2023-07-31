@@ -1,0 +1,78 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-top-introduction {
+  &__heading {
+    margin-top: 200px;
+    @include tablet {
+      margin-top: 55px;
+    }
+  }
+  &__movie {
+    margin-top: 100px;
+    padding-top: 57.25%;
+    background: #efefef;
+    @include tablet {
+      margin-top: 27px;
+      margin: 32px;
+    }
+  }
+  &__content {
+    margin-top: 150px;
+    @include tablet {
+      margin-top: 40px;
+    }
+  }
+  &__text-content {
+    width: 35.8%;
+    @include tablet {
+      width: 100%;
+      order: 2;
+    }
+  }
+  &__text-content-heading {
+    @include tablet {
+      margin-top: 30px;
+      text-align: center;
+    }
+  }
+  &__text-content-body {
+    margin-top: 90px;
+    font-size: rem(25);
+    @include tablet {
+      margin-top: 35px;
+      text-align: center;
+      font-size: rem(12);
+    }
+  }
+  &__text-content-line {
+    margin-top: 40px;
+    line-height: 1.8;
+    @include tablet {
+      margin-top: 16px;
+      line-height: 1.95;
+    }
+  }
+  &__product-img {
+    width: 46.25%;
+    padding-top: 25px;
+    padding-right: 75px;
+    @include tablet {
+      width: 44.9%;
+      margin: 0 auto;
+      padding-right: 0;
+      order: 1;
+    }
+  }
+  &__button {
+    width: 260px;
+    margin-top: 90px;
+    @include tablet {
+      width: 130px;
+      margin: 35px auto 0;
+      text-align: center;
+    }
+  }
+}

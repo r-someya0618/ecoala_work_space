@@ -4,7 +4,7 @@ Template Name: INSTAGRAM
 */
 ?>
 <?php get_header(); ?>
-<main class="c-section-container">
+<main class="l-container">
   <section class="p-instagram">
     <h1 class="c-section-heading--center" data-animate="fI">FOLLOW US ON<br>INSTAGRAM</h1>
     <section>

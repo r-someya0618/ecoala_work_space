@@ -54,3 +54,19 @@
 .u-inline-block {
   display: inline-block;
 }
+
+.u-narrow-text {
+  letter-spacing: -0.1rem;
+  &--mid {
+    letter-spacing: -1rem;
+    @include tablet {
+      letter-spacing: -0.2rem;
+    }
+  }
+  &--hard {
+    letter-spacing: -1.5rem;
+    @include tablet {
+      letter-spacing: -0.5rem;
+    }
+  }
+}

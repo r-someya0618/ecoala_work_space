@@ -8,6 +8,24 @@
   @include tablet {
     font-size: rem(22.5);
   }
+  &--large {
+    font-size: rem(65);
+    @include tablet {
+      font-size: rem(25);
+    }
+  }
+  &--smaller {
+    font-size: rem(40);
+    @include tablet {
+      font-size: rem(16.5);
+    }
+  }
+  &--small {
+    font-size: rem(35);
+    @include tablet {
+      font-size: rem(17.5);
+    }
+  }
   &--center {
     text-align: center;
   }

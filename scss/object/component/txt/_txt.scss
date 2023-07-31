@@ -3,17 +3,11 @@
 @use "../../../foundation/_variables" as *;
 @use "../../../foundation/_mixin" as *;
 
-.c-section-container {
-  width: 1200px;
-  margin: 0 auto;
-  @include tablet {
-    width: 100%;
-  }
-  &--wide {
-    width: 1500px;
-    margin: 0 auto;
+.c-text {
+  &--20 {
+    font-size: rem(20);
     @include tablet {
-      width: 100%;
+      font-size: rem(11.5);
     }
   }
 }

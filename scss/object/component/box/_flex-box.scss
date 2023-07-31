@@ -4,5 +4,8 @@
     &--column {
       flex-direction: column;
     }
+    &--end {
+      justify-content: end;
+    }
   }
 }
