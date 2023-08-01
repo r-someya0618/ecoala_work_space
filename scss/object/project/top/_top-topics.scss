@@ -1,0 +1,48 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-top-topics {
+  margin-top: 250px;
+  @include tablet {
+    margin-top: 300px;
+  }
+  &__posts-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 110px;
+    padding: 0 16px;
+    @include tablet {
+      margin-top: 0;
+      flex-wrap: wrap;
+    }
+  }
+  &__posts-list-item {
+    @include tablet {
+      margin-top: 36px;
+    }
+  }
+  &__posts-list-date {
+    margin-top: 30px;
+    @include tablet {
+      margin-top: 18px;
+    }
+  }
+  &__posts-list-title {
+    margin-top: 30px;
+    line-height: 1.85;
+    @include tablet {
+      margin-top: 18px;
+      line-height: 1.5;
+    }
+  }
+  &__button {
+    width: 260px;
+    margin: 100px auto 0;
+    @include tablet {
+      width: 130px;
+      margin: 35px auto 0;
+    }
+  }
+}

@@ -4,6 +4,7 @@
 @use "../../../foundation/_mixin" as *;
 
 .p-top-introduction {
+  padding: 0 16px;
   &__heading {
     margin-top: 200px;
     @include tablet {
@@ -16,7 +17,7 @@
     background: #efefef;
     @include tablet {
       margin-top: 27px;
-      margin: 32px;
+      margin: 32px 0;
     }
   }
   &__content {
@@ -38,7 +39,7 @@
       text-align: center;
     }
   }
-  &__text-content-body {
+  &__text-content-lead {
     margin-top: 90px;
     font-size: rem(25);
     @include tablet {
@@ -55,7 +56,7 @@
       line-height: 1.95;
     }
   }
-  &__product-img {
+  &__img-content {
     width: 46.25%;
     padding-top: 25px;
     padding-right: 75px;

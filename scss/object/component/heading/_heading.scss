@@ -26,6 +26,18 @@
       font-size: rem(17.5);
     }
   }
+  &--product-name-sub {
+    font-size: rem(53);
+    @include tablet {
+      font-size: rem(18.5);
+    }
+  }
+  &--product-name {
+    font-size: rem(78);
+    @include tablet {
+      font-size: rem(27.3);
+    }
+  }
   &--center {
     text-align: center;
   }

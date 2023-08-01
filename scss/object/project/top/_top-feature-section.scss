@@ -1,0 +1,63 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-top-feature-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 0 66px;
+  @include tablet {
+    width: 100%;
+    margin: 300px auto 0;
+    padding: 0 32px;
+  }
+  &__card {
+    display: flex;
+    width: 690;
+    margin-top: 100px;
+    @include tablet {
+      width: 100%;
+      margin-top: 32px;
+      justify-content: space-between;
+    }
+  }
+  &__card-thumb {
+    width: 300px;
+    @include tablet {
+      width: 42.5%;
+    }
+  }
+  &__card-body {
+    width: 343px;
+    margin-left: 45px;
+    @include tablet {
+      width: 50%;
+      margin: 0;
+    }
+  }
+  &__card-title {
+    line-height: 1.6;
+    @include tablet {
+      line-height: 1.4;
+    }
+  }
+  &__card-text {
+    margin-top: 40px;
+    line-height: 1.75;
+    @include tablet {
+      margin-top: 5px;
+      line-height: 1.52;
+    }
+  }
+  &__card-button {
+    margin-top: 48px;
+    width: 193px;
+    @include tablet {
+      width: 96.5px;
+      margin-top: 10px;
+    }
+  }
+}

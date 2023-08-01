@@ -5,13 +5,13 @@
 
 .l-container {
   position: relative;
-  max-width: 1200px;
+  max-width: 1232px;
   margin: 0 auto;
   @include tablet {
     width: 100%;
   }
   &--wide {
-    max-width: 1500px;
+    max-width: 1632px;
   }
 }
 
