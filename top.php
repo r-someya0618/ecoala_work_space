@@ -16,7 +16,7 @@ Template Name: top
   </section>
   <section class="p-top-introduction l-container">
     <h1 class="p-top-introduction__heading c-heading-section--smaller c-heading-section--center">
-      自分だけのiDryerがついに誕生。<br />
+      自分だけのiDryerがついに誕生。<br>
       ECOALA AI Pro Style
     </h1>
     <div class="p-top-introduction__movie">
@@ -24,20 +24,20 @@ Template Name: top
     <section class="p-top-introduction__content l-container l-container-flex l-container-flex--between">
       <div class="p-top-introduction__text-content">
         <h2 class="p-top-introduction__text-content-heading c-heading-section--smaller">
-          わたし<span class="u-narrow-text--hard">に</span>「いい<span class="u-narrow-text--hard">」</span>が、<br />
+          わたし<span class="u-narrow-text--hard">に</span>「いい<span class="u-narrow-text--hard">」</span>が、<br>
           いちば<span class="u-narrow-text--hard">ん</span>「いい<span class="u-narrow-text--hard">」</span>。
         </h2>
         <div class="p-top-introduction__text-content-lead">
           <p class="p-top-introduction__text-content-line">
-            髪質はちがうのに。 <br />
+            髪質はちがうのに。 <br>
             <span class="u-narrow-text">みんな同じドライヤーを使っているの？</span>
           </p>
           <p class="p-top-introduction__text-content-line">
-            待ちに待った自分の髪質に合う<br />
+            待ちに待った自分の髪質に合う<br>
             自分だけのiDryerがついに誕生。
           </p>
           <p class="p-top-introduction__text-content-line">
-            わたし<span class="u-narrow-text--mid">に</span>「いい<span class="u-narrow-text--mid">」</span>が、いちば<span class="u-narrow-text--mid">ん</span>「いい<span class="u-narrow-text--mid"></span>」</span>。 <br />
+            わたし<span class="u-narrow-text--mid">に</span>「いい<span class="u-narrow-text--mid">」</span>が、いちば<span class="u-narrow-text--mid">ん</span>「いい<span class="u-narrow-text--mid"></span>」</span>。 <br>
             それが、自分だけのiDryer。
           </p>
         </div>
@@ -59,7 +59,7 @@ Template Name: top
         <section class="p-top-kv-section__card p-top-kv-section__card">
           <h2 class="p-top-kv-section__card-title c-heading-section--small">ECOALA AI Pro Style</h2>
           <p class="p-top-kv-section__card-txt c-text--20">
-            わたし<span class="u-narrow-text">に</span>「いい<span class="u-narrow-text">」</span>が、いちば<span class="u-narrow-text">ん</span>「いい<span class="u-narrow-text">」</span>。<br />
+            わたし<span class="u-narrow-text">に</span>「いい<span class="u-narrow-text">」</span>が、いちば<span class="u-narrow-text">ん</span>「いい<span class="u-narrow-text">」</span>。<br>
             未だかつてない次世代ドライヤーを目指しました。
           </p>
           <div class="p-top-kv-section__card-button
@@ -86,12 +86,12 @@ Template Name: top
           </h2>
           <section class="p-top-kv-section__card p-top-kv-section__card--ai-prostyle p-top-kv-section__card--right">
             <h3 class="p-top-kv-section__card-title c-text--30">
-              わたし<span class="u-narrow-text--mid">に</span>「いい<span class="u-narrow-text--mid">」</span>が<span class="u-narrow-text--mid">、</span><br />
+              わたし<span class="u-narrow-text--mid">に</span>「いい<span class="u-narrow-text--mid">」</span>が<span class="u-narrow-text--mid">、</span><br>
               いちば<span class="u-narrow-text--mid">ん</span>「いい<span class="u-narrow-text--mid">」</span>。
             </h3>
             <p class="p-top-kv-section__card-txt c-text--20">
-              髪は一生もの。だから最適なヘアドライを届けたい。<br />
-              あなたの髪質・地肌に合わせた<br />
+              髪は一生もの。だから最適なヘアドライを届けたい。<br>
+              あなたの髪質・地肌に合わせた<br>
               あなただけのドライヤーが誕生しました。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
