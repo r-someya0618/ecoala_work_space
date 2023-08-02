@@ -1,0 +1,13 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.c-icon {
+  &--instagram {
+    width: 143px;
+    @include tablet {
+      width: 72px;
+    }
+  }
+}

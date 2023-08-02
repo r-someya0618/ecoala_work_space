@@ -9,10 +9,8 @@
     margin: 120px 0 122px;
   }
   &__icon {
-    width: 143px;
     margin: 65px auto 0;
     @include tablet {
-      width: 72px;
       margin: 32px auto 0;
     }
   }

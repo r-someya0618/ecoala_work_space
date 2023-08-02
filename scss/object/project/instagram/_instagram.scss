@@ -1,0 +1,61 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-instagram {
+  margin-top: 200px;
+  margin-bottom: 250px;
+  @include tablet {
+    margin-top: 55px;
+    margin-bottom: 70px;
+  }
+  &__icon {
+    margin: 95px auto 0;
+    @include tablet {
+      margin-top: 42px;
+    }
+  }
+  &__feed-container {
+    width: 900px;
+    margin: 95px auto 0;
+    padding: 10px 20px;
+    @include tablet {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  &__button {
+    width: 260px;
+    margin: 0 auto;
+    @include tablet {
+      width: 130px;
+    }
+  }
+}
+
+#sb_instagram #sbi_load .sbi_load_btn,
+#sb_instagram .sbi_follow_btn a {
+  border: 1px solid $black_color !important;
+  border-radius: 20px !important;
+  background-color: transparent !important;
+  width: 260px !important;
+  margin-top: 90px !important;
+  padding: 4px 0 !important;
+  @include tablet {
+    width: 130px !important;
+    margin-top: 35px !important;
+  }
+}
+
+#sb_instagram .sbi_load_btn .sbi_btn_text {
+  font-size: rem(20);
+  color: $black_color;
+  @include tablet {
+    font-size: rem(10);
+  }
+}
+
+#sb_instagram #sbi_load .sbi_loader {
+  background-color: #000 !important;
+}
