@@ -3,7 +3,7 @@
 @use "../../../foundation/_variables" as *;
 @use "../../../foundation/_mixin" as *;
 
-.c-text {
+.c-txt {
   &--20 {
     font-size: rem(20);
     @include tablet {
@@ -15,5 +15,8 @@
     @include tablet {
       font-size: rem(13);
     }
+  }
+  &--center {
+    text-align: center;
   }
 }

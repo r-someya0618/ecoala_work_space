@@ -626,21 +626,24 @@ template {
   text-decoration: underline;
 }
 
-.c-text--20 {
+.c-txt--20 {
   font-size: 1.25rem;
 }
 @media only screen and (max-width: 768px) {
-  .c-text--20 {
+  .c-txt--20 {
     font-size: 0.71875rem;
   }
 }
-.c-text--30 {
+.c-txt--30 {
   font-size: 1.875rem;
 }
 @media only screen and (max-width: 768px) {
-  .c-text--30 {
+  .c-txt--30 {
     font-size: 0.8125rem;
   }
+}
+.c-txt--center {
+  text-align: center;
 }
 
 .p-company {
