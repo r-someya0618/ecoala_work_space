@@ -4,39 +4,39 @@
 @use "../../../foundation/_mixin" as *;
 
 .c-heading-section {
-  font-size: rem(45);
   @include tablet {
     font-size: rem(22.5);
   }
+  font-size: rem(45);
   &--large {
-    font-size: rem(65);
     @include tablet {
       font-size: rem(25);
     }
+    font-size: rem(65);
   }
   &--smaller {
-    font-size: rem(40);
     @include tablet {
       font-size: rem(16.5);
     }
+    font-size: rem(40);
   }
   &--small {
-    font-size: rem(35);
     @include tablet {
       font-size: rem(17.5);
     }
+    font-size: rem(35);
   }
   &--product-name-sub {
-    font-size: rem(53);
     @include tablet {
       font-size: rem(18.5);
     }
+    font-size: rem(53);
   }
   &--product-name {
-    font-size: rem(78);
     @include tablet {
       font-size: rem(27.3);
     }
+    font-size: rem(78);
   }
   &--center {
     text-align: center;
@@ -44,8 +44,8 @@
 }
 
 .c-post-heading {
-  font-size: rem(30);
   @include tablet {
     font-size: rem(22.5);
   }
+  font-size: rem(30);
 }

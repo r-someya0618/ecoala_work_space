@@ -4,24 +4,24 @@
 @use "../../../foundation/_mixin" as *;
 
 .c-button {
-  color: $text_color;
   border: 1px solid $text_color;
+  color: $text_color;
   text-align: center;
   &--square {
-    padding: 25px;
-    font-size: rem(25);
     @include tablet {
       padding: 15px;
       font-size: rem(14);
     }
+    padding: 25px;
+    font-size: rem(25);
   }
   &--round {
-    padding: 8px;
-    border-radius: 19px;
-    font-size: rem(20);
     @include tablet {
       padding: 5px;
       font-size: rem(10);
     }
+    padding: 8px;
+    border-radius: 19px;
+    font-size: rem(20);
   }
 }

@@ -4,49 +4,49 @@
 @use "../../../foundation/_mixin" as *;
 
 .p-company {
-  margin-top: 200px;
   @include tablet {
     margin-top: 60px;
     padding: 0 32px;
   }
+  margin-top: 200px;
   &--contact {
-    margin: 250px 0;
     @include tablet {
       margin: 85px 0 100px;
     }
+    margin: 250px 0;
   }
 
   &__company-info {
-    margin-top: 130px;
     @include tablet {
       margin-top: 50px;
     }
+    margin-top: 130px;
   }
 
   &__company-txt {
-    font-size: rem(25);
-    text-align: center;
-    line-height: 1.8;
     @include tablet {
       font-size: rem(12.5);
     }
+    font-size: rem(25);
+    line-height: 1.8;
+    text-align: center;
     &--contact {
-      margin-top: 100px;
       @include tablet {
         margin-top: 45px;
       }
+      margin-top: 100px;
     }
   }
 
   &__map {
-    margin-top: 100px;
-    position: relative;
-    width: 100%;
-    padding-top: 37.0731%;
     @include tablet {
       margin-top: 20px;
       padding-top: 72.258%;
     }
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+    padding-top: 37.0731%;
 
     iframe {
       position: absolute;
@@ -58,13 +58,13 @@
   }
 
   &__button {
-    display: block;
-    width: 500px;
-    margin: 100px auto;
-    text-align: center;
     @include tablet {
       width: 66.67%;
       margin: 30px auto 0;
     }
+    display: block;
+    width: 500px;
+    margin: 100px auto;
+    text-align: center;
   }
 }

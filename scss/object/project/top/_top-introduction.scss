@@ -6,32 +6,32 @@
 .p-top-introduction {
   padding: 0 16px;
   &__heading {
-    margin-top: 200px;
     @include tablet {
       margin-top: 55px;
     }
+    margin-top: 200px;
   }
   &__movie {
+    @include tablet {
+      margin: 32px 0;
+      margin-top: 27px;
+    }
     margin-top: 100px;
     padding-top: 57.25%;
     background: #efefef;
-    @include tablet {
-      margin-top: 27px;
-      margin: 32px 0;
-    }
   }
   &__content {
-    margin-top: 150px;
     @include tablet {
       margin-top: 40px;
     }
+    margin-top: 150px;
   }
   &__text-content {
-    width: 35.8%;
     @include tablet {
-      width: 100%;
       order: 2;
+      width: 100%;
     }
+    width: 35.8%;
   }
   &__text-content-heading {
     @include tablet {
@@ -40,40 +40,40 @@
     }
   }
   &__text-content-lead {
-    margin-top: 90px;
-    font-size: rem(25);
     @include tablet {
       margin-top: 35px;
-      text-align: center;
       font-size: rem(12);
+      text-align: center;
     }
+    margin-top: 90px;
+    font-size: rem(25);
   }
   &__text-content-line {
-    margin-top: 40px;
-    line-height: 1.8;
     @include tablet {
       margin-top: 16px;
       line-height: 1.95;
     }
+    margin-top: 40px;
+    line-height: 1.8;
   }
   &__img-content {
-    width: 46.25%;
-    padding-top: 25px;
-    padding-right: 75px;
     @include tablet {
+      order: 1;
       width: 44.9%;
       margin: 0 auto;
       padding-right: 0;
-      order: 1;
     }
+    width: 46.25%;
+    padding-top: 25px;
+    padding-right: 75px;
   }
   &__button {
-    width: 260px;
-    margin-top: 90px;
     @include tablet {
       width: 130px;
       margin: 35px auto 0;
       text-align: center;
     }
+    width: 260px;
+    margin-top: 90px;
   }
 }

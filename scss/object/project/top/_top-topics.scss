@@ -4,19 +4,19 @@
 @use "../../../foundation/_mixin" as *;
 
 .p-top-topics {
-  margin-top: 250px;
   @include tablet {
     margin-top: 300px;
   }
+  margin-top: 250px;
   &__posts-list {
+    @include tablet {
+      flex-wrap: wrap;
+      margin-top: 0;
+    }
     display: flex;
     justify-content: space-between;
     margin-top: 110px;
     padding: 0 16px;
-    @include tablet {
-      margin-top: 0;
-      flex-wrap: wrap;
-    }
   }
   &__posts-list-item {
     @include tablet {
@@ -24,25 +24,25 @@
     }
   }
   &__posts-list-date {
-    margin-top: 30px;
     @include tablet {
       margin-top: 18px;
     }
+    margin-top: 30px;
   }
   &__posts-list-title {
-    margin-top: 30px;
-    line-height: 1.85;
     @include tablet {
       margin-top: 18px;
       line-height: 1.5;
     }
+    margin-top: 30px;
+    line-height: 1.85;
   }
   &__button {
-    width: 260px;
-    margin: 100px auto 0;
     @include tablet {
       width: 130px;
       margin: 35px auto 0;
     }
+    width: 260px;
+    margin: 100px auto 0;
   }
 }

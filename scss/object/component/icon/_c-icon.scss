@@ -5,9 +5,9 @@
 
 .c-icon {
   &--instagram {
-    width: 143px;
     @include tablet {
       width: 72px;
     }
+    width: 143px;
   }
 }

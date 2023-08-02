@@ -5,16 +5,16 @@
 
 .c-txt {
   &--20 {
-    font-size: rem(20);
     @include tablet {
       font-size: rem(11.5);
     }
+    font-size: rem(20);
   }
   &--30 {
-    font-size: rem(30);
     @include tablet {
       font-size: rem(13);
     }
+    font-size: rem(30);
   }
   &--center {
     text-align: center;
