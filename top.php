@@ -410,10 +410,14 @@ Template Name: top
       <img src="<?php bloginfo('template_url'); ?>/assets/images/insta_icon.png" alt="">
     </div>
     <div class="p-top-instagram__container">
-
-    </div>
-    <div class="p-top-instagram__button c-button c-button--round">
-      <a href="#">Read More</a>
+      <div id="js-iscroll-wrapper" class="p-top-instagram__scroll-wrapper">
+        <div class="p-top-instagram__scroll-field">
+          <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+        </div>
+      </div>
+      <div class="p-top-instagram__button c-button c-button--round">
+          <a href="#">Read More</a>
+        </div>
     </div>
   </section>
 </main>

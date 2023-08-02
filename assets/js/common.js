@@ -46,6 +46,22 @@ jQuery(function ($) {
     dots: true, //ドット部分を表示する
   });
 
+  // PCのみ
+  $(window).on('load resize', function () {
+    const windowWidth = window.innerWidth;
+    if (windowWidth > 768) {
+      new IScroll('#js-iscroll-wrapper', {
+        tap: true,
+        scrollX: true,
+        scrollY: false,
+        bounce: false,
+        mouseWheel: false,
+        scrollbars: true,
+        fadeScrollbars: true,
+      });
+    }
+  });
+
   if ($('body').hasClass('home')) {
     $('body').addClass('white');
     $('#logo_img').attr(
@@ -376,19 +392,19 @@ jQuery(function ($) {
     });
   }
 
+  // クリックイベント制御
   const delta = 6;
   let startX;
   let startY;
-
-  $('.scroll a').on('click', function (e) {
+  $('.p-top-instagram__scroll-field a').on('click', function (e) {
     e.preventDefault();
   });
-  $('.scroll a').on('mousedown', function (e) {
+  $('.p-top-instagram__scroll-field a').on('mousedown', function (e) {
     startX = event.pageX;
     startY = event.pageY;
     e.preventDefault();
   });
-  $('.scroll a').on('mouseup', function (e) {
+  $('.p-top-instagram__scroll-field a').on('mouseup', function (e) {
     const diffX = Math.abs(event.pageX - startX);
     const diffY = Math.abs(event.pageY - startY);
     if (diffX < delta && diffY < delta) {

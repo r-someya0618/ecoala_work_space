@@ -856,6 +856,31 @@ template {
     margin: 32px auto 0;
   }
 }
+.p-top-instagram__container {
+  margin-top: 100px;
+}
+@media only screen and (max-width: 768px) {
+  .p-top-instagram__container {
+    margin-top: 30px;
+  }
+}
+.p-top-instagram__scroll-wrapper {
+  position: relative;
+  width: 100%;
+  bottom: 30px;
+  left: 0;
+  overflow: hidden;
+}
+.p-top-instagram__scroll-field {
+  width: 3000px;
+}
+@media only screen and (max-width: 768px) {
+  .p-top-instagram__scroll-field {
+    width: 100%;
+    margin: 35px auto 0;
+    padding: 0 32px;
+  }
+}
 .p-top-instagram__button {
   width: 260px;
   margin: 100px auto 0;
@@ -863,7 +888,7 @@ template {
 @media only screen and (max-width: 768px) {
   .p-top-instagram__button {
     width: 130px;
-    margin: 35px auto 0;
+    margin: 15px auto;
   }
 }
 
