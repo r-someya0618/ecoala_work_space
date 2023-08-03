@@ -40,6 +40,13 @@
 // );
 
 jQuery(function ($) {
+  $('#humberger-check').on('change', function () {
+    if ($('#humberger-check').prop('checked')) {
+      $('body').addClass('noscroll');
+    } else {
+      $('body').removeClass('noscroll');
+    }
+  });
   $('.slider').slick({
     autoplay: true, //自動再生する
     autoplaySpeed: 4000, //自動再生するスピード 4秒
@@ -101,120 +108,120 @@ jQuery(function ($) {
       }, 3000);
     }
 
-    //top slide
-    $('.full').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-      if (nextSlide > 0) {
-        $(this).slick('slickSetOption', 'autoplaySpeed', 5000, true);
-      }
+    // //top slide
+    // $('.full').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    //   if (nextSlide > 0) {
+    //     $(this).slick('slickSetOption', 'autoplaySpeed', 5000, true);
+    //   }
 
-      var w = window.innerWidth;
-      if (980 < w) {
-        $('body').removeClass('whiteSp');
-        $('body').removeClass('blackSp');
-        if (nextSlide == 0 || nextSlide == 1 || nextSlide == 2) {
-          //header w
-          $('body').removeClass('black');
-          $('body').addClass('white');
-          if (!$('body').hasClass('bottom')) {
-            $('#logo_img').attr(
-              'src',
-              '/wp-content/themes/ecoala/assets/img/header_logo_w.svg'
-            );
-          }
-        } else {
-          //header b
-          $('body').removeClass('white');
-          $('body').addClass('black');
-          $('#logo_img').attr(
-            'src',
-            '/wp-content/themes/ecoala/assets/img/header_logo_b.svg'
-          );
-        }
-      } else {
-        $('body').removeClass('white');
-        $('body').removeClass('black');
-        if (nextSlide == 0 || nextSlide == 1 || nextSlide == 2) {
-          //header w
-          $('body').removeClass('blackSp');
-          $('body').addClass('whiteSp');
-          if (!$('body').hasClass('bottom')) {
-            $('#logo_img').attr(
-              'src',
-              '/wp-content/themes/ecoala/assets/img/header_logo_w.svg'
-            );
-          }
-        } else {
-          //header b
-          $('body').removeClass('whiteSp');
-          $('body').addClass('blackSp');
-          $('#logo_img').attr(
-            'src',
-            '/wp-content/themes/ecoala/assets/img/header_logo_b.svg'
-          );
-        }
-      }
-    });
+    //   var w = window.innerWidth;
+    //   if (980 < w) {
+    //     $('body').removeClass('whiteSp');
+    //     $('body').removeClass('blackSp');
+    //     if (nextSlide == 0 || nextSlide == 1 || nextSlide == 2) {
+    //       //header w
+    //       $('body').removeClass('black');
+    //       $('body').addClass('white');
+    //       if (!$('body').hasClass('bottom')) {
+    //         $('#logo_img').attr(
+    //           'src',
+    //           '/wp-content/themes/ecoala/assets/img/header_logo_w.svg'
+    //         );
+    //       }
+    //     } else {
+    //       //header b
+    //       $('body').removeClass('white');
+    //       $('body').addClass('black');
+    //       $('#logo_img').attr(
+    //         'src',
+    //         '/wp-content/themes/ecoala/assets/img/header_logo_b.svg'
+    //       );
+    //     }
+    //   } else {
+    //     $('body').removeClass('white');
+    //     $('body').removeClass('black');
+    //     if (nextSlide == 0 || nextSlide == 1 || nextSlide == 2) {
+    //       //header w
+    //       $('body').removeClass('blackSp');
+    //       $('body').addClass('whiteSp');
+    //       if (!$('body').hasClass('bottom')) {
+    //         $('#logo_img').attr(
+    //           'src',
+    //           '/wp-content/themes/ecoala/assets/img/header_logo_w.svg'
+    //         );
+    //       }
+    //     } else {
+    //       //header b
+    //       $('body').removeClass('whiteSp');
+    //       $('body').addClass('blackSp');
+    //       $('#logo_img').attr(
+    //         'src',
+    //         '/wp-content/themes/ecoala/assets/img/header_logo_b.svg'
+    //       );
+    //     }
+    //   }
+    // });
 
-    $(window).on('resize', function () {
-      setTimeout(function () {
-        $('.full').slick('slickGoTo', 0, true);
-        var w = window.innerWidth;
-        if (980 < w) {
-          $('body').removeClass('white');
-          $('body').removeClass('black');
-          $('body').removeClass('whiteSp');
-          $('body').removeClass('blackSp');
-          $('body').addClass('white');
-          if (!$('body').hasClass('bottom')) {
-            $('#logo_img').attr(
-              'src',
-              '/wp-content/themes/ecoala/assets/img/header_logo_w.svg'
-            );
-          }
-        } else {
-          $('body').removeClass('white');
-          $('body').removeClass('black');
-          $('body').removeClass('whiteSp');
-          $('body').removeClass('blackSp');
-          $('body').addClass('whiteSp');
-          if (!$('body').hasClass('bottom')) {
-            $('#logo_img').attr(
-              'src',
-              '/wp-content/themes/ecoala/assets/img/header_logo_w.svg'
-            );
-          }
-        }
-      }, 500);
-    });
+    // $(window).on('resize', function () {
+    //   setTimeout(function () {
+    //     $('.full').slick('slickGoTo', 0, true);
+    //     var w = window.innerWidth;
+    //     if (980 < w) {
+    //       $('body').removeClass('white');
+    //       $('body').removeClass('black');
+    //       $('body').removeClass('whiteSp');
+    //       $('body').removeClass('blackSp');
+    //       $('body').addClass('white');
+    //       if (!$('body').hasClass('bottom')) {
+    //         $('#logo_img').attr(
+    //           'src',
+    //           '/wp-content/themes/ecoala/assets/img/header_logo_w.svg'
+    //         );
+    //       }
+    //     } else {
+    //       $('body').removeClass('white');
+    //       $('body').removeClass('black');
+    //       $('body').removeClass('whiteSp');
+    //       $('body').removeClass('blackSp');
+    //       $('body').addClass('whiteSp');
+    //       if (!$('body').hasClass('bottom')) {
+    //         $('#logo_img').attr(
+    //           'src',
+    //           '/wp-content/themes/ecoala/assets/img/header_logo_w.svg'
+    //         );
+    //       }
+    //     }
+    //   }, 500);
+    // });
 
-    $('.full').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-      $('.slick-active')
-        .addClass('phLoad')
-        .delay(1000)
-        .queue(function (next) {
-          $('.full').find('.phLoad').not('.slick-active').removeClass('phLoad');
-          next();
-        });
-    });
+    // $('.full').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    //   $('.slick-active')
+    //     .addClass('phLoad')
+    //     .delay(1000)
+    //     .queue(function (next) {
+    //       $('.full').find('.phLoad').not('.slick-active').removeClass('phLoad');
+    //       next();
+    //     });
+    // });
 
-    $('.full').slick({
-      arrows: false,
-      dots: false,
-      autoplay: true,
-      autoplaySpeed: 8000,
-      speed: 1000,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      fade: true,
-      pauseOnFocus: false,
-      pauseOnHover: false,
-      pauseOnDotsHover: false,
-    });
+    // $('.full').slick({
+    //   arrows: false,
+    //   dots: false,
+    //   autoplay: true,
+    //   autoplaySpeed: 8000,
+    //   speed: 1000,
+    //   infinite: true,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   fade: true,
+    //   pauseOnFocus: false,
+    //   pauseOnHover: false,
+    //   pauseOnDotsHover: false,
+    // });
 
-    $('.full').on('touchmove', function (event, slick, currentSlide, nextSlide) {
-      $('.full').slick('slickPlay');
-    });
+    // $('.full').on('touchmove', function (event, slick, currentSlide, nextSlide) {
+    //   $('.full').slick('slickPlay');
+    // });
 
     //headerChange
     function headerChange() {
@@ -392,19 +399,20 @@ jQuery(function ($) {
     });
   }
 
-  // クリックイベント制御
+  console.log('yes');
   const delta = 6;
   let startX;
   let startY;
-  $('.p-top-instagram__scroll-field a').on('click', function (e) {
+
+  $('.scroll a').on('click', function (e) {
     e.preventDefault();
   });
-  $('.p-top-instagram__scroll-field a').on('mousedown', function (e) {
+  $('.scroll a').on('mousedown', function (e) {
     startX = event.pageX;
     startY = event.pageY;
     e.preventDefault();
   });
-  $('.p-top-instagram__scroll-field a').on('mouseup', function (e) {
+  $('.scroll a').on('mouseup', function (e) {
     const diffX = Math.abs(event.pageX - startX);
     const diffY = Math.abs(event.pageY - startY);
     if (diffX < delta && diffY < delta) {

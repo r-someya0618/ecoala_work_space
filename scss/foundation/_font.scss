@@ -5,3 +5,23 @@
 @function rem($remFz) {
   @return math.div($remFz, 16) * 1rem;
 }
+
+/***** 游ゴシック体 Pr6N R用 *****/
+@mixin font-r {
+  font-family: 'A+EqpB-游ゴシック体 Pr6N R', sans-serif;
+}
+
+/***** 游ゴシック体 Pr6N M用 *****/
+@mixin font-m {
+  font-family: 'A+EqpB-游ゴシック体 Pr6N M', sans-serif;
+}
+
+/***** 游ゴシック体 Pr6N D用 *****/
+@mixin font-d {
+  font-family: 'A+EqpB-游ゴシック体 Pr6N D', sans-serif;
+}
+
+/***** 英語フォント用 *****/
+@mixin font-e {
+  font-family: AvenirNextLTPro-Regular, sans-serif;
+}
