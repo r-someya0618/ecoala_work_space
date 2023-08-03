@@ -1,0 +1,12 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-product-introduction {
+  margin-top: 150px;
+  &__title {
+    line-height: 1.6;
+    letter-spacing: 4.5px;
+  }
+}

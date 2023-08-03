@@ -872,6 +872,26 @@ body {
   width: 2em;
 }
 
+.c-nav-indicator {
+  width: 100%;
+  height: 3px;
+  background-color: #dcdcdc;
+}
+.c-nav-indicator__bar {
+  width: 16.67%;
+  height: 100%;
+  background: #646464;
+}
+
+.c-nav-list__item {
+  font-size: 1.25rem;
+}
+@media only screen and (max-width: 768px) {
+  .c-nav-list__item {
+    font-size: 0.875rem;
+  }
+}
+
 .c-pagination {
   display: flex;
   justify-content: center;
@@ -1164,6 +1184,87 @@ body {
   .p-posts-list__title {
     margin-top: 12px;
   }
+}
+
+.p-product-introduction {
+  margin-top: 150px;
+}
+.p-product-introduction__title {
+  line-height: 1.6;
+  letter-spacing: 4.5px;
+}
+
+.p-product-kv__item {
+  transition: opacity 0.8s;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+}
+.p-product-kv__item.is-active {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+}
+
+.p-product-nav {
+  margin-top: 80px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.p-product-nav::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .p-product-nav {
+    margin-top: 0;
+  }
+}
+.p-product-nav__list {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(0, 0%, 20%);
+}
+@media only screen and (max-width: 768px) {
+  .p-product-nav__list {
+    width: fit-content;
+    justify-content: flex-start;
+    border-bottom: none;
+  }
+}
+.p-product-nav__list-item {
+  padding: 30px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .p-product-nav__list-item {
+    white-space: nowrap;
+    padding: 15px;
+  }
+}
+.p-product-nav__list-item:first-child {
+  padding-left: 0;
+}
+@media only screen and (max-width: 768px) {
+  .p-product-nav__list-item:first-child {
+    padding: 15px;
+  }
+}
+.p-product-nav__list-item:last-child {
+  padding-right: 0;
+}
+@media only screen and (max-width: 768px) {
+  .p-product-nav__list-item:last-child {
+    padding: 15px;
+  }
+}
+.p-product-nav__list-item.is-active {
+  color: #00a6e1;
+}
+.p-product-nav__indicator {
+  padding: 0 16px;
 }
 
 .p-top-feature-section {

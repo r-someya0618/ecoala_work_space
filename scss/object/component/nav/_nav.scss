@@ -3,7 +3,11 @@
 @use "../../../foundation/_variables" as *;
 @use "../../../foundation/_mixin" as *;
 
-.c-section {
-  &__container {
+.c-nav-list {
+  &__item {
+    font-size: rem(20);
+    @include tablet {
+      font-size: rem(14);
+    }
   }
 }

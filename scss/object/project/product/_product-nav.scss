@@ -1,0 +1,60 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-product-nav {
+  margin-top: 80px;
+  overflow-x: scroll;
+  // スクロールバー非表示対応
+  // edge
+  -ms-overflow-style: none;
+  // firefox
+  scrollbar-width: none;
+  // Google Chrome、Safari
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include tablet {
+    margin-top: 0;
+  }
+  &__list {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $dark_gray;
+    @include tablet {
+      width: fit-content;
+      justify-content: flex-start;
+      border-bottom: none;
+    }
+  }
+  &__list-item {
+    padding: 30px;
+    @include tablet {
+      white-space: nowrap;
+      padding: 15px;
+    }
+    cursor: pointer;
+    &:first-child {
+      padding-left: 0;
+      @include tablet {
+        padding: 15px;
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+      @include tablet {
+        padding: 15px;
+      }
+    }
+    &.is-active {
+      color: $active-blue;
+    }
+  }
+  &__indicator {
+    padding: 0 16px;
+  }
+}

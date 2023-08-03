@@ -1,0 +1,18 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-product-kv {
+  &__item {
+    transition: opacity 0.8s;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    &.is-active {
+      visibility: visible;
+      height: auto;
+      opacity: 1;
+    }
+  }
+}

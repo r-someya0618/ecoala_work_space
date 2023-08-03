@@ -1,0 +1,15 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.c-nav-indicator {
+  width: 100%;
+  height: 3px;
+  background-color: $gray;
+  &__bar {
+    width: 16.67%;
+    height: 100%;
+    background: $gray3;
+  }
+}

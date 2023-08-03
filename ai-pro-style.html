@@ -10,11 +10,91 @@
     <header style="height: 80px; color: white; background-color: #000;">
       仮Header
     </header>
-    <main class="l-container">
-      <section class="p-product"></section>
+    <main>
+      <div class="p-product-kv">
+        <!-- kv -->
+        <div data-kv="top" class="p-product-kv__item is-active">
+          <img class="pc" src="./assets/images/kv_ai_1_pc.png" alt="" />
+          <img class="sp is-active" src="./assets/images/kv_ai_1_sp.png" alt="" />
+        </div>
+        <div data-kv="concept" class="p-product-kv__item">
+          <img class="pc" src="./assets/images/kv_ai_2_pc.png" alt="" />
+          <img class="sp" src="./assets/images/kv_ai_2_sp.png" alt="" />
+        </div>
+        <div data-kv="feature" class="p-product-kv__item">
+          <img class="pc" src="./assets/images/kv_ai_3_pc.png" alt="" />
+          <img class="sp" src="./assets/images/kv_ai_3_sp.png" alt="" />
+        </div>
+        <div data-kv="design" class="p-product-kv__item">
+          <img class="pc" src="./assets/images/kv_ai_4_pc.png" alt="" />
+          <img class="sp" src="./assets/images/kv_ai_4_sp.png" alt="" />
+        </div>
+        <div data-kv="nozzle" class="p-product-kv__item">
+          <img class="pc" src="./assets/images/kv_ai_5_pc.png" alt="" />
+          <img class="sp" src="./assets/images/kv_ai_5_sp.png" alt="" />
+        </div>
+        <div data-kv="spec" class="p-product-kv__item">
+          <img class="pc" src="./assets/images/kv_ai_6_pc.png" alt="" />
+          <img class="sp" src="./assets/images/kv_ai_6_sp.png" alt="" />
+        </div>
+      </div>
+
+      <!-- nav -->
+      <nav class="p-product-nav">
+        <ul class="p-product-nav__list c-nav-list">
+          <li
+            data-list-id="top"
+            class="p-product-nav__list-item c-nav-list__item is-active"
+          >
+            AI Pro Style
+          </li>
+          <li
+            data-list-id="concept"
+            class="p-product-nav__list-item c-nav-list__item"
+          >
+            CONCEPT
+          </li>
+          <li
+            data-list-id="feature"
+            class="p-product-nav__list-item c-nav-list__item"
+          >
+            高性能・高機能
+          </li>
+          <li
+            data-list-id="design"
+            class="p-product-nav__list-item c-nav-list__item"
+          >
+            デザイン・操作性
+          </li>
+          <li
+            data-list-id="nozzle"
+            class="p-product-nav__list-item c-nav-list__item"
+          >
+            溶岩セラミックノズル
+          </li>
+          <li data-list-id="spec" class="p-product-nav__list-item c-nav-list__item">
+            スペック・保証
+          </li>
+        </ul>
+      </nav>
+      <div class="sp p-product-nav__indicator">
+      <div class="p-product-nav__indicator-inner c-nav-indicator">
+        <div class="c-nav-indicator__bar"></div>
+        </div>
+        <section class="p-product-introduction">
+        <h1
+          class="p-product-introduction__title c-heading-section c-heading-section--center"
+        >
+          より多くの人に<br />
+          最適なヘアドライを
+        </h1>
+      </section>
     </main>
     <footer style="height: 80px; color: white; background-color: #000;">
       仮footer
     </footer>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/common.js"></script>
   </body>
 </html>

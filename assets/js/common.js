@@ -68,6 +68,34 @@ jQuery(function ($) {
       });
     }
   });
+  // navのactive切り替え;
+  $('.p-product-nav__list-item').on('click', function () {
+    $('.p-product-nav__list-item').removeClass('is-active');
+    $(this).addClass('is-active');
+    const dataName = $(this).data('list-id');
+    const index = $(this).index();
+    // TOP画像切替
+    changeProductKeyVisual(dataName);
+    // SPインジケータの変更
+    changeIndicator(index);
+  });
+
+  function changeProductKeyVisual(dataName) {
+    const kvElms = $('.p-product-kv__item');
+    $('.p-product-kv__item').removeClass('is-active');
+    kvElms.each((_, elem) => {
+      if ($(elem).data().kv === dataName) {
+        $(elem).addClass('is-active');
+      }
+    });
+  }
+
+  function changeIndicator(index) {
+    const barWidth = $('.c-nav-indicator__bar').width();
+    const barPosition = index * barWidth;
+    // インジケータバー
+    $('.c-nav-indicator__bar').css('margin-left', barPosition + 'px');
+  }
 
   if ($('body').hasClass('home')) {
     $('body').addClass('white');
