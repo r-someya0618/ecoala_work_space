@@ -425,12 +425,12 @@ foreach ($custom_keys as $key) {
     <h1 class="p-top-instagram__heading c-heading-section--large c-heading-section--center">
       INSTAGRAM
     </h1>
-    <div class="p-top-instagram__icon">
+    <div class="p-top-instagram__icon c-icon--instagram">
       <img src="<?php bloginfo('template_url'); ?>/assets/images/insta_icon.png" alt="">
     </div>
     <div class="p-top-instagram__container">
       <div id="js-iscroll-wrapper" class="p-top-instagram__scroll-wrapper">
-        <div class="p-top-instagram__scroll-field">
+        <div class="p-top-instagram__scroll-field scroll">
           <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
         </div>
       </div>

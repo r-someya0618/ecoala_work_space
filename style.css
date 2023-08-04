@@ -349,6 +349,164 @@ template {
   justify-content: end;
 }
 
+.footer {
+  background: #141414;
+  padding: clamp(40px, 4vw, 120px);
+  min-width: 375px;
+}
+@media only screen and (max-width: 1180px) {
+  .footer {
+    padding: clamp(20px, 14vw, 100px) clamp(10px, 8vw, 60px);
+  }
+}
+.footer__container {
+  display: flex;
+}
+@media only screen and (max-width: 1180px) {
+  .footer__container {
+    flex-wrap: wrap;
+  }
+}
+.footer__left {
+  width: 40%;
+  margin-right: 40px;
+}
+@media only screen and (max-width: 1180px) {
+  .footer__left {
+    width: 100%;
+    order: 1;
+    margin-right: 0;
+  }
+}
+.footer__left--logo {
+  margin-bottom: 200px;
+}
+@media only screen and (max-width: 1180px) {
+  .footer__left--logo {
+    display: none;
+  }
+}
+.footer__left--logo a {
+  transition: opacity 0.5s;
+}
+.footer__left--logo a:hover {
+  opacity: 0.7;
+}
+.footer__left--logo a img {
+  width: 388px;
+  height: auto;
+}
+@media only screen and (max-width: 1180px) {
+  .footer__left--sns {
+    text-align: center;
+  }
+}
+.footer__left--sns a {
+  margin-right: 30px;
+  transition: opacity 0.5s;
+}
+.footer__left--sns a:last-child {
+  margin-right: 0;
+}
+.footer__left--sns a:hover {
+  opacity: 0.7;
+}
+.footer__left--sns a img {
+  width: 40px;
+  height: 40px;
+}
+.footer__right {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+}
+@media only screen and (max-width: 1180px) {
+  .footer__right {
+    width: 100%;
+  }
+}
+.footer__right--top, .footer__right--btm {
+  display: flex;
+  width: 100%;
+}
+@media only screen and (max-width: 1180px) {
+  .footer__right--top, .footer__right--btm {
+    flex-wrap: wrap;
+  }
+}
+.footer__link {
+  width: 245px;
+  margin-right: clamp(20px, 2vw, 80px);
+}
+@media only screen and (max-width: 1180px) {
+  .footer__link {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.footer__link:last-child {
+  margin-right: 0;
+}
+.footer__link--e {
+  font-family: AvenirNextLTPro-Regular, sans-serif;
+}
+.footer__title {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #aaa;
+  border-bottom: 2px solid #aaa;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 1180px) {
+  .footer__title {
+    font-size: clamp(18px, 4.5vw, 32px);
+  }
+}
+.footer__child-list {
+  margin-bottom: 65px;
+}
+@media only screen and (max-width: 1180px) {
+  .footer__child-list {
+    margin-bottom: clamp(24px, 11vw, 80px);
+  }
+}
+.footer__child-list > li > a {
+  display: inline-block;
+  font-size: clamp(12px, 1.3vw, 16px);
+  color: #aaa;
+  margin-bottom: 18px;
+  transition: color 0.3s;
+}
+.footer__child-list > li > a:hover {
+  color: #fff;
+}
+@media only screen and (max-width: 1180px) {
+  .footer__child-list > li > a {
+    font-size: clamp(14px, 3.2vw, 23px);
+  }
+}
+.footer__special-link {
+  display: flex;
+  color: #aaa;
+  border: 1px solid #aaa;
+  align-items: center;
+  justify-content: center;
+  height: 74px;
+  transition: color 0.3s, border 0.3s;
+}
+.footer__special-link:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+@media only screen and (max-width: 1180px) {
+  .footer__special-link {
+    width: 60%;
+    min-width: 220px;
+    font-size: clamp(16px, 3.5vw, 26px);
+    margin: 0 auto clamp(24px, 11vw, 80px);
+  }
+}
+
 body {
   margin: 0;
   font-family: "A+EqpB-游ゴシック体 Pr6N M", sans-serif;
@@ -366,8 +524,8 @@ body {
   min-width: 375px;
   height: 93px;
   display: flex;
-  color: white;
-  background: #000;
+  color: #fff;
+  background: #141414;
   justify-content: space-between;
   top: 0;
   left: 0;
@@ -399,6 +557,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.5s;
+}
+.header .header__img > a:hover {
+  opacity: 0.7;
 }
 .header .header__img > a > img {
   width: 100%;
@@ -457,18 +619,18 @@ body {
   margin-right: 0px;
 }
 .header .header__link .header__list > li:hover > a {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #fff;
 }
 .header .header__link .header__list > li > a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #141414;
   transition: all 0.3s;
   vertical-align: -webkit-baseline-middle;
   font-size: clamp(16px, 1.3vw, 22px);
 }
 .header .header__link .header__list > li > a:hover {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #fff;
 }
 .header .header__link .header__list > li .header__child-list {
   height: 0;
@@ -502,7 +664,7 @@ body {
   font-size: clamp(14px, 1vw, 16px);
 }
 .header .header__link .header__list > li .header__child-list > li > a:hover {
-  color: white;
+  color: #fff;
 }
 .header .header__link .header__list .header__list--product:hover .header__child-list--product,
 .header .header__link .header__list .header__list--salon:hover .header__child-list--salon,
@@ -514,7 +676,7 @@ body {
   font-family: AvenirNextLTPro-Regular, sans-serif;
 }
 .header .header__special-link {
-  color: white;
+  color: #fff;
   text-decoration: none;
   display: flex;
   height: 100%;
@@ -536,7 +698,7 @@ body {
   background-position: 99% 50%;
 }
 .header .header__humberger {
-  border-top: 3px solid white;
+  border-top: 3px solid #fff;
   cursor: pointer;
   display: inline-block;
   height: 30px;
@@ -546,7 +708,7 @@ body {
   z-index: 1;
 }
 .header .header__humberger::before, .header .header__humberger::after {
-  background: white;
+  background: #fff;
   content: "";
   display: inline-block;
   height: 3px;
@@ -630,7 +792,7 @@ body {
   width: 100%;
   height: 80px;
   border-radius: 5px;
-  background: white;
+  background: #fff;
   font-size: clamp(22px, 5vw, 26px);
   margin: 80px 0;
 }
@@ -949,11 +1111,11 @@ body {
   bottom: -5px;
   width: 15px;
   height: 1px;
-  background-color: #000;
+  background-color: #141414;
   content: "";
 }
 .c-pagination__item-link:not(.isActive):hover {
-  background: #000;
+  background: #141414;
   color: #fff;
 }
 .c-pagination__item-link:not(.isActive):hover .c-pagination__arrow {
@@ -1113,7 +1275,7 @@ body {
   width: 260px !important;
   margin-top: 90px !important;
   padding: 4px 0 !important;
-  border: 1px solid #000 !important;
+  border: 1px solid #141414 !important;
   border-radius: 20px !important;
   background-color: transparent !important;
 }
@@ -1126,7 +1288,7 @@ body {
 }
 
 #sb_instagram .sbi_load_btn .sbi_btn_text {
-  color: #000;
+  color: #141414;
   font-size: 1.25rem;
 }
 @media only screen and (max-width: 768px) {
@@ -1711,7 +1873,7 @@ body {
 }
 .p-topics-detail__heading {
   margin-top: 70px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #141414;
 }
 .p-topics-detail__date {
   margin-top: 25px;
