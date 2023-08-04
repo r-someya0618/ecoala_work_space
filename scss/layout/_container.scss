@@ -10,6 +10,9 @@
   position: relative;
   max-width: 1232px;
   margin: 0 auto;
+  &--middle {
+    max-width: 1532px;
+  }
   &--wide {
     max-width: 1632px;
   }

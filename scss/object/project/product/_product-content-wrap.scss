@@ -1,0 +1,6 @@
+.p-product-content-wrap {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}

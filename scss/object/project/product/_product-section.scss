@@ -1,0 +1,93 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-product-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  &--concept {
+    @include tablet {
+      margin-top: 55px;
+    }
+    margin-top: 150px;
+    background-image: url(./assets/images/product/product_concept_bg_pc.png);
+    @include tablet {
+      background-image: url(./assets/images/product/product_concept_bg_sp.png);
+    }
+  }
+  &--feature {
+    background-image: url(./assets/images/product/product_feature_bg_pc.png);
+    @include tablet {
+      background-image: url(./assets/images/product/product_feature_bg_sp.png);
+    }
+  }
+  &--design {
+    background-image: url(./assets/images/product/product_design_bg_pc.png);
+    @include tablet {
+      background-image: url(./assets/images/product/product_design_bg_sp.png);
+    }
+  }
+  &--nozzle {
+    background-image: url(./assets/images/product/product_nozzle_bg_pc.png);
+    @include tablet {
+      background-image: url(./assets/images/product/product_nozzle_bg_sp.png);
+    }
+  }
+  &--spec {
+    background-image: url(./assets/images/product/product_spec_bg_pc.png);
+    @include tablet {
+      background-image: url(./assets/images/product/product_spec_bg_sp.png);
+    }
+  }
+  &__container {
+    display: flex;
+    padding: 0 32px;
+    @include tablet {
+      padding: 0 32px;
+      min-height: 131.6vw;
+      align-items: flex-end;
+    }
+    &--inner-right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__container-inner {
+    width: 640px;
+    padding-top: 145px;
+    padding-bottom: 138px;
+    @include tablet {
+      width: 100%;
+      padding-top: 0;
+      padding-bottom: 37.5px;
+    }
+  }
+
+  &__container-title {
+    @include font-r;
+    color: $white_color;
+    line-height: 1.57;
+  }
+
+  &__container-txt {
+    @include font-r;
+    margin-top: 80px;
+    color: $white_color;
+    line-height: 2;
+    @include tablet {
+      margin-top: 40px;
+      letter-spacing: 1.25px;
+    }
+  }
+  &__container-button {
+    @include font-e;
+    width: 260px;
+    margin-top: 65px;
+    background: $white_color;
+    @include tablet {
+      width: 130px;
+      margin-top: 34px;
+    }
+  }
+}

@@ -68,6 +68,7 @@ jQuery(function ($) {
       });
     }
   });
+
   // navのactive切り替え;
   $('.p-product-nav__list-item').on('click', function () {
     $('.p-product-nav__list-item').removeClass('is-active');
@@ -78,11 +79,13 @@ jQuery(function ($) {
     changeProductKeyVisual(dataName);
     // SPインジケータの変更
     changeIndicator(index);
+    // コンテンツの切り替え
+    changeContents(dataName);
   });
 
   function changeProductKeyVisual(dataName) {
     const kvElms = $('.p-product-kv__item');
-    $('.p-product-kv__item').removeClass('is-active');
+    kvElms.removeClass('is-active');
     kvElms.each((_, elem) => {
       if ($(elem).data().kv === dataName) {
         $(elem).addClass('is-active');
@@ -95,6 +98,16 @@ jQuery(function ($) {
     const barPosition = index * barWidth;
     // インジケータバー
     $('.c-nav-indicator__bar').css('margin-left', barPosition + 'px');
+  }
+
+  function changeContents(dataName) {
+    const contents = $('.p-product-content-wrap');
+    contents.removeClass('is-active');
+    contents.each((_, elem) => {
+      if ($(elem).data().sectionName === dataName) {
+        $(elem).addClass('is-active');
+      }
+    });
   }
 
   if ($('body').hasClass('home')) {
