@@ -2,3 +2,173 @@
 @use "../foundation/_font" as *;
 @use "../foundation/_variables" as *;
 @use "../foundation/_mixin" as *;
+
+.footer {
+    background: $black_color;
+    padding: clamp(40px, 4vw, 120px);
+    min-width: 375px;
+
+    @include common-rwd {
+        padding: clamp(20px, 14vw, 100px) clamp(10px, 8vw, 60px);
+    }
+
+    &__container {
+        display: flex;
+
+        @include common-rwd {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__left {
+        width: 40%;
+        margin-right: 40px;
+
+        @include common-rwd {
+            width: 100%;
+            order: 1;
+            margin-right: 0;
+        }
+        
+        &--logo {
+            margin-bottom: 200px;
+
+            @include common-rwd {
+                display: none;
+            }
+
+            a {
+                transition: $opacity-transition;
+    
+                &:hover {
+                    opacity: $opacity-hover;
+                }
+
+                img {
+                    width: 388px;
+                    height: auto;
+                }
+            }
+        }
+        &--sns {
+            @include common-rwd {
+                text-align: center;
+            }
+
+            a {
+                margin-right: 30px;
+                transition: $opacity-transition;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+    
+                &:hover {
+                    opacity: $opacity-hover;
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+
+        @include common-rwd {
+            width: 100%;
+        }
+
+        &--top, &--btm {
+            display: flex;
+            width: 100%;
+
+            @include common-rwd {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    &__link {
+        width: 245px;
+        margin-right: clamp(20px, 2vw, 80px);
+
+        @include common-rwd {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--e {
+            @include font-e;
+        }
+    }
+
+    &__title {
+        font-size: clamp(16px, 2vw, 20px);
+        color: $gray_color;
+        border-bottom: 2px solid $gray_color;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+
+        @include common-rwd {
+            font-size: clamp(18px, 4.5vw, 32px);
+        }
+    }
+
+    &__child-list {
+        margin-bottom: 65px;
+
+        @include common-rwd {
+            margin-bottom: clamp(24px, 11vw, 80px);
+        }
+
+        > li {
+            > a {
+                display: inline-block;
+                font-size: clamp(12px, 1.3vw, 16px);
+                color: $gray_color;
+                margin-bottom: 18px;
+                transition: color .3s;
+
+                &:hover {
+                    color: $white_color;
+                }
+
+                @include common-rwd {
+                    font-size: clamp(14px, 3.2vw, 23px);
+                }
+            }
+        }
+    }
+
+    &__special-link {
+        display: flex;
+        color: $gray_color;
+        border: 1px solid $gray_color;
+        align-items: center;
+        justify-content: center;
+        height: 74px;
+        transition: color .3s, border .3s;
+
+        &:hover {
+            border: 1px solid $white_color;
+            color: $white_color;
+        }
+
+        @include common-rwd {
+            width: 60%;
+            min-width: 220px;
+            font-size: clamp(16px, 3.5vw, 26px);
+            margin: 0 auto clamp(24px, 11vw, 80px);
+        }
+    }
+}

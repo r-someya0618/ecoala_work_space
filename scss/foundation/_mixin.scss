@@ -40,7 +40,7 @@
         @content;
     }
 }
-@mixin header-rwd {
+@mixin common-rwd {
     @media only screen and (max-width: 1180px) {
         @content;
     }

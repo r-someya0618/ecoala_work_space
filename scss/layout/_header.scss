@@ -8,10 +8,10 @@
 body {
     margin: 0;
     @include font-m();
-    color: #141414;
+    color: $black_color;
 
     &.noscroll {
-        @include header-rwd {
+        @include common-rwd {
             overflow-y: hidden;
         }
     }
@@ -22,14 +22,14 @@ body {
     min-width: 375px;
     height: 93px;
     display: flex;
-    color: white;
-    background: #000;
+    color: $white_color;
+    background: $black_color;
     justify-content: space-between;
     top: 0;
     left: 0;
     z-index: 10;
 
-    @include header-rwd {
+    @include common-rwd {
         height: 100px;
     }
 
@@ -42,7 +42,7 @@ body {
             margin-left: 91px;
         }
 
-        @include header-rwd {
+        @include common-rwd {
             margin-left: calc(-1 * clamp(20px, 4vw, 50px) - 37px);
             justify-content: center;
             width: 100%;
@@ -52,13 +52,18 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: $opacity-transition;
+
+            &:hover {
+                opacity: $opacity-hover;
+            }
 
             > img {
                 width: 100%;
                 max-width: 268px;
                 height: auto;
 
-                @include header-rwd {
+                @include common-rwd {
                     width: 70%;
                     max-width: 304px;
                 }
@@ -69,7 +74,7 @@ body {
     &__sp {
         display: none;
     
-        @include header-rwd {
+        @include common-rwd {
             display: flex;
             align-items: center;
             margin-left: clamp(20px, 4vw, 50px);
@@ -79,7 +84,7 @@ body {
     &__pc {
         display: block;
 
-        @include header-rwd {
+        @include common-rwd {
             display: none;
         }
     }
@@ -111,19 +116,19 @@ body {
                 }
 
                 &:hover > a {
-                    border-bottom: 1px solid white;
+                    border-bottom: 1px solid $white_color;
                 }
 
                 > a {
-                    color: white;
+                    color: $white_color;
                     text-decoration: none;
-                    border-bottom: 1px solid #000;
+                    border-bottom: 1px solid $black_color;
                     transition: all .3s;
                     vertical-align: -webkit-baseline-middle;
                     font-size: clamp(16px, 1.3vw, 22px);
 
                     &:hover{
-                        border-bottom: 1px solid white;
+                        border-bottom: 1px solid $white_color;
                     }
                 }
 
@@ -152,16 +157,16 @@ body {
                         align-items: center;
 
                         &:nth-child(n+2) {
-                            border-top: 1px solid #141414;
+                            border-top: 1px solid $black_color;
                         }
 
                         > a {
-                            color: #141414;
+                            color: $black_color;
                             text-decoration: none;
                             font-size: clamp(14px, 1vw, 16px);
 
                             &:hover {
-                                color: white;
+                                color: $white_color;
                             }
                         }
                     }
@@ -182,7 +187,7 @@ body {
     }
 
     .header__special-link {
-        color: white;
+        color: $white_color;
         text-decoration: none;
         display: flex;
         height: 100%;
@@ -205,17 +210,17 @@ body {
     }
 
     .header__humberger {
-        border-top: 3px solid white;
+        border-top: 3px solid $white_color;
         cursor: pointer;
         display: inline-block;
         height: 30px;
         position: relative;
-        transition: transform 0.3s, opacity 0.5s;
+        transition: transform 0.3s, $opacity-transition;
         width: 37px;
         z-index: 1;
 
         &::before, &::after {
-            background: white;
+            background: $white_color;
             content: "";
             display: inline-block;
             height: 3px;
@@ -234,7 +239,7 @@ body {
 .dummy-space {
     height: 93px;
 
-    @include header-rwd {
+    @include common-rwd {
         height: 100px;
     }
 }
@@ -260,7 +265,7 @@ body {
     &:checked ~ .header {
         z-index: 10000;
     
-        @include header-rwd {
+        @include common-rwd {
             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
         }
     }
@@ -268,7 +273,7 @@ body {
 .humberger-menu {
     display: none;
 
-    @include header-rwd {
+    @include common-rwd {
         display: block;
     }
 
@@ -280,14 +285,14 @@ body {
     position: fixed;
     left: 0;
     top: calc(-100vh - 10px);
-    transition: opacity 0.5s;
+    transition: $opacity-transition;
     width: 100%;
     min-width: 375px;
     z-index: 9999;
 
     &__title {
         font-size: clamp(24px, 5.5vw, 28px);
-        border-bottom: 2px solid #141414;
+        border-bottom: 2px solid $black_color;
         margin-bottom: 15px;
     }
 
@@ -298,7 +303,7 @@ body {
         width: 100%;
         height: 80px;
         border-radius: 5px;
-        background: white;
+        background: $white_color;
         font-size: clamp(22px, 5vw, 26px);
         margin: 80px 0;
     }
@@ -312,7 +317,7 @@ body {
                 display: flex;
                 font-size: clamp(20px, 4.5vw, 23px);
                 align-items: center;
-                border-bottom: 1px solid #aaa;
+                border-bottom: 1px solid $gray_color;
                 padding: 0 40px;
                 position: relative;
 

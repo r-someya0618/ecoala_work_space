@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="ja">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 <meta charset="UTF-8">
@@ -29,7 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <label for="humberger-check" class="header__humberger"></label>
     </section>
     <div class="header__img">
-        <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/header_logo.svg" alt="ECOALA" /></a>
+        <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common_logo.svg" alt="ECOALA" /></a>
     </div>
     <section class="header__pc">
         <nav class="header__link">

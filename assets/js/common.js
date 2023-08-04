@@ -427,7 +427,6 @@ jQuery(function ($) {
     });
   }
 
-  console.log('yes');
   const delta = 6;
   let startX;
   let startY;
