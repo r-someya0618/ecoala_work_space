@@ -18,7 +18,6 @@
     @include tablet {
       height: 100vw;
       margin-top: 70px;
-      background-image: url(./assets/images/concept_bg_sp.png);
       background-size: contain;
     }
     height: 750px;
@@ -28,33 +27,33 @@
     background-repeat: no-repeat;
     &--concept {
       @include tablet {
-        background-image: url(./assets/images/concept_bg_sp.png);
+        background-image: url(./assets/images/top/bg/concept_bg_sp.png);
       }
-      background-image: url(./assets/images/concept_bg_pc.png);
+      background-image: url(./assets/images/top/bg/concept_bg_pc.png);
     }
     &--ai-prostyle {
       @include tablet {
-        background-image: url(./assets/images/ai_pro_bg_sp.png);
+        background-image: url(./assets/images/top/bg/ai_pro_bg_sp.png);
       }
-      background-image: url(./assets/images/ai_pro_bg_pc.png);
+      background-image: url(./assets/images/top/bg/ai_pro_bg_pc.png);
     }
     &--dryer {
       @include tablet {
-        background-image: url(./assets/images/dryer_bg_sp.png);
+        background-image: url(./assets/images/top/bg/dryer_bg_sp.png);
       }
-      background-image: url(./assets/images/dryer_bg_pc.png);
+      background-image: url(./assets/images/top/bg/dryer_bg_pc.png);
     }
     &--salon {
       @include tablet {
-        background-image: url(./assets/images/salon_bg_sp.png);
+        background-image: url(./assets/images/top/bg/salon_bg_sp.png);
       }
-      background-image: url(./assets/images/salon_bg_pc.png);
+      background-image: url(./assets/images/top/bg/salon_bg_pc.png);
     }
     &--dealer {
       @include tablet {
-        background-image: url(./assets/images/dealer_bg_sp.png);
+        background-image: url(./assets/images/top/bg/dealer_bg_sp.png);
       }
-      background-image: url(./assets/images/dealer_bg_pc.png);
+      background-image: url(./assets/images/top/bg/dealer_bg_pc.png);
     }
   }
   &__kv-container-inner {

@@ -80,7 +80,7 @@ foreach ($custom_keys as $key) {
         </div>
       </div>
       <div class="p-top-introduction__img-content">
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/product1.png" alt="">
+        <img src="<?php bloginfo('template_url'); ?>/assets/images/top/product/product1.png" alt="">
       </div>
     </section>
   </section>
@@ -139,7 +139,7 @@ foreach ($custom_keys as $key) {
     <section class="p-top-feature-section l-container l-container--wide">
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/thumb1.png" alt="">
+          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb1.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30">
@@ -159,7 +159,7 @@ foreach ($custom_keys as $key) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/thumb2.png" alt="">
+          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb2.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30">
@@ -179,7 +179,7 @@ foreach ($custom_keys as $key) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/thumb3.png" alt="">
+          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb3.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30">
@@ -199,7 +199,7 @@ foreach ($custom_keys as $key) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/thumb4.png" alt="">
+          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb4.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30">
@@ -249,7 +249,7 @@ foreach ($custom_keys as $key) {
     <section class="p-top-feature-section l-container l-container--wide">
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/dryer_thumb1.png" alt="">
+          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb1.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30">
@@ -270,7 +270,7 @@ foreach ($custom_keys as $key) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/dryer_thumb2.png" alt="">
+          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb2.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30">
@@ -289,7 +289,7 @@ foreach ($custom_keys as $key) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/dryer_thumb3.png" alt="">
+          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb3.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30">
@@ -308,7 +308,7 @@ foreach ($custom_keys as $key) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/dryer_thumb4.png" alt="">
+          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb4.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30">

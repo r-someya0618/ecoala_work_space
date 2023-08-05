@@ -1,0 +1,46 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-product-spec {
+  @include tablet {
+    margin-top: 55px;
+    padding: 0 32px;
+  }
+  margin-top: 150px;
+  &__img {
+    @include tablet {
+      width: 100%;
+      padding: 0 16px;
+    }
+    width: 443px;
+    margin: 140px auto 0;
+  }
+  &__table-container {
+    margin-top: 60px;
+    padding: 0 16px;
+  }
+  &__table {
+    width: 100%;
+    border-top: 1px solid $gray5;
+  }
+  &__tr {
+    border-bottom: 1px solid $gray5;
+  }
+  &__th {
+    @include tablet {
+      width: 29%;
+      padding: 10px 0;
+    }
+    width: 190px;
+    padding: 20px 0;
+    font-weight: normal;
+  }
+  &__td {
+    @include tablet {
+      padding: 10px 0;
+    }
+    padding: 20px 0;
+  }
+}

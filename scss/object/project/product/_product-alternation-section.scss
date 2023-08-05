@@ -1,0 +1,93 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-product-alternating-section {
+  @include pc-narrow {
+    margin-top: 55px;
+    margin-bottom: 110px;
+  }
+  margin-top: 150px;
+  margin-bottom: 250px;
+  &__title {
+    line-height: 1.67;
+    letter-spacing: 4.5px;
+  }
+  &__txt {
+    @include pc-narrow {
+      margin-top: 55px;
+    }
+    margin-top: 95px;
+    line-height: 2;
+    letter-spacing: 1.25px;
+  }
+  &__container {
+    display: flex;
+    @include pc-narrow {
+      margin-top: 60px;
+      flex-direction: column;
+    }
+    margin-top: 140px;
+    &--reverse {
+      flex-direction: row-reverse;
+      @include pc-narrow {
+        flex-direction: column;
+      }
+    }
+  }
+  @include pc-narrow {
+    margin-top: 55px;
+    margin-bottom: 110px;
+  }
+  &__txt-content {
+    width: 454px;
+    margin-left: 75px;
+    @include pc-narrow {
+      width: 100%;
+      margin-top: 43px;
+      margin-left: 0;
+      padding: 0 32px;
+    }
+    &--reverse {
+      margin-right: 75px;
+      margin-left: 0;
+    }
+  }
+  &__txt-content-title {
+    line-height: 1.67;
+    letter-spacing: 4.5px;
+    margin-top: -15px;
+  }
+  &__txt-content-body {
+    @include pc-narrow {
+      margin-top: 26px;
+    }
+    margin-top: 60px;
+    line-height: 2;
+    letter-spacing: 1.25px;
+  }
+  &__img-container {
+    width: 52vw;
+    margin-left: calc(50% - 50vw);
+    text-align: right;
+    @include pc-middle {
+      width: 50%;
+      margin-left: 0;
+    }
+    @include pc-narrow {
+      width: 100%;
+    }
+    &--reverse {
+      text-align: left;
+      margin-right: calc(50% - 50vw);
+      margin-left: 0;
+    }
+  }
+  &__note {
+    margin-top: 35px;
+    @include tablet {
+      margin-top: 22px;
+    }
+  }
+}

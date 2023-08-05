@@ -1,0 +1,31 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-product-guarantee {
+  margin-top: 250px;
+  margin-bottom: 250px;
+  @include tablet {
+    margin-top: 55px;
+    margin-bottom: 110px;
+    padding: 0 32px;
+  }
+
+  &__txt {
+    margin-top: 100px;
+    line-height: 2;
+    @include tablet {
+      margin-top: 20px;
+      padding: 0 16px;
+    }
+  }
+  &__contents {
+    margin-top: 110px;
+    height: 100px;
+    background: $gray5;
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+}

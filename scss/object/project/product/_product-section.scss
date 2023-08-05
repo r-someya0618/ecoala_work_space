@@ -11,33 +11,33 @@
       margin-top: 55px;
     }
     margin-top: 150px;
-    background-image: url(./assets/images/product/product_concept_bg_pc.png);
+    background-image: url(./assets/images/product/product_bg/product_concept_bg_pc.png);
     @include tablet {
-      background-image: url(./assets/images/product/product_concept_bg_sp.png);
+      background-image: url(./assets/images/product/product_bg/product_concept_bg_sp.png);
     }
   }
   &--feature {
-    background-image: url(./assets/images/product/product_feature_bg_pc.png);
+    background-image: url(./assets/images/product/product_bg/product_feature_bg_pc.png);
     @include tablet {
-      background-image: url(./assets/images/product/product_feature_bg_sp.png);
+      background-image: url(./assets/images/product/product_bg/product_feature_bg_sp.png);
     }
   }
   &--design {
-    background-image: url(./assets/images/product/product_design_bg_pc.png);
+    background-image: url(./assets/images/product/product_bg/product_design_bg_pc.png);
     @include tablet {
-      background-image: url(./assets/images/product/product_design_bg_sp.png);
+      background-image: url(./assets/images/product/product_bg/product_design_bg_sp.png);
     }
   }
   &--nozzle {
-    background-image: url(./assets/images/product/product_nozzle_bg_pc.png);
+    background-image: url(./assets/images/product/product_bg/product_nozzle_bg_pc.png);
     @include tablet {
-      background-image: url(./assets/images/product/product_nozzle_bg_sp.png);
+      background-image: url(./assets/images/product/product_bg/product_nozzle_bg_sp.png);
     }
   }
   &--spec {
-    background-image: url(./assets/images/product/product_spec_bg_pc.png);
+    background-image: url(./assets/images/product/product_bg/product_spec_bg_pc.png);
     @include tablet {
-      background-image: url(./assets/images/product/product_spec_bg_sp.png);
+      background-image: url(./assets/images/product/product_bg/product_spec_bg_sp.png);
     }
   }
   &__container {
