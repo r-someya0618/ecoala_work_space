@@ -6,6 +6,7 @@
 .p-product-section {
   background-repeat: no-repeat;
   background-size: cover;
+  // AI Pro
   &--concept {
     @include tablet {
       margin-top: 55px;
@@ -38,6 +39,41 @@
     background-image: url(./assets/images/product/product_bg/product_spec_bg_pc.png);
     @include tablet {
       background-image: url(./assets/images/product/product_bg/product_spec_bg_sp.png);
+    }
+  }
+  // ドライヤー
+  &--concept-dryer {
+    @include tablet {
+      margin-top: 55px;
+    }
+    margin-top: 150px;
+    background-image: url(./assets/images/product/product_dryer_bg/product_concept_bg_pc.png);
+    @include tablet {
+      background-image: url(./assets/images/product/product_dryer_bg/product_concept_bg_sp.png);
+    }
+  }
+  &--care {
+    background-image: url(./assets/images/product/product_dryer_bg/product_care_bg_pc.png);
+    @include tablet {
+      background-image: url(./assets/images/product/product_dryer_bg/product_care_bg_sp.png);
+    }
+  }
+  &--mode {
+    background-image: url(./assets/images/product/product_dryer_bg/product_mode_bg_pc.png);
+    @include tablet {
+      background-image: url(./assets/images/product/product_dryer_bg/product_mode_bg_sp.png);
+    }
+  }
+  &--nozzle-dryer {
+    background-image: url(./assets/images/product/product_dryer_bg/product_nozzle_bg_pc.png);
+    @include tablet {
+      background-image: url(./assets/images/product/product_dryer_bg/product_nozzle_bg_sp.png);
+    }
+  }
+  &--spec-dryer {
+    background-image: url(./assets/images/product/product_dryer_bg/product_spec_bg_pc.png);
+    @include tablet {
+      background-image: url(./assets/images/product/product_dryer_bg/product_spec_bg_sp.png);
     }
   }
   &__container {

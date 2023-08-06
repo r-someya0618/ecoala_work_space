@@ -1709,7 +1709,6 @@ body {
   .p-product-guarantee {
     margin-top: 55px;
     margin-bottom: 110px;
-    padding: 0 32px;
   }
 }
 .p-product-guarantee__txt {
@@ -1719,7 +1718,6 @@ body {
 @media only screen and (max-width: 768px) {
   .p-product-guarantee__txt {
     margin-top: 20px;
-    padding: 0 16px;
   }
 }
 .p-product-guarantee__contents {
@@ -1801,7 +1799,7 @@ body {
   }
 }
 .p-product-nav__list-item {
-  padding: 30px;
+  padding: 20px;
   cursor: pointer;
 }
 @media only screen and (max-width: 768px) {
@@ -1826,8 +1824,11 @@ body {
     padding: 15px;
   }
 }
-.p-product-nav__list-item.is-active {
+.p-product-nav__list-item.is-active-ai {
   color: #00a6e1;
+}
+.p-product-nav__list-item.is-active-dryer {
+  color: #ff00a7;
 }
 .p-product-nav__indicator {
   padding: 0 16px;
@@ -1881,6 +1882,52 @@ body {
 @media only screen and (max-width: 768px) {
   .p-product-section--spec {
     background-image: url(./assets/images/product/product_bg/product_spec_bg_sp.png);
+  }
+}
+.p-product-section--concept-dryer {
+  margin-top: 150px;
+  background-image: url(./assets/images/product/product_dryer_bg/product_concept_bg_pc.png);
+}
+@media only screen and (max-width: 768px) {
+  .p-product-section--concept-dryer {
+    margin-top: 55px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .p-product-section--concept-dryer {
+    background-image: url(./assets/images/product/product_dryer_bg/product_concept_bg_sp.png);
+  }
+}
+.p-product-section--care {
+  background-image: url(./assets/images/product/product_dryer_bg/product_care_bg_pc.png);
+}
+@media only screen and (max-width: 768px) {
+  .p-product-section--care {
+    background-image: url(./assets/images/product/product_dryer_bg/product_care_bg_sp.png);
+  }
+}
+.p-product-section--mode {
+  background-image: url(./assets/images/product/product_dryer_bg/product_mode_bg_pc.png);
+}
+@media only screen and (max-width: 768px) {
+  .p-product-section--mode {
+    background-image: url(./assets/images/product/product_dryer_bg/product_mode_bg_sp.png);
+  }
+}
+.p-product-section--nozzle-dryer {
+  background-image: url(./assets/images/product/product_dryer_bg/product_nozzle_bg_pc.png);
+}
+@media only screen and (max-width: 768px) {
+  .p-product-section--nozzle-dryer {
+    background-image: url(./assets/images/product/product_dryer_bg/product_nozzle_bg_sp.png);
+  }
+}
+.p-product-section--spec-dryer {
+  background-image: url(./assets/images/product/product_dryer_bg/product_spec_bg_pc.png);
+}
+@media only screen and (max-width: 768px) {
+  .p-product-section--spec-dryer {
+    background-image: url(./assets/images/product/product_dryer_bg/product_spec_bg_sp.png);
   }
 }
 .p-product-section__container {
@@ -1951,6 +1998,7 @@ body {
 .p-product-spec__img {
   width: 443px;
   margin: 140px auto 0;
+  text-align: center;
 }
 @media only screen and (max-width: 768px) {
   .p-product-spec__img {
@@ -2060,8 +2108,6 @@ body {
 }
 .p-product-users-voice__card-thumb {
   width: 100%;
-  height: 61.46%;
-  object-fit: cover;
 }
 @media only screen and (max-width: 1180px) {
   .p-product-users-voice__card-thumb {
@@ -2070,6 +2116,8 @@ body {
 }
 .p-product-users-voice__card-thumb img {
   width: 100%;
+  max-height: 252px;
+  object-fit: cover;
 }
 .p-product-users-voice__card-body {
   padding: 10.46% 11.7%;
@@ -3035,6 +3083,15 @@ body {
 @media only screen and (max-width: 768px) {
   .sp-flex {
     display: flex !important;
+  }
+}
+
+.pc-inline {
+  display: inline !important;
+}
+@media only screen and (max-width: 768px) {
+  .pc-inline {
+    display: none !important;
   }
 }
 

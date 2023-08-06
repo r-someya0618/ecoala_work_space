@@ -33,7 +33,7 @@
     }
   }
   &__list-item {
-    padding: 30px;
+    padding: 20px;
     @include tablet {
       white-space: nowrap;
       padding: 15px;
@@ -51,8 +51,11 @@
         padding: 15px;
       }
     }
-    &.is-active {
+    &.is-active-ai {
       color: $active-blue;
+    }
+    &.is-active-dryer {
+      color: $active-pink;
     }
   }
   &__indicator {

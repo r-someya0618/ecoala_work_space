@@ -70,9 +70,11 @@ jQuery(function ($) {
   });
 
   // navのactive切り替え;
+  const productType = $('main').data().product;
   $('.p-product-nav__list-item').on('click', function () {
-    $('.p-product-nav__list-item').removeClass('is-active');
-    $(this).addClass('is-active');
+    const selector = productType === 'dryer' ? 'is-active-dryer' : 'is-active-ai';
+    $('.p-product-nav__list-item').removeClass(selector);
+    $(this).addClass(selector);
     const dataName = $(this).data('list-id');
     const index = $(this).index();
     // TOP画像切替

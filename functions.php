@@ -7,3 +7,14 @@
   $html = preg_replace( '/class=[\'"]([^\'"]+)[\'"]/i', '', $html );
   return $html;
   }
+
+  // 固定ページでエディタを非表示にする設定
+  add_filter('use_block_editor_for_post',function($use_block_editor,$post){
+    if($post->post_type==='page'){
+      if(in_array($post->post_name,['quick_hair_dryer','ai_pro_style'])){
+        remove_post_type_support('page','editor');
+        return false;
+      }
+    }
+    return $use_block_editor;
+  },10,2);

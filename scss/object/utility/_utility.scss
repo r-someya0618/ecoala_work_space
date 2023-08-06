@@ -35,6 +35,14 @@
   }
 }
 
+.pc-inline {
+  display: inline !important;
+
+  @include tablet {
+    display: none !important;
+  }
+}
+
 .pc-inbl {
   display: inline-block !important;
 

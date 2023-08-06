@@ -9,7 +9,6 @@
   @include tablet {
     margin-top: 55px;
     margin-bottom: 110px;
-    padding: 0 32px;
   }
 
   &__txt {
@@ -17,7 +16,6 @@
     line-height: 2;
     @include tablet {
       margin-top: 20px;
-      padding: 0 16px;
     }
   }
   &__contents {
