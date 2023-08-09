@@ -10,6 +10,9 @@ $page_id = $page_obj->ID;
 $custom_keys = get_post_custom_keys($page_id);
 $img_keys = [];
 $img_imgs = [];
+// TODO 画像が存在しない場合を考慮する修正
+// カスタムフィールドを見直す
+
 // スライダー画像のPCとSPの組数を算出するための配列を作成
 foreach ($custom_keys as $key) {
   if (preg_match('/^(pc|sp)_slider_img/', $key)) {

@@ -38,6 +38,12 @@
     }
     font-size: rem(78);
   }
+  &--dealer-intro-card {
+    @include tablet {
+      font-size: rem(13);
+    }
+    font-size: rem(40);
+  }
   &--center {
     text-align: center;
   }

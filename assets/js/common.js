@@ -47,6 +47,7 @@ jQuery(function ($) {
       $('body').removeClass('noscroll');
     }
   });
+
   $('.slider').slick({
     autoplay: true, //自動再生する
     autoplaySpeed: 4000, //自動再生するスピード 4秒
@@ -108,6 +109,111 @@ jQuery(function ($) {
     contents.each((_, elem) => {
       if ($(elem).data().sectionName === dataName) {
         $(elem).addClass('is-active');
+      }
+    });
+  }
+
+  changeSliderImage();
+
+  function changeSliderImage() {
+    let downCount = 0;
+    let upCount = 0;
+
+    // dealer スライダー
+    $('.p-dealer-tobe__slider-counter-item').on('click', function () {
+      const counterItem = $('.p-dealer-tobe__slider-counter-item');
+      const counterLine = $('.p-dealer-tobe__slider-counter-item-line');
+      const sliderItem = $('.p-dealer-tobe__slider-item');
+      // is-activeを外す
+      counterItem.removeClass('is-active');
+      counterLine.removeClass('is-active');
+      sliderItem.removeClass('is-active');
+      const index = counterItem.index($(this));
+      $(this).addClass('is-active');
+
+      $(
+        `.p-dealer-tobe__slider-counter-item-line[data-slider-id=${index + 1}]`
+      ).addClass('is-active');
+
+      $(`.p-dealer-tobe__slider-item[data-slider-id=${index + 1}]`).addClass(
+        'is-active'
+      );
+    });
+
+    const mouseWheelEvent =
+      'onwheel' in document
+        ? 'wheel'
+        : 'onmousewheel' in document
+        ? 'mousewheel'
+        : 'DOMMouseScroll';
+
+    $('.p-dealer-tobe__slider-item').on(mouseWheelEvent, function (e) {
+      e.preventDefault();
+      const delta = e.originalEvent.deltaY
+        ? -e.originalEvent.deltaY
+        : e.originalEvent.wheelDelta
+        ? e.originalEvent.wheelDelta
+        : -e.originalEvent.detail;
+
+      if (delta < 0) {
+        if (downCount > 30) {
+          const counterActiveItem = $(
+            '.p-dealer-tobe__slider-counter-item.is-active'
+          );
+          const counterItem = $('.p-dealer-tobe__slider-counter-item');
+          const counterLine = $('.p-dealer-tobe__slider-counter-item-line');
+          const sliderItem = $('.p-dealer-tobe__slider-item');
+          const sliderId = counterActiveItem.data('slider-id');
+          if (sliderId < 5) {
+            // is-activeを外す
+            counterItem.removeClass('is-active');
+            counterLine.removeClass('is-active');
+            sliderItem.removeClass('is-active');
+            $(
+              `.p-dealer-tobe__slider-counter-item[data-slider-id=${sliderId + 1}]`
+            ).addClass('is-active');
+            $(
+              `.p-dealer-tobe__slider-counter-item-line[data-slider-id=${
+                sliderId + 1
+              }]`
+            ).addClass('is-active');
+
+            $(
+              `.p-dealer-tobe__slider-item[data-slider-id=${sliderId + 1}]`
+            ).addClass('is-active');
+          }
+          downCount = 0;
+        }
+        downCount++;
+      } else if (delta > 0) {
+        if (upCount > 30) {
+          const counterActiveItem = $(
+            '.p-dealer-tobe__slider-counter-item.is-active'
+          );
+          const counterItem = $('.p-dealer-tobe__slider-counter-item');
+          const counterLine = $('.p-dealer-tobe__slider-counter-item-line');
+          const sliderItem = $('.p-dealer-tobe__slider-item');
+          const sliderId = counterActiveItem.data('slider-id');
+          if (sliderId > 1) {
+            counterItem.removeClass('is-active');
+            counterLine.removeClass('is-active');
+            sliderItem.removeClass('is-active');
+            $(
+              `.p-dealer-tobe__slider-counter-item[data-slider-id=${sliderId - 1}]`
+            ).addClass('is-active');
+            $(
+              `.p-dealer-tobe__slider-counter-item-line[data-slider-id=${
+                sliderId - 1
+              }]`
+            ).addClass('is-active');
+
+            $(
+              `.p-dealer-tobe__slider-item[data-slider-id=${sliderId - 1}]`
+            ).addClass('is-active');
+            upCount = 0;
+          }
+        }
+        upCount++;
       }
     });
   }
