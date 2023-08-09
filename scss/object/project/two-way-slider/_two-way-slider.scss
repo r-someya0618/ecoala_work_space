@@ -1,0 +1,183 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-two-way-slider {
+  // カウンタのレイアウト
+  &__counter-container {
+    @include tablet {
+      width: 21.42%;
+    }
+    display: flex;
+    align-items: center;
+  }
+  // カウンターの幅
+  &__counter {
+    @include tablet {
+      width: 100%;
+      height: 240px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+    height: 612px;
+  }
+  // カウンター
+  &__counter-item {
+    @include tablet {
+      width: 25px;
+      height: 25px;
+      font-size: rem(7.5);
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    background-color: $white_color;
+    color: $black_color;
+    font-size: rem(15);
+    cursor: pointer;
+    &.is-active {
+      @include tablet {
+        width: 35px;
+        height: 35px;
+        font-size: rem(13);
+      }
+      width: 90px;
+      height: 90px;
+      background-color: $black_color;
+      color: $white_color;
+      font-size: rem(25);
+    }
+  }
+  // カウンター間のライン
+  &__counter-item-line {
+    @include tablet {
+      height: 20px;
+    }
+    height: 64px;
+    &.is-active::after {
+      @include tablet {
+        height: 20px;
+      }
+      display: block;
+      width: 1px;
+      height: 64px;
+      background-color: $black_color;
+      content: '';
+    }
+  }
+
+  // スライダー本体レイアウト
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @include pc-middle {
+      padding: 0 32px;
+    }
+    @include tablet {
+      padding: 0;
+    }
+  }
+  // 各スライダー
+  &__item {
+    @include tablet {
+      width: 78.5%;
+      height: auto;
+      margin-top: 16px;
+      padding: 0;
+      background-color: inherit;
+    }
+    display: none;
+    justify-content: space-between;
+    position: relative;
+    width: 1025px;
+    height: 700px;
+    margin-left: 32px;
+    padding: 20px;
+    background-color: $white_color;
+    &.is-active {
+      @include tablet {
+        display: block;
+        width: 100%;
+        padding-right: 32px;
+      }
+      display: flex;
+    }
+  }
+  // スライダー画像コンテンツ
+  &__img-content {
+    @include pc-middle {
+      display: flex;
+      align-items: center;
+      width: 50%;
+    }
+    @include tablet {
+      width: 100%;
+      height: auto;
+      padding: 30px 40px 50px 40px;
+      background-color: $white_color;
+    }
+    width: 610px;
+  }
+  // スライダーテキストコンテンツ
+  &__txt-content {
+    @include pc-middle {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 50%;
+    }
+    @include tablet {
+      position: relative;
+      top: -25px;
+      left: 0;
+      transform: none;
+      width: 100%;
+    }
+    position: absolute;
+    top: 273px;
+    right: -150px;
+    width: 47.7%;
+  }
+  // スライダー番号画像
+  &__item-num {
+    @include pc-narrow {
+      width: 120px;
+    }
+    @include tablet {
+      width: 70px;
+      margin: 0 16px;
+    }
+    width: 195px;
+  }
+  &__item-title {
+    @include pc-middle {
+      margin-right: 32px;
+    }
+    @include tablet {
+      width: 100%;
+      margin-top: 16px;
+      padding: 0 16px;
+    }
+    margin-top: 50px;
+    line-height: 1.83;
+  }
+  &__item-txt {
+    @include pc-middle {
+      margin-right: 32px;
+    }
+    @include tablet {
+      width: 100%;
+      margin-top: 16px;
+      padding: 0 16px;
+    }
+    margin-top: 20px;
+    line-height: 1.85;
+  }
+}

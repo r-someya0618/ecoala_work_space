@@ -54,7 +54,7 @@ jQuery(function ($) {
     dots: true, //ドット部分を表示する
   });
 
-  // PCのみ
+  // PCのみ;
   $(window).on('load resize', function () {
     const windowWidth = window.innerWidth;
     if (windowWidth > 768) {
@@ -113,17 +113,17 @@ jQuery(function ($) {
     });
   }
 
-  changeSliderImage();
+  twoWaySlider();
 
-  function changeSliderImage() {
+  function twoWaySlider() {
+    const minScroll = 20;
     let downCount = 0;
     let upCount = 0;
-
-    // dealer スライダー
-    $('.p-dealer-tobe__slider-counter-item').on('click', function () {
-      const counterItem = $('.p-dealer-tobe__slider-counter-item');
-      const counterLine = $('.p-dealer-tobe__slider-counter-item-line');
-      const sliderItem = $('.p-dealer-tobe__slider-item');
+    $('.p-two-way-slider__counter-item').on('click', function () {
+      console.log('click');
+      const counterItem = $('.p-two-way-slider__counter-item');
+      const counterLine = $('.p-two-way-slider__counter-item-line');
+      const sliderItem = $('.p-two-way-slider__item');
       // is-activeを外す
       counterItem.removeClass('is-active');
       counterLine.removeClass('is-active');
@@ -132,14 +132,15 @@ jQuery(function ($) {
       $(this).addClass('is-active');
 
       $(
-        `.p-dealer-tobe__slider-counter-item-line[data-slider-id=${index + 1}]`
+        `.p-two-way-slider__counter-item-line[data-slider-id=${index + 1}]`
       ).addClass('is-active');
 
-      $(`.p-dealer-tobe__slider-item[data-slider-id=${index + 1}]`).addClass(
+      $(`.p-two-way-slider__item[data-slider-id=${index + 1}]`).addClass(
         'is-active'
       );
     });
 
+    // PC用
     const mouseWheelEvent =
       'onwheel' in document
         ? 'wheel'
@@ -147,7 +148,7 @@ jQuery(function ($) {
         ? 'mousewheel'
         : 'DOMMouseScroll';
 
-    $('.p-dealer-tobe__slider-item').on(mouseWheelEvent, function (e) {
+    $('.p-two-way-slider__item').on(mouseWheelEvent, function (e) {
       e.preventDefault();
       const delta = e.originalEvent.deltaY
         ? -e.originalEvent.deltaY
@@ -156,66 +157,115 @@ jQuery(function ($) {
         : -e.originalEvent.detail;
 
       if (delta < 0) {
-        if (downCount > 30) {
-          const counterActiveItem = $(
-            '.p-dealer-tobe__slider-counter-item.is-active'
-          );
-          const counterItem = $('.p-dealer-tobe__slider-counter-item');
-          const counterLine = $('.p-dealer-tobe__slider-counter-item-line');
-          const sliderItem = $('.p-dealer-tobe__slider-item');
-          const sliderId = counterActiveItem.data('slider-id');
-          if (sliderId < 5) {
-            // is-activeを外す
-            counterItem.removeClass('is-active');
-            counterLine.removeClass('is-active');
-            sliderItem.removeClass('is-active');
-            $(
-              `.p-dealer-tobe__slider-counter-item[data-slider-id=${sliderId + 1}]`
-            ).addClass('is-active');
-            $(
-              `.p-dealer-tobe__slider-counter-item-line[data-slider-id=${
-                sliderId + 1
-              }]`
-            ).addClass('is-active');
-
-            $(
-              `.p-dealer-tobe__slider-item[data-slider-id=${sliderId + 1}]`
-            ).addClass('is-active');
-          }
-          downCount = 0;
+        if (downCount > minScroll) {
+          downCount = execChangeSlide(true, downCount);
         }
         downCount++;
       } else if (delta > 0) {
-        if (upCount > 30) {
-          const counterActiveItem = $(
-            '.p-dealer-tobe__slider-counter-item.is-active'
-          );
-          const counterItem = $('.p-dealer-tobe__slider-counter-item');
-          const counterLine = $('.p-dealer-tobe__slider-counter-item-line');
-          const sliderItem = $('.p-dealer-tobe__slider-item');
-          const sliderId = counterActiveItem.data('slider-id');
-          if (sliderId > 1) {
-            counterItem.removeClass('is-active');
-            counterLine.removeClass('is-active');
-            sliderItem.removeClass('is-active');
-            $(
-              `.p-dealer-tobe__slider-counter-item[data-slider-id=${sliderId - 1}]`
-            ).addClass('is-active');
-            $(
-              `.p-dealer-tobe__slider-counter-item-line[data-slider-id=${
-                sliderId - 1
-              }]`
-            ).addClass('is-active');
-
-            $(
-              `.p-dealer-tobe__slider-item[data-slider-id=${sliderId - 1}]`
-            ).addClass('is-active');
-            upCount = 0;
-          }
+        if (upCount > minScroll) {
+          upCount = execChangeSlide(false, upCount);
         }
         upCount++;
       }
     });
+  }
+
+  twoWaySliderSp();
+  function twoWaySliderSp() {
+    // スマホ用
+    // タップ時の誤動作を防ぐためのスワイプ時の処理を実行しない最小距離
+    const minimumDistance = 130;
+    // スワイプ開始時の座標
+    let startX = 0;
+    let startY = 0;
+    // スワイプ終了時の座標
+    let endX = 0;
+    let endY = 0;
+
+    const target = $('#js-two-way-slider');
+    // 解説①：移動を開始した座標を取得
+    target.on('touchstart', (e) => {
+      e.preventDefault();
+      startX = e.touches[0].pageX;
+      startY = e.touches[0].pageY;
+    });
+
+    // 解説②：移動した座標を取得
+    target.on('touchmove', (e) => {
+      e.preventDefault();
+      endX = e.changedTouches[0].pageX;
+      endY = e.changedTouches[0].pageY;
+    });
+
+    // 解説③：移動距離から左右or上下の処理を実行
+    target.on('touchend', (e) => {
+      // スワイプ終了時にx軸とy軸の移動量を取得
+      // 左スワイプに対応するためMath.abs()で+に変換
+      e.preventDefault();
+      const distanceX = Math.abs(endX - startX);
+      const distanceY = Math.abs(endY - startY);
+
+      // 上下のスワイプ距離の方が左右より長い && 小さなスワイプは検知しないようにする && 下から上のスワイプ
+      if (distanceX < distanceY && distanceY > minimumDistance && startY > endY) {
+        execChangeSlide();
+      } else if (
+        distanceX < distanceY &&
+        distanceY > minimumDistance &&
+        startY < endY
+      ) {
+        execChangeSlide(false);
+      }
+    });
+  }
+
+  function execChangeSlide(isCountUp = true, count) {
+    const counterActiveItem = $('.p-two-way-slider__counter-item.is-active');
+    const counterItem = $('.p-two-way-slider__counter-item');
+    const counterLine = $('.p-two-way-slider__counter-item-line');
+    const sliderItem = $('.p-two-way-slider__item');
+    const sliderId = counterActiveItem.data('slider-id');
+    if (isCountUp) {
+      if (sliderId < 5) {
+        // is-activeを外す
+        counterItem.removeClass('is-active');
+        counterLine.removeClass('is-active');
+        sliderItem.removeClass('is-active');
+        $(
+          `.p-two-way-slider__counter-item[data-slider-id=${sliderId + 1}]`
+        ).addClass('is-active');
+        $(
+          `.p-two-way-slider__counter-item-line[data-slider-id=${sliderId + 1}]`
+        ).addClass('is-active');
+
+        $(`.p-two-way-slider__item[data-slider-id=${sliderId + 1}]`).addClass(
+          'is-active'
+        );
+        if (count) {
+          count = 0;
+        }
+      }
+      return count;
+    } else {
+      if (sliderId > 1) {
+        counterItem.removeClass('is-active');
+        counterLine.removeClass('is-active');
+        sliderItem.removeClass('is-active');
+        $(
+          `.p-two-way-slider__counter-item[data-slider-id=${sliderId - 1}]`
+        ).addClass('is-active');
+        $(
+          `.p-two-way-slider__counter-item-line[data-slider-id=${sliderId - 1}]`
+        ).addClass('is-active');
+
+        $(`.p-two-way-slider__item[data-slider-id=${sliderId - 1}]`).addClass(
+          'is-active'
+        );
+        if (count) {
+          count = 0;
+        }
+      }
+      return count;
+    }
   }
 
   if ($('body').hasClass('home')) {
