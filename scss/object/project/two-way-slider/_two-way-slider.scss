@@ -61,7 +61,7 @@
     }
     height: 64px;
     &.is-active::after {
-      @include tablet {
+      @include pc-narrow {
         height: 20px;
       }
       display: block;
@@ -79,13 +79,13 @@
     @include pc-middle {
       padding: 0 32px;
     }
-    @include tablet {
+    @include pc-narrow {
       padding: 0;
     }
   }
   // 各スライダー
   &__item {
-    @include tablet {
+    @include pc-narrow {
       width: 78.5%;
       height: auto;
       margin-top: 16px;
@@ -101,7 +101,7 @@
     padding: 20px;
     background-color: $white_color;
     &.is-active {
-      @include tablet {
+      @include pc-narrow {
         display: block;
         width: 100%;
         padding-right: 32px;
@@ -116,7 +116,7 @@
       align-items: center;
       width: 50%;
     }
-    @include tablet {
+    @include pc-narrow {
       width: 100%;
       height: auto;
       padding: 30px 40px 50px 40px;
@@ -133,7 +133,7 @@
       transform: translateY(-50%);
       width: 50%;
     }
-    @include tablet {
+    @include pc-narrow {
       position: relative;
       top: -25px;
       left: 0;
@@ -150,7 +150,7 @@
     @include pc-narrow {
       width: 120px;
     }
-    @include tablet {
+    @include pc-narrow {
       width: 70px;
       margin: 0 16px;
     }
@@ -160,7 +160,7 @@
     @include pc-middle {
       margin-right: 32px;
     }
-    @include tablet {
+    @include pc-narrow {
       width: 100%;
       margin-top: 16px;
       padding: 0 16px;
@@ -172,12 +172,50 @@
     @include pc-middle {
       margin-right: 32px;
     }
-    @include tablet {
+    @include pc-narrow {
       width: 100%;
       margin-top: 16px;
       padding: 0 16px;
     }
     margin-top: 20px;
     line-height: 1.85;
+  }
+}
+
+.fadeDownFirst {
+  animation-name: fadeDownFirstAnime;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeDownFirstAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeDownSecond {
+  animation-name: fadeDownSecondAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeDownSecondAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dealer</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <header style="height: 80px; color: white; background-color: #000;">
-      仮Header
-    </header>
-    <main>
+<?php
+/*
+Template Name: dealer
+*/
+?>
+<?php get_header(); ?>
+
+<main>
       <div class="p-dealer-kv">
         <div class="p-dealer-kv__item pc">
-          <img src="./assets/images/dealer/kv/pc_kv_1.png" alt="" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/kv/pc_kv_1.png" alt="" />
         </div>
         <div class="p-dealer-kv__item sp">
-          <img src="./assets/images/dealer/kv/sp_kv_1.png" alt="" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/kv/sp_kv_1.png" alt="" />
         </div>
       </div>
       <section class="p-dealer-introduction l-container">
@@ -51,8 +46,8 @@
           <!--  -->
           <div class="p-dealer-introduction__contents-item">
             <div class="p-dealer-introduction__contents-thumb">
-              <img class="pc" src="./assets/images/dealer/dummy.png" alt="" />
-              <img class="sp" src="./assets/images/dealer/sp_dummy.png" alt="" />
+              <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/dummy.png" alt="" />
+              <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/sp_dummy.png" alt="" />
             </div>
             <div class="p-dealer-introduction__contents-txt">
               <h2
@@ -69,8 +64,8 @@
           <!--  -->
           <div class="p-dealer-introduction__contents-item">
             <div class="p-dealer-introduction__contents-thumb">
-              <img class="pc" src="./assets/images/dealer/dummy.png" alt="" />
-              <img class="sp" src="./assets/images/dealer/sp_dummy.png" alt="" />
+              <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/dummy.png" alt="" />
+              <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/sp_dummy.png" alt="" />
             </div>
             <div class="p-dealer-introduction__contents-txt">
               <h2
@@ -87,8 +82,8 @@
           <!--  -->
           <div class="p-dealer-introduction__contents-item">
             <div class="p-dealer-introduction__contents-thumb">
-              <img class="pc" src="./assets/images/dealer/dummy.png" alt="" />
-              <img class="sp" src="./assets/images/dealer/sp_dummy.png" alt="" />
+              <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/dummy.png" alt="" />
+              <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/sp_dummy.png" alt="" />
             </div>
             <div class="p-dealer-introduction__contents-txt">
               <h2
@@ -173,13 +168,13 @@
               <!-- スライダー本体 1-->
               <div data-slider-id="1" class="p-two-way-slider__item is-active">
                 <div class="p-two-way-slider__img-content fadeDownFirst">
-                  <img src="./assets/images/slider/slider1.png" alt="" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider1.png" alt="" />
                 </div>
                 <div class="p-two-way-slider__txt-content fadeDownSecond">
                   <div class="p-two-way-slider__item-num">
                     <img
                       class="fadeDownFirst"
-                      src="./assets/images/slider/slider_num1.png"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider_num1.png"
                       alt=""
                     />
                   </div>
@@ -198,14 +193,14 @@
               <!-- スライダー本体 2-->
               <div data-slider-id="2" class="p-two-way-slider__item">
                 <div class="p-two-way-slider__img-content fadeDownFirst">
-                  <img src="./assets/images/slider/slider2.png" alt="" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider2.png" alt="" />
                 </div>
                 <div class="p-two-way-slider__txt-content fadeDownSecond">
                   <div class="p-two-way-slider__txt-content-inner">
                     <div class="p-two-way-slider__item-num">
                       <img
                         class="fadeDownFirst"
-                        src="./assets/images/slider/slider_num2.png"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider_num2.png"
                         alt=""
                       />
                     </div>
@@ -224,14 +219,14 @@
               <!-- スライダー本体 3-->
               <div data-slider-id="3" class="p-two-way-slider__item">
                 <div class="p-two-way-slider__img-content fadeDownFirst">
-                  <img src="./assets/images/slider/slider3.png" alt="" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider3.png" alt="" />
                 </div>
                 <div class="p-two-way-slider__txt-content fadeDownSecond">
                   <div class="p-two-way-slider__txt-content-inner">
                     <div class="p-two-way-slider__item-num">
                       <img
                         class="fadeDownFirst"
-                        src="./assets/images/slider/slider_num3.png"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider_num3.png"
                         alt=""
                       />
                     </div>
@@ -252,14 +247,14 @@
                 <div class="p-two-way-slider__img-content">
                   <img
                     class="fadeDownFirst"
-                    src="./assets/images/slider/slider4.png"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider4.png"
                     alt=""
                   />
                 </div>
                 <div class="p-two-way-slider__txt-content fadeDownSecond">
                   <div class="p-two-way-slider__txt-content-inner">
                     <div class="p-two-way-slider__item-num">
-                      <img src="./assets/images/slider/slider_num4.png" alt="" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider_num4.png" alt="" />
                     </div>
                     <div class="p-two-way-slider__item-title c-txt--30">
                       タイトルタイトルタイトル<br />
@@ -278,14 +273,14 @@
                 <div class="p-two-way-slider__img-content">
                   <img
                     class="fadeDownFirst"
-                    src="./assets/images/slider/slider5.png"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider5.png"
                     alt=""
                   />
                 </div>
                 <div class="p-two-way-slider__txt-content fadeDownSecond">
                   <div class="p-two-way-slider__txt-content-inner">
                     <div class="p-two-way-slider__item-num">
-                      <img src="./assets/images/slider/slider_num5.png" alt="" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/slider/slider_num5.png" alt="" />
                     </div>
                     <div class="p-two-way-slider__item-title c-txt--30">
                       タイトルタイトルタイトル<br />
@@ -318,16 +313,9 @@
         <a
           href="mailto:info@example.com"
           class="p-dealer-contact__button c-button c-button--square"
-          >contact</a
+          >CONTACT</a
         >
       </section>
     </main>
-    <footer style="height: 80px; color: white; background-color: #000;">
-      仮footer
-    </footer>
-    <script src="./assets/js/jquery.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
-    <script src="./assets/js/iscroll.js"></script>
-    <script src="./assets/js/common.js"></script>
-  </body>
-</html>
+
+<?php get_footer(); ?>

@@ -85,7 +85,7 @@
   }
   //スライダー大外枠
   &__slider {
-    @include tablet {
+    @include pc-narrow {
       margin-top: 41px;
       padding: 0 16px;
     }

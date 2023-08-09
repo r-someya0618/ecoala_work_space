@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ja">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 <meta charset="UTF-8">
@@ -17,6 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T2CQV7G');</script>
 <!-- End Google Tag Manager -->
 <?php wp_head(); ?>
+
 <script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?rYDuG-ahsMY%3D&box=h6UP-JJPRDk%3D&aa=1&ab=2"></script>
 <script src="https://font.realtype.jp/api/script/v4" data-rt-user="hNl3TcwAbUd8dqe6skl0unKuMFKzApRH"></script>
 </head>
@@ -58,10 +59,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </ul>
                 </li>
             </ul>
-            <a href="" class="header__special-link">サロン・美容師の皆様へ</a>
+            <a href="/dealer/" class="header__special-link">サロン・美容師の皆様へ</a>
         </nav>
     </section>
 </header>
+<a href="/dealer/" class="sp header__sp-specital-link">ー サロン・美容師の皆様へ ー</a>
 <div class="humberger-menu">
         <nav class="humberger-menu__link">
             <ul class="humberger-menu__list">
@@ -99,6 +101,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </ul>
                 </li>
             </ul>
-            <a href="" class="humberger-menu__special-link">サロン・美容師の皆様へ</a>
+            <a href="/dealer/" class="humberger-menu__special-link">サロン・美容師の皆様へ</a>
         </nav>
 </div>

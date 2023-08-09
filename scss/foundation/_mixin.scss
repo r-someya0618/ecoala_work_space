@@ -16,7 +16,7 @@
   }
 }
 @mixin pc-narrow {
-  @media only screen and (max-width: 960px) {
+  @media only screen and (max-width: 1200px) {
     @content;
   }
 }

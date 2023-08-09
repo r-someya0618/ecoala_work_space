@@ -70,22 +70,6 @@ jQuery(function ($) {
     }
   });
 
-  // navのactive切り替え;
-  const productType = $('main').data().product;
-  $('.p-product-nav__list-item').on('click', function () {
-    const selector = productType === 'dryer' ? 'is-active-dryer' : 'is-active-ai';
-    $('.p-product-nav__list-item').removeClass(selector);
-    $(this).addClass(selector);
-    const dataName = $(this).data('list-id');
-    const index = $(this).index();
-    // TOP画像切替
-    changeProductKeyVisual(dataName);
-    // SPインジケータの変更
-    changeIndicator(index);
-    // コンテンツの切り替え
-    changeContents(dataName);
-  });
-
   function changeProductKeyVisual(dataName) {
     const kvElms = $('.p-product-kv__item');
     kvElms.removeClass('is-active');
@@ -113,7 +97,71 @@ jQuery(function ($) {
     });
   }
 
-  twoWaySlider();
+  // navのactive切り替え;
+  const productType = $('main').data().product;
+  $('.p-product-nav__list-item').on('click', function () {
+    const selector = productType === 'dryer' ? 'is-active-dryer' : 'is-active-ai';
+    $('.p-product-nav__list-item').removeClass(selector);
+    $(this).addClass(selector);
+    const dataName = $(this).data('list-id');
+    const index = $(this).index();
+    // TOP画像切替
+    changeProductKeyVisual(dataName);
+    // SPインジケータの変更
+    changeIndicator(index);
+    // コンテンツの切り替え
+    changeContents(dataName);
+  });
+
+  function execChangeSlide(isCountUp = true, count) {
+    const counterActiveItem = $('.p-two-way-slider__counter-item.is-active');
+    const counterItem = $('.p-two-way-slider__counter-item');
+    const counterLine = $('.p-two-way-slider__counter-item-line');
+    const sliderItem = $('.p-two-way-slider__item');
+    const sliderId = counterActiveItem.data('slider-id');
+    if (isCountUp) {
+      if (sliderId < 5) {
+        // is-activeを外す
+        counterItem.removeClass('is-active');
+        counterLine.removeClass('is-active');
+        sliderItem.removeClass('is-active');
+        $(
+          `.p-two-way-slider__counter-item[data-slider-id=${sliderId + 1}]`
+        ).addClass('is-active');
+        $(
+          `.p-two-way-slider__counter-item-line[data-slider-id=${sliderId + 1}]`
+        ).addClass('is-active');
+
+        $(`.p-two-way-slider__item[data-slider-id=${sliderId + 1}]`).addClass(
+          'is-active'
+        );
+        if (count) {
+          count = 0;
+        }
+      }
+      return count;
+    } else {
+      if (sliderId > 1) {
+        counterItem.removeClass('is-active');
+        counterLine.removeClass('is-active');
+        sliderItem.removeClass('is-active');
+        $(
+          `.p-two-way-slider__counter-item[data-slider-id=${sliderId - 1}]`
+        ).addClass('is-active');
+        $(
+          `.p-two-way-slider__counter-item-line[data-slider-id=${sliderId - 1}]`
+        ).addClass('is-active');
+
+        $(`.p-two-way-slider__item[data-slider-id=${sliderId - 1}]`).addClass(
+          'is-active'
+        );
+        if (count) {
+          count = 0;
+        }
+      }
+      return count;
+    }
+  }
 
   function twoWaySlider() {
     const minScroll = 20;
@@ -169,10 +217,9 @@ jQuery(function ($) {
       }
     });
   }
+  twoWaySlider();
 
-  twoWaySliderSp();
   function twoWaySliderSp() {
-    // スマホ用
     // タップ時の誤動作を防ぐためのスワイプ時の処理を実行しない最小距離
     const minimumDistance = 130;
     // スワイプ開始時の座標
@@ -183,21 +230,21 @@ jQuery(function ($) {
     let endY = 0;
 
     const target = $('#js-two-way-slider');
-    // 解説①：移動を開始した座標を取得
+    // 移動を開始した座標を取得
     target.on('touchstart', (e) => {
       e.preventDefault();
       startX = e.touches[0].pageX;
       startY = e.touches[0].pageY;
     });
 
-    // 解説②：移動した座標を取得
+    // 移動した座標を取得
     target.on('touchmove', (e) => {
       e.preventDefault();
       endX = e.changedTouches[0].pageX;
       endY = e.changedTouches[0].pageY;
     });
 
-    // 解説③：移動距離から左右or上下の処理を実行
+    // 移動距離から左右or上下の処理を実行
     target.on('touchend', (e) => {
       // スワイプ終了時にx軸とy軸の移動量を取得
       // 左スワイプに対応するためMath.abs()で+に変換
@@ -217,56 +264,7 @@ jQuery(function ($) {
       }
     });
   }
-
-  function execChangeSlide(isCountUp = true, count) {
-    const counterActiveItem = $('.p-two-way-slider__counter-item.is-active');
-    const counterItem = $('.p-two-way-slider__counter-item');
-    const counterLine = $('.p-two-way-slider__counter-item-line');
-    const sliderItem = $('.p-two-way-slider__item');
-    const sliderId = counterActiveItem.data('slider-id');
-    if (isCountUp) {
-      if (sliderId < 5) {
-        // is-activeを外す
-        counterItem.removeClass('is-active');
-        counterLine.removeClass('is-active');
-        sliderItem.removeClass('is-active');
-        $(
-          `.p-two-way-slider__counter-item[data-slider-id=${sliderId + 1}]`
-        ).addClass('is-active');
-        $(
-          `.p-two-way-slider__counter-item-line[data-slider-id=${sliderId + 1}]`
-        ).addClass('is-active');
-
-        $(`.p-two-way-slider__item[data-slider-id=${sliderId + 1}]`).addClass(
-          'is-active'
-        );
-        if (count) {
-          count = 0;
-        }
-      }
-      return count;
-    } else {
-      if (sliderId > 1) {
-        counterItem.removeClass('is-active');
-        counterLine.removeClass('is-active');
-        sliderItem.removeClass('is-active');
-        $(
-          `.p-two-way-slider__counter-item[data-slider-id=${sliderId - 1}]`
-        ).addClass('is-active');
-        $(
-          `.p-two-way-slider__counter-item-line[data-slider-id=${sliderId - 1}]`
-        ).addClass('is-active');
-
-        $(`.p-two-way-slider__item[data-slider-id=${sliderId - 1}]`).addClass(
-          'is-active'
-        );
-        if (count) {
-          count = 0;
-        }
-      }
-      return count;
-    }
-  }
+  twoWaySliderSp();
 
   if ($('body').hasClass('home')) {
     $('body').addClass('white');
