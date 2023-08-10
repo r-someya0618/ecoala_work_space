@@ -69,6 +69,7 @@ wp_enqueue_script('slick','/wp-content/themes/ecoala_renewal/assets/js/slick.min
 wp_enqueue_script('script','/wp-content/themes/ecoala_renewal/assets/js/common.js', array('jquery'));
 // wp_enqueue_script('topics','/wp-content/themes/ecoala/assets/js/topics.js',array('jquery'));
 ?>
+
 <?php wp_footer(); ?>
 </body>
 
