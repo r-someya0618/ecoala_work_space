@@ -93,7 +93,7 @@ $key_visuals = get_field('kv_dryer');
             「高品質なものを<span class="u-narrow-text--mid">、</span>お求めやすい価格でご提供したい<span class="u-narrow-text--mid">」。</span><br />
             性能の良さはもちろん、スタイリッシュで快適なライフスタイルを提供できる商品を目指しました。
           </p>
-          <div class="p-product-section__container-button c-button c-button--round">
+          <div data-list-id="concept" data-product-section="concept" class="p-product-section__container-button c-button c-button--round">
             Read More
           </div>
         </div>
@@ -111,7 +111,7 @@ $key_visuals = get_field('kv_dryer');
           <p class="p-product-section__container-txt c-txt--25">
             使うたびに髪と頭皮をやさしくケア。ブローの時間があなた専属のサロンへと変わります。
           </p>
-          <div class="p-product-section__container-button c-button c-button--round">
+          <div data-list-id="feature" data-product-section="feature" class="p-product-section__container-button c-button c-button--round">
             Read More
           </div>
         </div>
@@ -129,7 +129,7 @@ $key_visuals = get_field('kv_dryer');
           <p class="p-product-section__container-txt c-txt--25">
             髪や頭皮の状態に合わせて選べる多機能なモードを搭載。髪と頭皮にハリ、コシ、うるおいを。
           </p>
-          <div class="p-product-section__container-button c-button c-button--round">
+          <div data-list-id="design" data-product-section="design" class="p-product-section__container-button c-button c-button--round">
             Read More
           </div>
         </div>
@@ -147,7 +147,7 @@ $key_visuals = get_field('kv_dryer');
           <p class="p-product-section__container-txt c-txt--25">
             富士山溶岩を練り込んだ独自のセラミックフィルターが自然の力を利用して今までにないサラサラのツヤ髪を作り出します。
           </p>
-          <div class="p-product-section__container-button c-button c-button--round">
+          <div data-list-id="nozzle" data-product-section="nozzle" class="p-product-section__container-button c-button c-button--round">
             Read More
           </div>
         </div>
@@ -165,7 +165,7 @@ $key_visuals = get_field('kv_dryer');
           <p class="p-product-section__container-txt c-txt--25">
             長きにわたってご愛顧いただけますよう、エコアラは万が一のトラブルに備えた安心保証を全てのお客様にご提供いたします。
           </p>
-          <div class="p-product-section__container-button c-button c-button--round">
+          <div data-list-id="spec" data-product-section="spec" class="p-product-section__container-button c-button c-button--round">
             Read More
           </div>
         </div>
@@ -700,7 +700,7 @@ $key_visuals = get_field('kv_dryer');
             <tr class="p-product-spec__tr">
               <th class="p-product-spec__th c-txt--20">内容物</th>
               <td class="p-product-spec__td c-txt--20">
-                <?php echo $nozzle_spec['content'] ?>
+                <?php echo $nozzle_spec['contents'] ?>
               </td>
             </tr>
           </tbody>

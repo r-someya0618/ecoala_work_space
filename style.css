@@ -848,6 +848,7 @@ body {
   border: 1px solid #141414;
   color: #141414;
   text-align: center;
+  cursor: pointer;
   font-family: AvenirNextLTPro-Regular, sans-serif;
 }
 .c-button--square {

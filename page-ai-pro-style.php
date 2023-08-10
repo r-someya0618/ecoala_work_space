@@ -95,7 +95,7 @@ $key_visuals = get_field('kv_ai');
           <p class="p-product-section__container-txt c-txt--25">
             頭髪のプロ、熟練美容師と共同開発した新時代のドライヤー。髪や頭皮もお肌のように丁寧なケアができる、未だかつてないドライヤーが誕生しました。
           </p>
-          <div class="p-product-section__container-button c-button c-button--round">
+          <div data-list-id="concept" data-product-section="concept"  class="p-product-section__container-button c-button c-button--round">
             Read More
           </div>
         </div>
@@ -113,7 +113,7 @@ $key_visuals = get_field('kv_ai');
           <p class="p-product-section__container-txt c-txt--25">
             家庭用ドライヤーの域を超えた、プロの美容師も使いやすい高性能・高機能。プロの「あったらいいな」を多数搭載しました。
           </p>
-          <div class="p-product-section__container-button c-button c-button--round">
+          <div data-list-id="feature" data-product-section="feature" class="p-product-section__container-button c-button c-button--round">
             Read More
           </div>
         </div>
@@ -131,7 +131,7 @@ $key_visuals = get_field('kv_ai');
           <p class="p-product-section__container-txt c-txt--25">
             誰でも使いやすいように考え抜かれたUI。最先端のAI技術と自然を感じる木目調のデザインの融合。モダンで上質なプロダクトは世界的アワードで受賞しました。
           </p>
-          <div class="p-product-section__container-button c-button c-button--round">
+          <div data-list-id="design" data-product-section="design" class="p-product-section__container-button c-button c-button--round">
             Read More
           </div>
         </div>
@@ -149,7 +149,7 @@ $key_visuals = get_field('kv_ai');
           <p class="p-product-section__container-txt c-txt--25">
             頭髪のプロ、熟練美容師と共同開発した新時代のドライヤー。髪や頭皮もお肌のように丁寧なケアができる、未だかつてないドライヤーが誕生しました。
           </p>
-          <div class="p-product-section__container-button c-button c-button--round">
+          <div data-list-id="nozzle" data-product-section="nozzle" class="p-product-section__container-button c-button c-button--round">
             Read More
           </div>
         </div>
@@ -168,7 +168,7 @@ $key_visuals = get_field('kv_ai');
           <p class="p-product-section__container-txt c-txt--25">
             長きにわたってご愛顧いただけますよう、エコアラは万が一のトラブルに備えた安心保証を全てのお客様にご提供いたします。
           </p>
-          <div class="p-product-section__container-button c-button c-button--round">
+          <div data-list-id="spec" data-product-section="spec" class="p-product-section__container-button c-button c-button--round">
             Read More
           </div>
         </div>

@@ -10,39 +10,13 @@ $page_id = $page_obj->ID;
 $slider_data = get_field('top_slider');
 $slider_imgs = [];
 
+// スライダー画像の設定のあるものだけを抽出
 foreach($slider_data as $key => $value) {
   if (!$value['slider_img_pc'] || !$value['slider_img_sp']) {
     continue;
   }
   array_push($slider_imgs, $value);
 }
-// var_dump($slider_data['top_slider_10'])
-// $img_keys = [];
-// $img_imgs = [];
-// // TODO 画像が存在しない場合を考慮する修正
-// // カスタムフィールドを見直す
-
-// // スライダー画像のPCとSPの組数を算出するための配列を作成
-// foreach ($custom_keys as $key) {
-//   if (preg_match('/^(pc|sp)_slider_img/', $key)) {
-//     // keyの数字を取得
-//     $num = (int)substr($key, -1);
-//     // 配列にまだない場合は追加する
-//     if (!in_array($num, $img_keys)) {
-//       array_push($img_keys, $num);
-//     }
-//   }
-// }
-// // 画像の組数
-// $img_pare_count = count($img_keys);
-// // リンクを格納
-// foreach ($custom_keys as $key) {
-//   if (preg_match('/^(pc|sp)_slider_img/', $key)) {
-//     $img = [$key => get_field($key)];
-//     $img_imgs = array_merge($img_imgs, $img);
-//   }
-// }
-
 ?>
 
 <main>
@@ -160,7 +134,7 @@ foreach($slider_data as $key => $value) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/ai_pro_style/">Read More</a>
+              <a href="/product/ai_pro_style/?section_id=3">Read More</a>
             </div>
           </dd>
         </dl>
@@ -180,7 +154,7 @@ foreach($slider_data as $key => $value) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/ai_pro_style/">Read More</a>
+              <a href="/product/ai_pro_style/?section_id=4">Read More</a>
             </div>
           </dd>
         </dl>
@@ -200,7 +174,7 @@ foreach($slider_data as $key => $value) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/ai_pro_style/">Read More</a>
+              <a href="/product/ai_pro_style/?section_id=5">Read More</a>
             </div>
           </dd>
         </dl>
@@ -220,7 +194,7 @@ foreach($slider_data as $key => $value) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/ai_pro_style/">Read More</a>
+              <a href="/product/ai_pro_style/?section_id=6">Read More</a>
             </div>
           </dd>
         </dl>
@@ -271,7 +245,7 @@ foreach($slider_data as $key => $value) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/quick_hair_dryer/">Read More</a>
+              <a href="/product/quick_hair_dryer/?section_id=3">Read More</a>
             </div>
           </dd>
         </dl>
@@ -290,7 +264,7 @@ foreach($slider_data as $key => $value) {
             髪や頭皮の状態に合わせて選べる多機能なモードを搭載。
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/quick_hair_dryer/">Read More</a>
+              <a href="/product/quick_hair_dryer/?section_id=4">Read More</a>
             </div>
           </dd>
         </dl>
@@ -309,7 +283,7 @@ foreach($slider_data as $key => $value) {
             自然の力を利用して今までにないサラサラのツヤ髪を作り出します。
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/quick_hair_dryer/">Read More</a>
+              <a href="/product/quick_hair_dryer/?section_id=5">Read More</a>
             </div>
           </dd>
         </dl>
@@ -328,7 +302,7 @@ foreach($slider_data as $key => $value) {
             万が一のトラブルに備えた安心保証を全てのお客様にご提供いたします。
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/quick_hair_dryer/">Read More</a>
+              <a href="/product/quick_hair_dryer/?section_id=6">Read More</a>
             </div>
           </dd>
         </dl>

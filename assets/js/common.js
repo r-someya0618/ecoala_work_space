@@ -71,6 +71,7 @@ jQuery(function ($) {
   });
 
   function changeProductKeyVisual(dataName) {
+    console.log(dataName);
     const kvElms = $('.p-product-kv__item');
     kvElms.removeClass('is-active');
     kvElms.each((_, elem) => {
@@ -97,14 +98,18 @@ jQuery(function ($) {
     });
   }
 
-  // navのactive切り替え;
+  // productのnavのactive切り替え
   const productType = $('main').data().product;
-  $('.p-product-nav__list-item').on('click', function () {
+  $('[data-list-id]').on('click', function () {
     const selector = productType === 'dryer' ? 'is-active-dryer' : 'is-active-ai';
-    $('.p-product-nav__list-item').removeClass(selector);
-    $(this).addClass(selector);
     const dataName = $(this).data('list-id');
     const index = $(this).index();
+    $('[data-list-id]').removeClass(selector);
+    $(`.p-product-nav__list-item[data-list-id=${dataName}]`).addClass(selector);
+    const isToTop = $(this).data('product-section');
+    if (isToTop) {
+      window.scroll({ top: 0 });
+    }
     // TOP画像切替
     changeProductKeyVisual(dataName);
     // SPインジケータの変更
@@ -112,6 +117,51 @@ jQuery(function ($) {
     // コンテンツの切り替え
     changeContents(dataName);
   });
+
+  function changeProductContents(page, id, index) {
+    $('.p-product-nav__list-item').removeClass(
+      page === 'ai' ? 'is-active-ai' : 'is-active-dryer'
+    );
+    $('.p-product-nav__list-item')
+      .eq(index)
+      .addClass(page === 'ai' ? 'is-active-ai' : 'is-active-dryer');
+    // TOP画像切替
+    changeProductKeyVisual(id);
+    // SPインジケータの変更
+    changeIndicator(index);
+    // コンテンツの切り替え
+    changeContents(id);
+  }
+
+  // 遷移時のnavの切り替え
+  const page = location.pathname;
+  const query = $(location).attr('search').split('=')[1];
+  if (page === '/product/ai_pro_style/' || page === '/product/quick_hair_dryer/') {
+    const pageType = page.match(/dryer/) ? 'dryer' : 'ai';
+    switch (Number(query)) {
+      case 1:
+        changeProductContents(pageType, 'top', 0);
+        break;
+      case 2:
+        changeProductContents(pageType, 'concept', 1);
+        break;
+      case 3:
+        changeProductContents(pageType, 'feature', 2);
+        break;
+      case 4:
+        changeProductContents(pageType, 'design', 3);
+        break;
+      case 5:
+        changeProductContents(pageType, 'nozzle', 4);
+        break;
+      case 6:
+        changeProductContents(pageType, 'spec', 5);
+        break;
+      default:
+        changeProductContents(pageType, 'top', 0);
+        break;
+    }
+  }
 
   function execChangeSlide(isCountUp = true, count) {
     const counterActiveItem = $('.p-two-way-slider__counter-item.is-active');
