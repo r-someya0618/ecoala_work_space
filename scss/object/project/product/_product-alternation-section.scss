@@ -17,6 +17,7 @@
   &__txt {
     @include pc-narrow {
       margin-top: 55px;
+      padding: 0 16px;
     }
     margin-top: 95px;
     line-height: 2;

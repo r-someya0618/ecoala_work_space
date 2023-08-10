@@ -851,6 +851,9 @@ body {
   cursor: pointer;
   font-family: AvenirNextLTPro-Regular, sans-serif;
 }
+.c-button:hover {
+  opacity: 0.7;
+}
 .c-button--square {
   padding: 25px;
   font-size: 1.5625rem;
@@ -1610,6 +1613,7 @@ body {
 @media only screen and (max-width: 1200px) {
   .p-product-alternating-section__txt {
     margin-top: 55px;
+    padding: 0 16px;
   }
 }
 .p-product-alternating-section__container {

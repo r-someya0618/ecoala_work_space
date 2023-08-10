@@ -70,8 +70,8 @@ jQuery(function ($) {
     }
   });
 
+  // プロダクトページのキービジュアル切り替え
   function changeProductKeyVisual(dataName) {
-    console.log(dataName);
     const kvElms = $('.p-product-kv__item');
     kvElms.removeClass('is-active');
     kvElms.each((_, elem) => {
@@ -81,6 +81,7 @@ jQuery(function ($) {
     });
   }
 
+  // SP用ナビゲーションのインジケータの位置変更
   function changeIndicator(index) {
     const barWidth = $('.c-nav-indicator__bar').width();
     const barPosition = index * barWidth;
@@ -88,14 +89,42 @@ jQuery(function ($) {
     $('.c-nav-indicator__bar').css('margin-left', barPosition + 'px');
   }
 
-  function changeContents(dataName) {
+  // プロダクトページのコンテンツ表示切り替え
+  function changeProductContents(dataName, isNavClick) {
     const contents = $('.p-product-content-wrap');
+    const selector = `.p-product-nav__list-item[data-list-id="${dataName}"]`;
+    if (!isNavClick) {
+      // 選択されたコンテンツのnav itemの位置調整（ナビを直接クリックした場合は実行しない）
+      const navWrapperLeftPosition = $('.p-product-nav__list').offset().left;
+      const selectedNavItemLeftPosition = $(selector).offset().left;
+      $('.p-product-nav').scrollLeft(
+        -navWrapperLeftPosition + selectedNavItemLeftPosition
+      );
+    }
     contents.removeClass('is-active');
     contents.each((_, elem) => {
       if ($(elem).data().sectionName === dataName) {
         $(elem).addClass('is-active');
       }
     });
+  }
+
+  // 遷移を伴うプロダクトコンテンツの切り替え
+  function changeProductContentsAtTransition(page, id, index) {
+    $('.p-product-nav__list-item').removeClass(
+      page === 'ai' ? 'is-active-ai' : 'is-active-dryer'
+    );
+    $('.p-product-nav__list-item')
+      .eq(index)
+      .addClass(page === 'ai' ? 'is-active-ai' : 'is-active-dryer');
+    // navの位置調整
+    $('.p-product-nav').scrollLeft(300);
+    // TOP画像切替
+    changeProductKeyVisual(id);
+    // SPインジケータの変更
+    changeIndicator(index);
+    // コンテンツの切り替え
+    changeProductContents(id, false);
   }
 
   // productのnavのactive切り替え
@@ -110,28 +139,14 @@ jQuery(function ($) {
     if (isToTop) {
       window.scroll({ top: 0 });
     }
+    const isNavClick = $(this).hasClass('p-product-nav__list-item');
     // TOP画像切替
     changeProductKeyVisual(dataName);
     // SPインジケータの変更
     changeIndicator(index);
     // コンテンツの切り替え
-    changeContents(dataName);
+    changeProductContents(dataName, isNavClick);
   });
-
-  function changeProductContents(page, id, index) {
-    $('.p-product-nav__list-item').removeClass(
-      page === 'ai' ? 'is-active-ai' : 'is-active-dryer'
-    );
-    $('.p-product-nav__list-item')
-      .eq(index)
-      .addClass(page === 'ai' ? 'is-active-ai' : 'is-active-dryer');
-    // TOP画像切替
-    changeProductKeyVisual(id);
-    // SPインジケータの変更
-    changeIndicator(index);
-    // コンテンツの切り替え
-    changeContents(id);
-  }
 
   // 遷移時のnavの切り替え
   const page = location.pathname;
@@ -140,25 +155,25 @@ jQuery(function ($) {
     const pageType = page.match(/dryer/) ? 'dryer' : 'ai';
     switch (Number(query)) {
       case 1:
-        changeProductContents(pageType, 'top', 0);
+        changeProductContentsAtTransition(pageType, 'top', 0);
         break;
       case 2:
-        changeProductContents(pageType, 'concept', 1);
+        changeProductContentsAtTransition(pageType, 'concept', 1);
         break;
       case 3:
-        changeProductContents(pageType, 'feature', 2);
+        changeProductContentsAtTransition(pageType, 'feature', 2);
         break;
       case 4:
-        changeProductContents(pageType, 'design', 3);
+        changeProductContentsAtTransition(pageType, 'design', 3);
         break;
       case 5:
-        changeProductContents(pageType, 'nozzle', 4);
+        changeProductContentsAtTransition(pageType, 'nozzle', 4);
         break;
       case 6:
-        changeProductContents(pageType, 'spec', 5);
+        changeProductContentsAtTransition(pageType, 'spec', 5);
         break;
       default:
-        changeProductContents(pageType, 'top', 0);
+        changeProductContentsAtTransition(pageType, 'top', 0);
         break;
     }
   }
@@ -218,7 +233,6 @@ jQuery(function ($) {
     let downCount = 0;
     let upCount = 0;
     $('.p-two-way-slider__counter-item').on('click', function () {
-      console.log('click');
       const counterItem = $('.p-two-way-slider__counter-item');
       const counterLine = $('.p-two-way-slider__counter-item-line');
       const sliderItem = $('.p-two-way-slider__item');

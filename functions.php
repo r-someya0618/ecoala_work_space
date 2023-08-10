@@ -10,8 +10,10 @@
 
   // 固定ページでエディタを非表示にする設定
   add_filter('use_block_editor_for_post',function($use_block_editor,$post){
+    // 固定ページでエディタを非表示にするページ
+    $hide_editor_pages = ['top','quick_hair_dryer','ai_pro_style', 'company', 'instagram', 'dealer'];
     if($post->post_type==='page'){
-      if(in_array($post->post_name,['quick_hair_dryer','ai_pro_style'])){
+      if(in_array($post->post_name, $hide_editor_pages)){
         remove_post_type_support('page','editor');
         return false;
       }

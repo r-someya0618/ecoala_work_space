@@ -3,15 +3,18 @@
 Template Name: dealer
 */
 ?>
-<?php get_header(); ?>
+<?php
+get_header();
+$data = get_field('dealer')
+?>
 
 <main>
       <div class="p-dealer-kv">
         <div class="p-dealer-kv__item pc">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/kv/pc_kv_1.png" alt="" />
+          <img src="<?php echo $data['kv']['img_pc']; ?>" alt="" />
         </div>
         <div class="p-dealer-kv__item sp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/kv/sp_kv_1.png" alt="" />
+          <img src="<?php echo $data['kv']['img_sp']; ?>" alt="" />
         </div>
       </div>
       <section class="p-dealer-introduction l-container">
@@ -32,15 +35,9 @@ Template Name: dealer
         </p>
         <div class="p-dealer-introduction__movie">
           <!-- youtube -->
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/bjmBJ1Fl0cs"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <?php
+            echo $data['youtube'];
+          ?>
         </div>
         <div class="p-dealer-introduction__contents">
           <!--  -->

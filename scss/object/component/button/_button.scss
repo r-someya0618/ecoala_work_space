@@ -9,6 +9,9 @@
   text-align: center;
   cursor: pointer;
   @include font_e;
+  &:hover {
+    opacity: $opacity-hover;
+  }
   &--square {
     @include tablet {
       padding: 15px;
