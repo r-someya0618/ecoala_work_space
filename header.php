@@ -20,6 +20,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?rYDuG-ahsMY%3D&box=h6UP-JJPRDk%3D&aa=1&ab=2"></script>
 <script src="https://font.realtype.jp/api/script/v4" data-rt-user="hNl3TcwAbUd8dqe6skl0unKuMFKzApRH"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>

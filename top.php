@@ -7,32 +7,41 @@ Template Name: top
 <?php
 $page_obj = get_page_by_path('top');
 $page_id = $page_obj->ID;
-$custom_keys = get_post_custom_keys($page_id);
-$img_keys = [];
-$img_imgs = [];
-// TODO 画像が存在しない場合を考慮する修正
-// カスタムフィールドを見直す
+$slider_data = get_field('top_slider');
+$slider_imgs = [];
 
-// スライダー画像のPCとSPの組数を算出するための配列を作成
-foreach ($custom_keys as $key) {
-  if (preg_match('/^(pc|sp)_slider_img/', $key)) {
-    // keyの数字を取得
-    $num = (int)substr($key, -1);
-    // 配列にまだない場合は追加する
-    if (!in_array($num, $img_keys)) {
-      array_push($img_keys, $num);
-    }
+foreach($slider_data as $key => $value) {
+  if (!$value['slider_img_pc'] || !$value['slider_img_sp']) {
+    continue;
   }
+  array_push($slider_imgs, $value);
 }
-// 画像の組数
-$img_pare_count = count($img_keys);
-// リンクを格納
-foreach ($custom_keys as $key) {
-  if (preg_match('/^(pc|sp)_slider_img/', $key)) {
-    $img = [$key => get_field($key)];
-    $img_imgs = array_merge($img_imgs, $img);
-  }
-}
+// var_dump($slider_data['top_slider_10'])
+// $img_keys = [];
+// $img_imgs = [];
+// // TODO 画像が存在しない場合を考慮する修正
+// // カスタムフィールドを見直す
+
+// // スライダー画像のPCとSPの組数を算出するための配列を作成
+// foreach ($custom_keys as $key) {
+//   if (preg_match('/^(pc|sp)_slider_img/', $key)) {
+//     // keyの数字を取得
+//     $num = (int)substr($key, -1);
+//     // 配列にまだない場合は追加する
+//     if (!in_array($num, $img_keys)) {
+//       array_push($img_keys, $num);
+//     }
+//   }
+// }
+// // 画像の組数
+// $img_pare_count = count($img_keys);
+// // リンクを格納
+// foreach ($custom_keys as $key) {
+//   if (preg_match('/^(pc|sp)_slider_img/', $key)) {
+//     $img = [$key => get_field($key)];
+//     $img_imgs = array_merge($img_imgs, $img);
+//   }
+// }
 
 ?>
 
@@ -40,15 +49,12 @@ foreach ($custom_keys as $key) {
   <section class="c-slider">
     <!-- スライダー部 -->
     <ul class="slider full">
-      <?php for ($i = 0; $i < $img_pare_count; $i++) : ?>
-        <li>
-          <?php
-          foreach ($img_imgs as $key => $img) : if (preg_match("/" . $i + 1 . "/", $key) == 1) : ?>
-              <img class="<?php echo preg_match('/pc/', $key) == 1 ? 'pc' : 'sp' ?>" src="<?php echo $img ?>" alt="" />
-          <?php endif;
-          endforeach; ?>
-        </li>
-      <?php endfor; ?>
+        <?php foreach($slider_imgs as $img):?>
+          <li>
+            <img class="pc" src="<?php echo $img['slider_img_pc']?>" alt="">
+            <img class="sp" src="<?php echo $img['slider_img_sp']?>" alt="">
+          </li>
+        <?php endforeach;?>
     </ul>
   </section>
   <section class="p-top-introduction l-container">
@@ -79,7 +85,7 @@ foreach ($custom_keys as $key) {
           </p>
         </div>
         <div class="p-top-introduction__button c-button c-button--round">
-          <a href="#">Product Page</a>
+          <a href="/product/ai_pro_style/">Product Page</a>
         </div>
       </div>
       <div class="p-top-introduction__img-content">
@@ -88,41 +94,41 @@ foreach ($custom_keys as $key) {
     </section>
   </section>
   <section class="p-top-kv-section">
-    <h1 class="p-top-kv-section__heading c-heading-section--large c-heading-section--center">
+    <h1 class="p-top-kv-section__heading c-heading-section--large c-heading-section--center c-txt--font-e">
       CONCEPT
     </h1>
     <div class="p-top-kv-section__kv-container p-top-kv-section__kv-container--concept">
       <div class="p-top-kv-section__kv-container-inner l-container l-container--wide">
         <section class="p-top-kv-section__card p-top-kv-section__card">
-          <h2 class="p-top-kv-section__card-title c-heading-section--small">ECOALA AI Pro Style</h2>
+          <h2 class="p-top-kv-section__card-title c-heading-section--small c-txt--font-e">ECOALA AI Pro Style</h2>
           <p class="p-top-kv-section__card-txt c-txt--20">
             わたし<span class="u-narrow-text">に</span>「いい<span class="u-narrow-text">」</span>が、いちば<span class="u-narrow-text">ん</span>「いい<span class="u-narrow-text">」</span>。<br>
             未だかつてない次世代ドライヤーを目指しました。
           </p>
           <div class="p-top-kv-section__card-button
               c-button c-button--round">
-            <a href="#">Read More</a>
+            <a href="/product/ai_pro_style/">Read More</a>
           </div>
         </section>
       </div>
     </div>
   </section>
   <section class="p-top-kv-section p-top-kv-section--product">
-    <h1 class="p-top-kv-section__heading c-heading-section--large c-heading-section--center">
+    <h1 class="p-top-kv-section__heading c-heading-section--large c-heading-section--center  c-txt--font-e">
       PRODUCT
     </h1>
     <!-- AI Pro Style -->
     <div class="p-top-kv-section__kv-container p-top-kv-section__kv-container--ai-prostyle">
       <div class="p-top-kv-section__kv-container-inner l-container l-container--wide">
-        <div class="p-top-kv-section__kv-contents">
+        <div class="p-top-kv-section__kv-contents p-top-kv-section__kv-contents--right">
           <h2 class="p-top-kv-section__product-name">
-            <div class="p-top-kv-section__product-name-inner u-inline-block">
+            <div class="p-top-kv-section__product-name-inner u-inline-block c-txt--font-e-serif">
               <span class="c-heading-section--product-name-sub">ECOALA</span><br>
               <span class="c-heading-section--product-name">AI Pro Style</span>
             </div>
           </h2>
           <section class="p-top-kv-section__card p-top-kv-section__card--ai-prostyle p-top-kv-section__card--right">
-            <h3 class="p-top-kv-section__card-title c-txt--30">
+            <h3 class="p-top-kv-section__card-title c-txt--30 c-txt--font-d">
               わたし<span class="u-narrow-text--mid">に</span>「いい<span class="u-narrow-text--mid">」</span>が<span class="u-narrow-text--mid">、</span><br>
               いちば<span class="u-narrow-text--mid">ん</span>「いい<span class="u-narrow-text--mid">」</span>。
             </h3>
@@ -132,7 +138,7 @@ foreach ($custom_keys as $key) {
               あなただけのドライヤーが誕生しました。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
-              <a href="#">Product Page</a>
+              <a href="/product/ai_pro_style/">Product Page</a>
             </div>
           </section>
         </div>
@@ -145,7 +151,7 @@ foreach ($custom_keys as $key) {
           <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb1.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
-          <dt class="p-top-feature-section__card-title c-txt--30">
+          <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
             高性能・高機能<br>
             プロ推奨ドライヤー
           </dt>
@@ -154,7 +160,7 @@ foreach ($custom_keys as $key) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="#">Read More</a>
+              <a href="/product/ai_pro_style/">Read More</a>
             </div>
           </dd>
         </dl>
@@ -165,7 +171,7 @@ foreach ($custom_keys as $key) {
           <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb2.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
-          <dt class="p-top-feature-section__card-title c-txt--30">
+          <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
             世界に認められた<br>
             高いデザイン性
           </dt>
@@ -174,7 +180,7 @@ foreach ($custom_keys as $key) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="#">Read More</a>
+              <a href="/product/ai_pro_style/">Read More</a>
             </div>
           </dd>
         </dl>
@@ -185,7 +191,7 @@ foreach ($custom_keys as $key) {
           <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb3.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
-          <dt class="p-top-feature-section__card-title c-txt--30">
+          <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
             富士山溶岩配合の<br>
             セラミックノズル
           </dt>
@@ -194,7 +200,7 @@ foreach ($custom_keys as $key) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="#">Read More</a>
+              <a href="/product/ai_pro_style/">Read More</a>
             </div>
           </dd>
         </dl>
@@ -205,7 +211,7 @@ foreach ($custom_keys as $key) {
           <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb4.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
-          <dt class="p-top-feature-section__card-title c-txt--30">
+          <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
             スペック＆<br>
             安心のまごころ保証
           </dt>
@@ -214,7 +220,7 @@ foreach ($custom_keys as $key) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="#">Read More</a>
+              <a href="/product/ai_pro_style/">Read More</a>
             </div>
           </dd>
         </dl>
@@ -224,15 +230,15 @@ foreach ($custom_keys as $key) {
     <!-- Dryer -->
     <div class="p-top-kv-section__kv-container p-top-kv-section__kv-container--dryer">
       <div class="p-top-kv-section__kv-container-inner l-container l-container--wide">
-        <div class="p-top-kv-section__kv-contents">
+        <div class="p-top-kv-section__kv-contents p-top-kv-section__kv-contents--right">
           <h2 class="p-top-kv-section__product-name p-top-kv-section__product-name--white">
-            <div class="p-top-kv-section__product-name-inner u-inline-block">
-              <span class="c-heading-section--product-name-sub">COALA</span><br>
-              <span class="c-heading-section--product-name">Quick Hair<br class="sp">Dryer</span>
+            <div class="p-top-kv-section__product-name-inner u-inline-block c-txt--font-e-serif">
+              <span class="c-heading-section--product-name-sub">ECOALA</span><br>
+              <span class="c-heading-section--product-name">Quick Hair <br class="sp">Dryer</span>
             </div>
           </h2>
           <section class="p-top-kv-section__card p-top-kv-section__card--dryer p-top-kv-section__card--right">
-            <h3 class="p-top-kv-section__card-title c-txt--30">
+            <h3 class="p-top-kv-section__card-title c-txt--30 c-txt--font-d">
               ファミリーでも ひとりでも、<br>
               髪と地肌に合わせたヘアケアを。
             </h3>
@@ -242,7 +248,7 @@ foreach ($custom_keys as $key) {
               気分やヘアスタイルで自由に楽しんで。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
-              <a href="#">Product Page</a>
+              <a href="/product/quick_hair_dryer/">Product Page</a>
             </div>
           </section>
         </div>
@@ -255,7 +261,7 @@ foreach ($custom_keys as $key) {
           <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb1.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
-          <dt class="p-top-feature-section__card-title c-txt--30">
+          <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
             ヘアドライで<br>
             髪と頭皮を健やかにケア
           </dt>
@@ -265,7 +271,7 @@ foreach ($custom_keys as $key) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="#">Read More</a>
+              <a href="/product/quick_hair_dryer/">Read More</a>
             </div>
           </dd>
         </dl>
@@ -276,7 +282,7 @@ foreach ($custom_keys as $key) {
           <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb2.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
-          <dt class="p-top-feature-section__card-title c-txt--30">
+          <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
             4つの風温モードと<br>
             ミネラルマイナスイオン
           </dt>
@@ -284,7 +290,7 @@ foreach ($custom_keys as $key) {
             髪や頭皮の状態に合わせて選べる多機能なモードを搭載。
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="#">Read More</a>
+              <a href="/product/quick_hair_dryer/">Read More</a>
             </div>
           </dd>
         </dl>
@@ -295,7 +301,7 @@ foreach ($custom_keys as $key) {
           <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb3.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
-          <dt class="p-top-feature-section__card-title c-txt--30">
+          <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
             富士山溶岩配合ノズル&<br>
             オールインワンセット
           </dt>
@@ -303,7 +309,7 @@ foreach ($custom_keys as $key) {
             自然の力を利用して今までにないサラサラのツヤ髪を作り出します。
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="#">Read More</a>
+              <a href="/product/quick_hair_dryer/">Read More</a>
             </div>
           </dd>
         </dl>
@@ -314,7 +320,7 @@ foreach ($custom_keys as $key) {
           <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb4.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
-          <dt class="p-top-feature-section__card-title c-txt--30">
+          <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
             スペック＆<br>
             安心のまごころ保証
           </dt>
@@ -322,7 +328,7 @@ foreach ($custom_keys as $key) {
             万が一のトラブルに備えた安心保証を全てのお客様にご提供いたします。
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="#">Read More</a>
+              <a href="/product/quick_hair_dryer/">Read More</a>
             </div>
           </dd>
         </dl>
@@ -337,9 +343,8 @@ foreach ($custom_keys as $key) {
     <div class="p-top-kv-section__kv-container p-top-kv-section__kv-container--salon">
       <div class="p-top-kv-section__kv-container-inner l-container l-container--wide">
         <div class="p-top-kv-section__kv-contents">
-
           <section class="p-top-kv-section__card">
-            <h2 class="p-top-kv-section__card-title c-heading-section--small">
+            <h2 class="p-top-kv-section__card-title c-heading-section--small c-txt--font-d">
               試す・体感する。<br>
               お取り扱い店舗一覧。
             </h2>
@@ -349,7 +354,7 @@ foreach ($custom_keys as $key) {
               是非、お近くのサロンでお試しください。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
-              <a href="#">Read More</a>
+              <a href="/product/salon/">Read More</a>
             </div>
           </section>
         </div>
@@ -363,10 +368,9 @@ foreach ($custom_keys as $key) {
     </h1>
     <div class="p-top-kv-section__kv-container p-top-kv-section__kv-container--dealer">
       <div class="p-top-kv-section__kv-container-inner l-container l-container--wide">
-        <div class="p-top-kv-section__kv-contents">
-
+        <div class="p-top-kv-section__kv-contents p-top-kv-section__kv-contents--right">
           <section class="p-top-kv-section__card p-top-kv-section__card--right">
-            <h2 class="p-top-kv-section__card-title c-heading-section--small">
+            <h2 class="p-top-kv-section__card-title c-heading-section--small c-txt--font-d">
               お取り扱い<br>
               認定店になるために。
             </h2>
@@ -376,7 +380,7 @@ foreach ($custom_keys as $key) {
               詳しくはお問い合わせください。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
-              <a href="#">Read More</a>
+              <a href="/product/dealer/">Read More</a>
             </div>
           </section>
         </div>
@@ -421,7 +425,7 @@ foreach ($custom_keys as $key) {
       <?php endif; ?>
     </div>
     <div class="p-top-topics__button c-button c-button--round">
-      <a href="#">Read More</a>
+      <a href="/topics/">Read More</a>
     </div>
   </section>
   <section class="p-top-instagram">
@@ -438,7 +442,7 @@ foreach ($custom_keys as $key) {
         </div>
       </div>
       <div class="p-top-instagram__button c-button c-button--round">
-        <a href="#">Read More</a>
+        <a href="/instagram/">Read More</a>
       </div>
     </div>
   </section>

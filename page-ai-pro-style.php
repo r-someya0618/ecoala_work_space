@@ -103,7 +103,7 @@ $key_visuals = get_field('kv_ai');
     </section>
     <!-- concept section end -->
     <!-- feature section start -->
-    <section class="p-product-section p-product-section--feature">
+    <section id="feature" class="p-product-section p-product-section--feature">
       <div class="p-product-section__container p-product-section__container--inner-right l-container l-container--middle">
         <div class="p-product-section__container-inner p-product-section-container__inner">
           <h2 class="p-product-section__container-title c-txt--40">
@@ -690,7 +690,7 @@ $key_visuals = get_field('kv_ai');
   ?>
   <div data-section-name="spec" class="p-product-content-wrap">
     <section class="p-product-spec">
-      <h1 class="p-product-spec__title c-heading-section c-heading-section--center">
+      <h1 class="p-product-spec__title c-heading-section c-heading-section--center c-txt--font-e">
         SPECIFICATIONS
       </h1>
       <div class="p-product-spec__img">

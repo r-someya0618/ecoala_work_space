@@ -848,6 +848,7 @@ body {
   border: 1px solid #141414;
   color: #141414;
   text-align: center;
+  font-family: AvenirNextLTPro-Regular, sans-serif;
 }
 .c-button--square {
   padding: 25px;
@@ -987,7 +988,7 @@ body {
   }
 }
 .c-heading-section--product-name {
-  font-size: 4.875rem;
+  font-size: 4.5625rem;
 }
 @media only screen and (max-width: 768px) {
   .c-heading-section--product-name {
@@ -1208,6 +1209,15 @@ body {
 }
 .c-txt--center {
   text-align: center;
+}
+.c-txt--font-d {
+  font-family: "A+EqpB-游ゴシック体 Pr6N D", sans-serif;
+}
+.c-txt--font-e {
+  font-family: AvenirNextLTPro-Regular, sans-serif;
+}
+.c-txt--font-e-serif {
+  font-family: "Libre Baskerville", serif;
 }
 
 .c-txt-product--users-voice {
@@ -2475,6 +2485,9 @@ body {
     width: 100%;
   }
 }
+.p-top-introduction__text-content-heading {
+  line-height: 1.75;
+}
 @media only screen and (max-width: 768px) {
   .p-top-introduction__text-content-heading {
     margin-top: 30px;
@@ -2601,7 +2614,7 @@ body {
 }
 .p-top-kv-section__kv-contents {
   position: absolute;
-  right: 16px;
+  left: 16px;
   bottom: -50px;
   width: 660px;
   height: 100%;
@@ -2609,10 +2622,14 @@ body {
 @media only screen and (max-width: 768px) {
   .p-top-kv-section__kv-contents {
     position: relative;
-    right: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }
+}
+.p-top-kv-section__kv-contents--right {
+  left: auto;
+  right: 0;
 }
 .p-top-kv-section__card {
   opacity: 0.8;

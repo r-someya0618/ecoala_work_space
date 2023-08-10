@@ -43,6 +43,15 @@
   &--center {
     text-align: center;
   }
+  &--font-d {
+    @include font-d;
+  }
+  &--font-e {
+    @include font-e;
+  }
+  &--font-e-serif {
+    @include font-e-serif;
+  }
 }
 
 .c-txt-product {
