@@ -1,0 +1,100 @@
+@use "../../../foundation/_color" as *;
+@use "../../../foundation/_font" as *;
+@use "../../../foundation/_variables" as *;
+@use "../../../foundation/_mixin" as *;
+
+.p-sticky-banner {
+  position: fixed;
+  right: 0;
+  bottom: 32px;
+  display: block;
+  width: 330px;
+  height: 215px;
+  padding: 32px;
+  color: $white_color;
+  z-index: 99;
+  opacity: 0;
+  transition: all 1s;
+  &.is-active {
+    opacity: 1;
+  }
+  @include tablet {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 15px 32px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--blue {
+    background: linear-gradient(
+      57deg,
+      rgba(20, 20, 96, 1) 0%,
+      rgba(20, 20, 119, 1) 14.73%,
+      rgba(20, 20, 146, 1) 35.66%,
+      rgba(20, 20, 156, 1) 47.96%,
+      rgba(25, 32, 160, 1) 51.07%,
+      rgba(49, 93, 180, 1) 67.99%,
+      rgba(67, 137, 195, 1) 82.37%,
+      rgba(78, 164, 204, 1) 93.49%,
+      rgba(82, 174, 207, 1) 100%
+    );
+  }
+  &--pink {
+    background: linear-gradient(
+      57deg,
+      rgba(182, 0, 116, 1) 0%,
+      rgba(255, 0, 167, 1) 44.14%,
+      rgba(255, 182, 213, 1) 95.24%
+    );
+  }
+  &__txt {
+    flex: 1;
+    font-size: rem(26);
+    line-height: 1.53;
+    @include tablet {
+      font-size: rem(15);
+    }
+  }
+  &__button {
+    position: relative;
+    width: 252px;
+    height: 49px;
+    margin-top: 30px;
+    font-size: rem(18);
+    line-height: 49px;
+    text-align: center;
+    @include tablet {
+      font-size: rem(14);
+      width: 39.86%;
+      margin-top: 0;
+      height: 37px;
+      line-height: 37px;
+    }
+    @include mobile-l2 {
+      font-size: rem(10);
+    }
+
+    &--square {
+      border: 1px solid $white_color;
+    }
+    &--arrow {
+      background-color: rgba(255, 255, 255, 0.2);
+      &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -13px;
+        border-width: 24.5px 0 24.5px 13px;
+        border-style: solid;
+        border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);
+        content: '';
+        @include tablet {
+          right: -10px;
+          border-width: 18.5px 0 18.5px 10px;
+        }
+      }
+    }
+  }
+}

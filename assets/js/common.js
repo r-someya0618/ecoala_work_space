@@ -54,6 +54,25 @@ jQuery(function ($) {
     dots: true, //ドット部分を表示する
   });
 
+  // バナー表示
+  const kvH = $('#kv-area').outerHeight();
+  const kvTop = $('#kv-area').offset().top;
+  const kvBottom = kvTop + kvH;
+  const winH = $(window).height();
+  const footerTop = $('.footer').offset().top;
+  $(window).scroll(function () {
+    const scroll = $(this).scrollTop();
+    if (scroll > kvBottom) {
+      $('.p-sticky-banner').addClass('is-active');
+    } else {
+      console.log('else');
+      $('.p-sticky-banner').removeClass('is-active');
+    }
+    if (scroll > footerTop - winH) {
+      $('.p-sticky-banner').removeClass('is-active');
+    }
+  });
+
   // PCのみ
   $(window).on('load resize', function () {
     const windowWidth = window.innerWidth;

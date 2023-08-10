@@ -1257,6 +1257,94 @@ body {
   }
 }
 
+.p-sticky-banner {
+  position: fixed;
+  right: 0;
+  bottom: 32px;
+  display: block;
+  width: 330px;
+  height: 215px;
+  padding: 32px;
+  color: #fff;
+  z-index: 99;
+  opacity: 0;
+  transition: all 1s;
+}
+.p-sticky-banner.is-active {
+  opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+  .p-sticky-banner {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 15px 32px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.p-sticky-banner--blue {
+  background: linear-gradient(57deg, rgb(20, 20, 96) 0%, rgb(20, 20, 119) 14.73%, rgb(20, 20, 146) 35.66%, rgb(20, 20, 156) 47.96%, rgb(25, 32, 160) 51.07%, rgb(49, 93, 180) 67.99%, rgb(67, 137, 195) 82.37%, rgb(78, 164, 204) 93.49%, rgb(82, 174, 207) 100%);
+}
+.p-sticky-banner--pink {
+  background: linear-gradient(57deg, rgb(182, 0, 116) 0%, rgb(255, 0, 167) 44.14%, rgb(255, 182, 213) 95.24%);
+}
+.p-sticky-banner__txt {
+  flex: 1;
+  font-size: 1.625rem;
+  line-height: 1.53;
+}
+@media only screen and (max-width: 768px) {
+  .p-sticky-banner__txt {
+    font-size: 0.9375rem;
+  }
+}
+.p-sticky-banner__button {
+  position: relative;
+  width: 252px;
+  height: 49px;
+  margin-top: 30px;
+  font-size: 1.125rem;
+  line-height: 49px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .p-sticky-banner__button {
+    font-size: 0.875rem;
+    width: 39.86%;
+    margin-top: 0;
+    height: 37px;
+    line-height: 37px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .p-sticky-banner__button {
+    font-size: 0.625rem;
+  }
+}
+.p-sticky-banner__button--square {
+  border: 1px solid #fff;
+}
+.p-sticky-banner__button--arrow {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.p-sticky-banner__button--arrow::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -13px;
+  border-width: 24.5px 0 24.5px 13px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);
+  content: "";
+}
+@media only screen and (max-width: 768px) {
+  .p-sticky-banner__button--arrow::after {
+    right: -10px;
+    border-width: 18.5px 0 18.5px 10px;
+  }
+}
+
 .p-company {
   margin-top: 200px;
 }

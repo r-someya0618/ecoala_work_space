@@ -10,7 +10,7 @@ $key_visuals = get_field('kv_dryer');
 ?>
 <main data-product="dryer">
   <!-- kv -->
-  <div class="p-product-kv">
+  <div id="kv-area" class="p-product-kv">
     <div data-kv="top" class="p-product-kv__item is-active">
       <img class="pc" src="<?php echo $key_visuals['top']['pc_kv']; ?>" alt="" />
       <img class="sp is-active" src="<?php echo $key_visuals['top']['sp_kv']; ?>" alt="" />

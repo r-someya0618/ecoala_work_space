@@ -9,7 +9,7 @@ $data = get_field('dealer')
 ?>
 
 <main>
-      <div class="p-dealer-kv">
+      <div id="kv-area" class="p-dealer-kv">
         <div class="p-dealer-kv__item pc">
           <img src="<?php echo $data['kv']['img_pc']; ?>" alt="" />
         </div>

@@ -20,7 +20,7 @@ foreach($slider_data as $key => $value) {
 ?>
 
 <main>
-  <section class="c-slider">
+  <section id="kv-area" class="c-slider">
     <!-- スライダー部 -->
     <ul class="slider full">
         <?php foreach($slider_imgs as $img):?>
@@ -420,6 +420,24 @@ foreach($slider_data as $key => $value) {
       </div>
     </div>
   </section>
+  <a class="p-sticky-banner p-sticky-banner--pink">
+      <p class="p-sticky-banner__txt">
+      もっとうるおう、<br>
+      もっと美しく。
+      </p>
+      <div class="p-sticky-banner__button p-sticky-banner__button--square">
+        購入・お試しはこちらから
+      </div>
+  </a>
+  <a class="p-sticky-banner p-sticky-banner--blue">
+      <p class="p-sticky-banner__txt">
+        <span class="u-inline-block">わたしに「いい」が、</span>
+        <span class="u-inline-block">いちばん「いい」。</span>
+        </p>
+      <div class="p-sticky-banner__button p-sticky-banner__button--arrow">
+        購入・お試しはこちらから
+      </div>
+  </a>
 </main>
 
 <?php get_footer(); ?>
