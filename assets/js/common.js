@@ -54,7 +54,7 @@ jQuery(function ($) {
     dots: true, //ドット部分を表示する
   });
 
-  // PCのみ;
+  // PCのみ
   $(window).on('load resize', function () {
     const windowWidth = window.innerWidth;
     if (windowWidth > 768) {
