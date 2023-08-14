@@ -15,8 +15,8 @@
         <div class="footer__link">
           <h3 class="footer__title">PRODUCT</h3>
           <ul class="footer__child-list">
-              <li><a href="/products/ai_pro_style/" class="footer__link--e" title="AI Pro Style">AI Pro Style</a></li>
-              <li><a href="/products/quick_hair_dryer/" class="footer__link--e" title="Quick Hair Dryer">Quick Hair Dryer</a></li>
+              <li><a href="/product/ai_pro_style/" class="footer__link--e" title="AI Pro Style">AI Pro Style</a></li>
+              <li><a href="/product/quick_hair_dryer/" class="footer__link--e" title="Quick Hair Dryer">Quick Hair Dryer</a></li>
           </ul>
         </div>
         <div class="footer__link">

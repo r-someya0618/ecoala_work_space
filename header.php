@@ -38,7 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <nav class="header__link">
             <ul class="header__list">
                 <li class="header__list--product">
-                    <a href="/products/ai_pro_style/" class="header__list--e" title="PRODUCT">PRODUCT</a>
+                    <a href="/product/ai_pro_style/" class="header__list--e" title="PRODUCT">PRODUCT</a>
                     <ul class="header__child-list header__child-list--product">
                         <li><a href="/product/ai_pro_style/" class="header__list--e" title="AI Pro Style">AI Pro Style</a></li>
                         <li><a href="/product/quick_hair_dryer/" class="header__list--e" title="Quick Hair Dryer">Quick Hair Dryer</a></li>
