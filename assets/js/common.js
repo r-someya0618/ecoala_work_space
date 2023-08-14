@@ -40,6 +40,7 @@
 // );
 
 jQuery(function ($) {
+  // 直接アクセス対策
   if (window.location.pathname === '/product/') {
     window.location.href = '/product/ai_pro_style';
   }

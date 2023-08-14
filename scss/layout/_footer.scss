@@ -115,8 +115,8 @@
 
   &__title {
     font-size: clamp(16px, 2vw, 20px);
-    color: $gray_color;
-    border-bottom: 2px solid $gray_color;
+    color: $gray_color_1;
+    border-bottom: 2px solid $gray_color_1;
     padding-bottom: 15px;
     margin-bottom: 15px;
 
@@ -136,7 +136,7 @@
       > a {
         display: inline-block;
         font-size: clamp(12px, 1.3vw, 16px);
-        color: $gray_color;
+        color: $gray_color_1;
         margin-bottom: 18px;
         transition: color 0.3s;
 
@@ -153,8 +153,8 @@
 
   &__special-link {
     display: flex;
-    color: $gray_color;
-    border: 1px solid $gray_color;
+    color: $gray_color_1;
+    border: 1px solid $gray_color_1;
     align-items: center;
     justify-content: center;
     height: 74px;

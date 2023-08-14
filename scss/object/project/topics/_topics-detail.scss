@@ -17,15 +17,19 @@
 
   &__date {
     margin-top: 25px;
+    margin-bottom: 45px;
   }
 
   &__top-image {
+    @include tablet {
+      margin-bottom: 50px;
+    }
     margin-top: 60px;
+    margin-bottom: 100px;
     text-align: center;
   }
 
   &__content {
-    margin-top: 90px;
     font-size: rem(20);
     line-height: 2;
   }

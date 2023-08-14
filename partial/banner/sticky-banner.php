@@ -1,3 +1,4 @@
+<!-- バナーパーツ -->
 <?php
   $banner_pink = '<a class="p-sticky-banner p-sticky-banner--pink">
     <p class="p-sticky-banner__txt">

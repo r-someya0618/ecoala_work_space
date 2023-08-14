@@ -23,7 +23,7 @@
     @include tablet {
       font-size: rem(12);
     }
-    color: $text_gray_color;
+    color: $gray_color_2;
     font-size: rem(20);
   }
   &__title {
@@ -46,7 +46,7 @@
     @include tablet {
       font-size: rem(12);
     }
-    color: $text_gray_color;
+    color: $gray_color_2;
     font-size: rem(20);
   }
   &__title {

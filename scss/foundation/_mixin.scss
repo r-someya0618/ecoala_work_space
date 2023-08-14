@@ -10,11 +10,13 @@
     @content;
   }
 }
+// PC 中サイズ
 @mixin pc-middle {
   @media only screen and (max-width: 1510px) {
     @content;
   }
 }
+// タブレット ~ PC小サイズ
 @mixin pc-narrow {
   @media only screen and (max-width: 1200px) {
     @content;

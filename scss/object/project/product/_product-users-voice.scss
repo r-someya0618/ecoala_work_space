@@ -43,8 +43,8 @@
       background: linear-gradient(
         $white_color 0%,
         $white_color 3.4%,
-        $gray4 3.4%,
-        $gray4 100%
+        $gray_color_5 3.4%,
+        $gray_color_5 100%
       );
     }
     display: flex;
@@ -55,8 +55,8 @@
     background: linear-gradient(
       $white_color 0%,
       $white_color 16.77%,
-      $gray4 16.77%,
-      $gray4 100%
+      $gray_color_5 16.77%,
+      $gray_color_5 100%
     );
   }
   &__card {

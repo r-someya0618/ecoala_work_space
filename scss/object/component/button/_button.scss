@@ -4,8 +4,8 @@
 @use "../../../foundation/_mixin" as *;
 
 .c-button {
-  border: 1px solid $text_color;
-  color: $text_color;
+  border: 1px solid $black_color;
+  color: $black_color;
   text-align: center;
   cursor: pointer;
   @include font_e;

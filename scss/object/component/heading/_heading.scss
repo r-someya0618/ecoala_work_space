@@ -38,6 +38,12 @@
     }
     font-size: rem(73);
   }
+  &--post {
+    @include tablet {
+      font-size: rem(22.5);
+    }
+    font-size: rem(30);
+  }
   &--dealer-intro-card {
     @include tablet {
       font-size: rem(13);
@@ -47,11 +53,4 @@
   &--center {
     text-align: center;
   }
-}
-
-.c-post-heading {
-  @include tablet {
-    font-size: rem(22.5);
-  }
-  font-size: rem(30);
 }
