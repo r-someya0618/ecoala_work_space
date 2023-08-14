@@ -18,10 +18,6 @@
   </div>
   </a>
   ';
-  // バナーを出さないページ
-  $show_banner_blacklist = [
-    '/dealer/'
-  ];
 
   if (strpos($_SERVER['REQUEST_URI'] , 'product/quick_hair_dryer/')) {
     echo $banner_pink;
