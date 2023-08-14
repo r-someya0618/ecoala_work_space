@@ -79,9 +79,9 @@ jQuery(function ($) {
         $('.p-sticky-banner').addClass('is-active');
       } else {
         $('.p-sticky-banner').removeClass('is-active');
-        if (scroll > footerTop - winH) {
-          $('.p-sticky-banner').removeClass('is-active');
-        }
+      }
+      if (scroll > footerTop - winH) {
+        $('.p-sticky-banner').removeClass('is-active');
       }
     });
   } else if (
