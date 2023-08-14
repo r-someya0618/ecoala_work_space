@@ -1,3 +1,4 @@
+<?php get_template_part('common/sticky-banner'); ?>
 <footer class="footer">
   <div class="footer__container">
     <div class="footer__left">

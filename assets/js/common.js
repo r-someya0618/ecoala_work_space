@@ -40,6 +40,10 @@
 // );
 
 jQuery(function ($) {
+  if (window.location.pathname === '/product/') {
+    window.location.href = '/product/ai_pro_style';
+  }
+
   $('#humberger-check').on('change', function () {
     if ($('#humberger-check').prop('checked')) {
       $('body').addClass('noscroll');
@@ -55,23 +59,46 @@ jQuery(function ($) {
   });
 
   // バナー表示
-  const kvH = $('#kv-area').outerHeight();
-  const kvTop = $('#kv-area').offset().top;
-  const kvBottom = kvTop + kvH;
+  const kvArea = $('#kv-area');
   const winH = $(window).height();
   const footerTop = $('.footer').offset().top;
-  $(window).scroll(function () {
-    const scroll = $(this).scrollTop();
-    if (scroll > kvBottom) {
+  if (kvArea.length) {
+    const kvH = kvArea.outerHeight();
+    const kvTop = kvArea.offset().top;
+    const kvBottom = kvTop + kvH;
+
+    if (
+      window.location.pathname === '/topics/' ||
+      window.location.pathname === '/instagram/'
+    ) {
       $('.p-sticky-banner').addClass('is-active');
-    } else {
-      console.log('else');
-      $('.p-sticky-banner').removeClass('is-active');
     }
-    if (scroll > footerTop - winH) {
-      $('.p-sticky-banner').removeClass('is-active');
-    }
-  });
+    $(window).scroll(function () {
+      const scroll = $(this).scrollTop();
+      if (scroll > kvBottom) {
+        $('.p-sticky-banner').addClass('is-active');
+      } else {
+        $('.p-sticky-banner').removeClass('is-active');
+        if (scroll > footerTop - winH) {
+          $('.p-sticky-banner').removeClass('is-active');
+        }
+      }
+    });
+  } else if (
+    window.location.pathname.match('/instagram/') ||
+    window.location.pathname.match('/topics/')
+  ) {
+    // instagramとtopicsのページは初期状態では表示
+    $('.p-sticky-banner').addClass('is-active');
+    $(window).scroll(function () {
+      const scroll = $(this).scrollTop();
+      if (scroll > footerTop - winH) {
+        $('.p-sticky-banner').removeClass('is-active');
+      } else {
+        $('.p-sticky-banner').addClass('is-active');
+      }
+    });
+  }
 
   // PCのみ
   $(window).on('load resize', function () {

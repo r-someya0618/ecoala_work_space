@@ -38,7 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <nav class="header__link">
             <ul class="header__list">
                 <li class="header__list--product">
-                    <a href="/products/" class="header__list--e" title="PRODUCT">PRODUCT</a>
+                    <a href="/products/ai_pro_style/" class="header__list--e" title="PRODUCT">PRODUCT</a>
                     <ul class="header__child-list header__child-list--product">
                         <li><a href="/products/ai_pro_style/" class="header__list--e" title="AI Pro Style">AI Pro Style</a></li>
                         <li><a href="/products/quick_hair_dryer/" class="header__list--e" title="Quick Hair Dryer">Quick Hair Dryer</a></li>
@@ -65,7 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </nav>
     </section>
 </header>
-<a href="/dealer/" class="sp header__sp-specital-link">ー サロン・美容師の皆様へ ー</a>
+<a href="/dealer/" class="sp header__sp-special-link">ー サロン・美容師の皆様へ ー</a>
 <div class="humberger-menu">
         <nav class="humberger-menu__link">
             <ul class="humberger-menu__list">

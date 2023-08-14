@@ -23,8 +23,8 @@
       height: 10px;
       background: radial-gradient(
         circle farthest-side,
-        #000000,
-        #000000 20%,
+        $black_color,
+        $black_color 20%,
         transparent 20%,
         transparent
       );
