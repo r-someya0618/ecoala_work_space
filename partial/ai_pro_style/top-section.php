@@ -116,7 +116,7 @@
       </p>
       <div class="p-product-users-voice__container">
         <div class="p-product-users-voice__container-inner">
-          <?php for ($i = 0; $i < count($users_voice); $i++) : $key = 'voice' . $i + 1 ?>
+          <?php for ($i = 0; $i < count($users_voice); $i++) : $key = 'voice' . strval($i + 1) ?>
             <div class="p-product-users-voice__card">
               <dl>
                 <dd class="p-product-users-voice__card-thumb">

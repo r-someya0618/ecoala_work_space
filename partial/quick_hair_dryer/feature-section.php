@@ -35,8 +35,8 @@
       <div class="p-product-alternating-section__container p-product-alternating-section__container--reverse l-container">
         <div class="p-product-alternating-section__img-container p-product-alternating-section__img-container--reverse">
           <div class="p-product-alternating-section__img p-product-concept__img--left">
-            <img class="pc-inbl" src="./assets/images/product/mode/mode_2_pc.png" alt="" />
-            <img class="sp" src="./assets/images/product/mode/mode_2_sp.png" alt="" />
+            <img class="pc-inbl" src="<?php echo get_template_directory_uri(); ?>/assets/images/product/mode/mode_2_pc.png" alt="" />
+            <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/images/product/mode/mode_2_sp.png" alt="" />
           </div>
         </div>
         <div class="p-product-alternating-section__txt-content p-product-alternating-section__txt-content--reverse">

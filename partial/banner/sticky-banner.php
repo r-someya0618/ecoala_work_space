@@ -20,7 +20,7 @@
   </a>
   ';
 
-  if (strpos($_SERVER['REQUEST_URI'] , 'product/quick_hair_dryer/')) {
+  if (strpos($_SERVER['REQUEST_URI'] , 'products/quick_hair_dryer/')) {
     echo $banner_pink;
   } else if ($_SERVER['REQUEST_URI'] !== '/dealer/') {
     echo $banner_blue;

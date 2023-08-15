@@ -41,8 +41,8 @@
 
 jQuery(function ($) {
   // 直接アクセス対策
-  if (window.location.pathname === '/product/') {
-    window.location.href = '/product/ai_pro_style';
+  if (window.location.pathname === '/products/') {
+    window.location.href = '/products/ai_pro_style';
   }
 
   $('#humberger-check').on('change', function () {
@@ -198,7 +198,7 @@ jQuery(function ($) {
   // 遷移時のnavの切り替え
   const page = location.pathname;
   const query = $(location).attr('search').split('=')[1];
-  if (page === '/product/ai_pro_style/' || page === '/product/quick_hair_dryer/') {
+  if (page === '/products/ai_pro_style/' || page === '/products/quick_hair_dryer/') {
     const pageType = page.match(/dryer/) ? 'dryer' : 'ai';
     switch (Number(query)) {
       case 1:
