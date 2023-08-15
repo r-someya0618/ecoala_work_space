@@ -2,21 +2,6 @@
   //管理バーOFF
   add_filter( 'show_admin_bar', '__return_false' );
 
-  add_filter('register_post_type_args', function($args, $post_type) {
-    if ($post_type === 'post') {
-      $slug = 'topics';
-      $args['labels'] = array(
-        'name' => 'TOPICS'
-      );
-      $args['has_archive'] = $slug;
-      $args['rewrite'] = array(
-        'slug' => $slug,
-        'with_front' => false,
-      );
-    }
-    return $args;
-  }, 10, 2);
-
   // 投稿サムネイル
   add_theme_support('post-thumbnails');
   add_filter( 'image_send_to_editor', 'remove_image_attribute', 10 );

@@ -5,11 +5,6 @@ Author: high5
 Description: The 2023- theme for WordPress
 Version: 1.0
 */
-img {
-  max-width: 100%;
-  vertical-align: bottom;
-}
-
 /***** 游ゴシック体 Pr6N R用 *****/
 /***** 游ゴシック体 Pr6N M用 *****/
 /***** 游ゴシック体 Pr6N D用 *****/
@@ -147,6 +142,7 @@ sup {
 }
 
 img {
+  max-width: 100%;
   border-style: none;
   vertical-align: bottom;
 }
@@ -317,6 +313,18 @@ template {
   display: none;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .l-container {
   position: relative;
   max-width: 1232px;
@@ -352,6 +360,12 @@ template {
   justify-content: end;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .footer {
   background: #141414;
   padding: clamp(40px, 4vw, 120px);
@@ -510,6 +524,12 @@ template {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 body {
   margin: 0;
   font-family: "A+EqpB-游ゴシック体 Pr6N M", sans-serif;
@@ -834,6 +854,30 @@ body {
   transform: translateY(-50%);
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-box-flex {
   display: flex;
 }
@@ -844,6 +888,12 @@ body {
   justify-content: end;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-button {
   border: 1px solid #141414;
   color: #141414;
@@ -876,6 +926,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-posts-card__inner {
   display: flex;
   align-items: center;
@@ -941,16 +997,12 @@ body {
   }
 }
 
-.c-date {
-  color: #888;
-  font-size: 1.25rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-date {
-    font-size: 0.75rem;
-  }
-}
-
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-heading-section {
   font-size: 2.8125rem;
 }
@@ -999,6 +1051,14 @@ body {
     font-size: 1.70625rem;
   }
 }
+.c-heading-section--post {
+  font-size: 1.875rem;
+}
+@media only screen and (max-width: 768px) {
+  .c-heading-section--post {
+    font-size: 1.40625rem;
+  }
+}
 .c-heading-section--dealer-intro-card {
   font-size: 2.5rem;
 }
@@ -1011,15 +1071,12 @@ body {
   text-align: center;
 }
 
-.c-post-heading {
-  font-size: 1.875rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-post-heading {
-    font-size: 1.40625rem;
-  }
-}
-
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-icon--instagram {
   width: 143px;
 }
@@ -1029,6 +1086,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-list-brackets > li {
   list-style-type: none;
   counter-increment: brackets-cnt;
@@ -1041,6 +1104,12 @@ body {
   width: 2em;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-list-dot li {
   text-indent: -1em;
   margin-left: 1em;
@@ -1049,6 +1118,12 @@ body {
   content: "・";
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-list-num > li {
   list-style-type: none;
   counter-increment: num-cnt;
@@ -1061,6 +1136,12 @@ body {
   width: 2em;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-nav-indicator {
   width: 100%;
   height: 3px;
@@ -1072,6 +1153,12 @@ body {
   background: #646464;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-nav-list__item {
   font-size: 1.25rem;
 }
@@ -1081,6 +1168,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-pagination {
   display: flex;
   justify-content: center;
@@ -1152,10 +1245,46 @@ body {
   width: 20px;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-txt-h1 {
   font-size: 2.8125rem;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-txt-link:hover {
   opacity: 0.7;
 }
@@ -1163,6 +1292,12 @@ body {
   text-decoration: underline;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .c-txt--15 {
   font-size: 0.9375rem;
 }
@@ -1257,6 +1392,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-sticky-banner {
   position: fixed;
   right: 0;
@@ -1346,6 +1487,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-company {
   margin-top: 200px;
 }
@@ -1421,6 +1568,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-dealer-introduction {
   margin-top: 200px;
 }
@@ -1563,6 +1716,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-instagram {
   margin-top: 200px;
   margin-bottom: 250px;
@@ -1633,6 +1792,12 @@ body {
   background-color: #000000 !important;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-posts-list {
   margin: 60px 0;
 }
@@ -1680,6 +1845,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-product-alternating-section {
   margin-top: 150px;
   margin-bottom: 250px;
@@ -1790,6 +1961,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-product-concept {
   margin-top: 150px;
   margin-bottom: 250px;
@@ -1936,7 +2113,7 @@ body {
   position: absolute;
   width: 44.27vw;
   height: 100%;
-  background-color: #c8c8c8;
+  background-color: #eee;
   opacity: 0.3;
   z-index: -1;
 }
@@ -1966,6 +2143,12 @@ body {
   display: block;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-product-guarantee {
   margin-top: 250px;
   margin-bottom: 250px;
@@ -1988,7 +2171,7 @@ body {
 .p-product-guarantee__contents {
   margin-top: 110px;
   height: 100px;
-  background: #c8c8c8;
+  background: #eee;
 }
 @media only screen and (max-width: 768px) {
   .p-product-guarantee__contents {
@@ -1996,6 +2179,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-product-introduction {
   margin-top: 150px;
 }
@@ -2019,6 +2208,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-product-kv__item {
   transition: opacity 0.8s;
   visibility: hidden;
@@ -2034,6 +2229,12 @@ body {
   width: 100%;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-product-nav {
   margin-top: 80px;
   padding: 0 32px;
@@ -2099,6 +2300,12 @@ body {
   padding: 0 16px;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-product-section {
   background-repeat: no-repeat;
   background-size: cover;
@@ -2251,6 +2458,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-product-spec {
   margin-top: 150px;
 }
@@ -2277,10 +2490,10 @@ body {
 }
 .p-product-spec__table {
   width: 100%;
-  border-top: 1px solid #c8c8c8;
+  border-top: 1px solid #eee;
 }
 .p-product-spec__tr {
-  border-bottom: 1px solid #c8c8c8;
+  border-bottom: 1px solid #eee;
 }
 .p-product-spec__th {
   width: 190px;
@@ -2302,6 +2515,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-product-users-voice {
   margin-top: 250px;
 }
@@ -2409,6 +2628,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-top-feature-section {
   display: flex;
   flex-wrap: wrap;
@@ -2488,6 +2713,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-top-instagram {
   margin: 250px 0 255px;
 }
@@ -2540,6 +2771,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-top-introduction {
   padding: 0 16px;
 }
@@ -2634,6 +2871,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-top-kv-section {
   margin-top: 250px;
 }
@@ -2800,6 +3043,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-top-topics {
   margin-top: 250px;
 }
@@ -2854,6 +3103,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-topics-detail {
   margin: 130px 0 250px;
 }
@@ -2869,13 +3124,19 @@ body {
 }
 .p-topics-detail__date {
   margin-top: 25px;
+  margin-bottom: 45px;
 }
 .p-topics-detail__top-image {
   margin-top: 60px;
+  margin-bottom: 100px;
   text-align: center;
 }
+@media only screen and (max-width: 768px) {
+  .p-topics-detail__top-image {
+    margin-bottom: 50px;
+  }
+}
 .p-topics-detail__content {
-  margin-top: 90px;
   font-size: 1.25rem;
   line-height: 2;
 }
@@ -2888,6 +3149,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-topics-index {
   margin: 130px 0 250px;
 }
@@ -2906,6 +3173,12 @@ body {
   }
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .p-two-way-slider__counter-container {
   display: flex;
   align-items: center;
@@ -3147,6 +3420,12 @@ body {
     transform: translateY(0);
   }
 }
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .u-margin__top--5 {
   margin-top: 5px;
 }
@@ -3251,6 +3530,12 @@ body {
   margin-left: auto;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .u-padding__left--8 {
   padding-left: 8px;
 }
@@ -3309,6 +3594,12 @@ body {
   padding-bottom: 150px;
 }
 
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 /* オリジナルCSSここから */
 /* Slider */
 .slick-slider {
@@ -3563,6 +3854,12 @@ body {
 }
 
 /* オリジナルCSSここまで */
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
 .pc {
   display: block !important;
 }
