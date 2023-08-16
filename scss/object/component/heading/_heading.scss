@@ -4,51 +4,27 @@
 @use "../../../foundation/_mixin" as *;
 
 .c-heading-section {
-  @include tablet {
-    font-size: rem(22.5);
-  }
-  font-size: rem(45);
+  font-size: clamp(22.5px, 4.39vw, 45px);
   &--large {
-    @include tablet {
-      font-size: rem(25);
-    }
-    font-size: rem(65);
+    font-size: clamp(25px, 5.85vw, 65px);
   }
   &--smaller {
-    @include tablet {
-      font-size: rem(16.5);
-    }
-    font-size: rem(40);
+    font-size: clamp(16.5px, 3.67vw, 40px);
   }
   &--small {
-    @include tablet {
-      font-size: rem(17.5);
-    }
-    font-size: rem(35);
+    font-size: clamp(17.5px, 3.41vw, 35px);
   }
   &--product-name-sub {
-    @include tablet {
-      font-size: rem(18.5);
-    }
-    font-size: rem(53);
+    font-size: clamp(18.5px, 4.65vw, 53px);
   }
   &--product-name {
-    @include tablet {
-      font-size: rem(27.3);
-    }
-    font-size: rem(73);
+    font-size: clamp(27.3px, 6.52vw, 73px);
   }
   &--post {
-    @include tablet {
-      font-size: rem(22.5);
-    }
-    font-size: rem(30);
+    font-size: clamp(22.5px, 3.41vw, 30px);
   }
   &--dealer-intro-card {
-    @include tablet {
-      font-size: rem(13);
-    }
-    font-size: rem(40);
+    font-size: clamp(13px, 3.45vw, 40px);
   }
   &--center {
     text-align: center;

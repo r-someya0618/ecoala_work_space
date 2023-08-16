@@ -43,11 +43,10 @@
   &__text-content-lead {
     @include tablet {
       margin-top: 35px;
-      font-size: rem(12);
       text-align: center;
     }
     margin-top: 90px;
-    font-size: rem(25);
+    font-size: clamp(12px, 2.4vw, 25px);
   }
   &__text-content-line {
     @include tablet {

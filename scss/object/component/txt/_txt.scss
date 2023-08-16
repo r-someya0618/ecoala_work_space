@@ -5,40 +5,22 @@
 
 .c-txt {
   &--15 {
-    @include tablet {
-      font-size: rem(8);
-    }
-    font-size: rem(15);
+    font-size: clamp(8px, 1.6vw, 15px);
   }
   &--20 {
-    @include tablet {
-      font-size: rem(11.5);
-    }
-    font-size: rem(20);
+    font-size: clamp(11.5px, 2.1vw, 20px);
   }
   &--25 {
-    @include tablet {
-      font-size: rem(12.5);
-    }
-    font-size: rem(25);
+    font-size: clamp(12.5px, 2.6vw, 25px);
   }
   &--30 {
-    @include tablet {
-      font-size: rem(13);
-    }
-    font-size: rem(30);
+    font-size: clamp(13px, 2.7vw, 30px);
   }
   &--40 {
-    @include tablet {
-      font-size: rem(22.5);
-    }
-    font-size: rem(40);
+    font-size: clamp(22.5px, 2.7vw, 40px);
   }
   &--45 {
-    @include tablet {
-      font-size: rem(22.5);
-    }
-    font-size: rem(45);
+    font-size: clamp(22.5px, 4.4vw, 45px);
   }
   &--center {
     text-align: center;
@@ -56,27 +38,15 @@
 
 .c-txt-product {
   &--users-voice {
-    @include tablet {
-      font-size: rem(26.5);
-    }
-    font-size: rem(45);
+    font-size: clamp(26.5px, 4.65vw, 45px);
   }
   &--card-title {
-    @include tablet {
-      font-size: rem(15);
-    }
-    font-size: rem(20);
+    font-size: clamp(15px, 2.21vw, 20px);
   }
   &--card-txt {
-    @include tablet {
-      font-size: rem(12.5);
-    }
-    font-size: rem(16);
+    font-size: clamp(12.5px, 1.85vw, 16px);
   }
   &--concept-title {
-    @include tablet {
-      font-size: rem(20);
-    }
-    font-size: rem(40);
+    font-size: clamp(20px, 3.9vw, 40px);
   }
 }

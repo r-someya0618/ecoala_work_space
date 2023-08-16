@@ -21,13 +21,12 @@
   }
   &__date {
     @include tablet {
-      font-size: rem(12);
     }
     color: $gray_color_2;
-    font-size: rem(20);
+    font-size: clamp(12px, 2.08vw, 20px);
   }
   &__title {
-    font-size: rem(14);
+    font-size: clamp(12px, 2.08vw, 20px);
   }
 }
 
@@ -36,24 +35,12 @@
     width: 45%;
   }
   width: 255px;
-  &__thumbail {
-    @include tablet {
-      width: 40.7%;
-    }
-    width: 100%;
-  }
   &__date {
-    @include tablet {
-      font-size: rem(12);
-    }
     color: $gray_color_2;
-    font-size: rem(20);
+    font-size: clamp(12px, 2.08vw, 20px);
   }
   &__title {
-    @include tablet {
-      font-size: rem(12);
-    }
     font-weight: normal;
-    font-size: rem(20);
+    font-size: clamp(12px, 2.08vw, 20px);
   }
 }

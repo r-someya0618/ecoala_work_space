@@ -32,6 +32,7 @@ html {
 
 body {
   margin: 0;
+  min-width: 375px;
 }
 
 main {
@@ -749,10 +750,10 @@ body {
   position: fixed;
   top: 100px;
   width: 100%;
-  height: 65px;
-  padding: 15px 0;
+  height: max(8.5vw, 32px);
   text-align: center;
-  font-size: 26px;
+  font-size: clamp(13px, 4.33vw, 26px);
+  line-height: max(8.5vw, 32px);
   background: linear-gradient(57deg, #828282 0%, #e6e6e6 50%, #e6e6e6 51%, #828282 100%);
   z-index: 1;
 }
@@ -760,9 +761,9 @@ body {
 .dummy-space {
   height: 93px;
 }
-@media only screen and (max-width: 1180px) {
+@media only screen and (max-width: 768px) {
   .dummy-space {
-    height: 165px;
+    height: calc(max(8.5vw, 32px) + 93px);
   }
 }
 
@@ -895,34 +896,32 @@ Description: The 2023- theme for WordPress
 Version: 1.0
 */
 .c-button {
+  font-family: AvenirNextLTPro-Regular, sans-serif;
   border: 1px solid #141414;
   color: #141414;
   text-align: center;
   cursor: pointer;
-  font-family: AvenirNextLTPro-Regular, sans-serif;
 }
 .c-button:hover {
   opacity: 0.7;
 }
 .c-button--square {
   padding: 25px;
-  font-size: 1.5625rem;
+  font-size: clamp(14px, 2.53vw, 25px);
 }
 @media only screen and (max-width: 768px) {
   .c-button--square {
     padding: 15px;
-    font-size: 0.875rem;
   }
 }
 .c-button--round {
   padding: 8px;
   border-radius: 19px;
-  font-size: 1.25rem;
+  font-size: clamp(10px, 1.95vw, 20px);
 }
 @media only screen and (max-width: 768px) {
   .c-button--round {
     padding: 5px;
-    font-size: 0.625rem;
   }
 }
 
@@ -951,15 +950,10 @@ Version: 1.0
 }
 .c-posts-card__date {
   color: #888;
-  font-size: 1.25rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-posts-card__date {
-    font-size: 0.75rem;
-  }
+  font-size: clamp(12px, 2.08vw, 20px);
 }
 .c-posts-card__title {
-  font-size: 0.875rem;
+  font-size: clamp(12px, 2.08vw, 20px);
 }
 
 .c-posts-list-card {
@@ -970,31 +964,13 @@ Version: 1.0
     width: 45%;
   }
 }
-.c-posts-list-card__thumbail {
-  width: 100%;
-}
-@media only screen and (max-width: 768px) {
-  .c-posts-list-card__thumbail {
-    width: 40.7%;
-  }
-}
 .c-posts-list-card__date {
   color: #888;
-  font-size: 1.25rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-posts-list-card__date {
-    font-size: 0.75rem;
-  }
+  font-size: clamp(12px, 2.08vw, 20px);
 }
 .c-posts-list-card__title {
   font-weight: normal;
-  font-size: 1.25rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-posts-list-card__title {
-    font-size: 0.75rem;
-  }
+  font-size: clamp(12px, 2.08vw, 20px);
 }
 
 /*
@@ -1004,68 +980,28 @@ Description: The 2023- theme for WordPress
 Version: 1.0
 */
 .c-heading-section {
-  font-size: 2.8125rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-heading-section {
-    font-size: 1.40625rem;
-  }
+  font-size: clamp(22.5px, 4.39vw, 45px);
 }
 .c-heading-section--large {
-  font-size: 4.0625rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-heading-section--large {
-    font-size: 1.5625rem;
-  }
+  font-size: clamp(25px, 5.85vw, 65px);
 }
 .c-heading-section--smaller {
-  font-size: 2.5rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-heading-section--smaller {
-    font-size: 1.03125rem;
-  }
+  font-size: clamp(16.5px, 3.67vw, 40px);
 }
 .c-heading-section--small {
-  font-size: 2.1875rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-heading-section--small {
-    font-size: 1.09375rem;
-  }
+  font-size: clamp(17.5px, 3.41vw, 35px);
 }
 .c-heading-section--product-name-sub {
-  font-size: 3.3125rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-heading-section--product-name-sub {
-    font-size: 1.15625rem;
-  }
+  font-size: clamp(18.5px, 4.65vw, 53px);
 }
 .c-heading-section--product-name {
-  font-size: 4.5625rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-heading-section--product-name {
-    font-size: 1.70625rem;
-  }
+  font-size: clamp(27.3px, 6.52vw, 73px);
 }
 .c-heading-section--post {
-  font-size: 1.875rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-heading-section--post {
-    font-size: 1.40625rem;
-  }
+  font-size: clamp(22.5px, 3.41vw, 30px);
 }
 .c-heading-section--dealer-intro-card {
-  font-size: 2.5rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-heading-section--dealer-intro-card {
-    font-size: 0.8125rem;
-  }
+  font-size: clamp(13px, 3.45vw, 40px);
 }
 .c-heading-section--center {
   text-align: center;
@@ -1160,12 +1096,7 @@ Description: The 2023- theme for WordPress
 Version: 1.0
 */
 .c-nav-list__item {
-  font-size: 1.25rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-nav-list__item {
-    font-size: 0.875rem;
-  }
+  font-size: clamp(14px, 2.21vw, 20px);
 }
 
 /*
@@ -1214,13 +1145,8 @@ Version: 1.0
   align-items: center;
   position: relative;
   height: 25px;
-  font-size: 1.25rem;
+  font-size: clamp(14px, 2.21vw, 20px);
   transition: all 0.15s linear;
-}
-@media only screen and (max-width: 768px) {
-  .c-pagination__item-link {
-    font-size: 0.875rem;
-  }
 }
 .c-pagination__item-link--list {
   width: 15px;
@@ -1299,52 +1225,22 @@ Description: The 2023- theme for WordPress
 Version: 1.0
 */
 .c-txt--15 {
-  font-size: 0.9375rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-txt--15 {
-    font-size: 0.5rem;
-  }
+  font-size: clamp(8px, 1.6vw, 15px);
 }
 .c-txt--20 {
-  font-size: 1.25rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-txt--20 {
-    font-size: 0.71875rem;
-  }
+  font-size: clamp(11.5px, 2.1vw, 20px);
 }
 .c-txt--25 {
-  font-size: 1.5625rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-txt--25 {
-    font-size: 0.78125rem;
-  }
+  font-size: clamp(12.5px, 2.6vw, 25px);
 }
 .c-txt--30 {
-  font-size: 1.875rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-txt--30 {
-    font-size: 0.8125rem;
-  }
+  font-size: clamp(13px, 2.7vw, 30px);
 }
 .c-txt--40 {
-  font-size: 2.5rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-txt--40 {
-    font-size: 1.40625rem;
-  }
+  font-size: clamp(22.5px, 2.7vw, 40px);
 }
 .c-txt--45 {
-  font-size: 2.8125rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-txt--45 {
-    font-size: 1.40625rem;
-  }
+  font-size: clamp(22.5px, 4.4vw, 45px);
 }
 .c-txt--center {
   text-align: center;
@@ -1360,36 +1256,16 @@ Version: 1.0
 }
 
 .c-txt-product--users-voice {
-  font-size: 2.8125rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-txt-product--users-voice {
-    font-size: 1.65625rem;
-  }
+  font-size: clamp(26.5px, 4.65vw, 45px);
 }
 .c-txt-product--card-title {
-  font-size: 1.25rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-txt-product--card-title {
-    font-size: 0.9375rem;
-  }
+  font-size: clamp(15px, 2.21vw, 20px);
 }
 .c-txt-product--card-txt {
-  font-size: 1rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-txt-product--card-txt {
-    font-size: 0.78125rem;
-  }
+  font-size: clamp(12.5px, 1.85vw, 16px);
 }
 .c-txt-product--concept-title {
-  font-size: 2.5rem;
-}
-@media only screen and (max-width: 768px) {
-  .c-txt-product--concept-title {
-    font-size: 1.25rem;
-  }
+  font-size: clamp(20px, 3.9vw, 40px);
 }
 
 /*
@@ -1399,31 +1275,31 @@ Description: The 2023- theme for WordPress
 Version: 1.0
 */
 .p-sticky-banner {
+  display: block;
+  opacity: 0;
   position: fixed;
   right: 0;
   bottom: 32px;
-  display: block;
+  z-index: 99;
   width: 330px;
   height: 215px;
   padding: 32px;
   color: #fff;
-  z-index: 99;
-  opacity: 0;
   transition: all 1s;
-}
-.p-sticky-banner.is-active {
-  opacity: 1;
 }
 @media only screen and (max-width: 768px) {
   .p-sticky-banner {
     display: flex;
-    width: 100%;
-    height: auto;
-    padding: 15px 32px;
     justify-content: space-between;
     align-items: center;
     bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 15px 32px;
   }
+}
+.p-sticky-banner.is-active {
+  opacity: 1;
 }
 .p-sticky-banner--blue {
   background: linear-gradient(57deg, rgb(20, 20, 96) 0%, rgb(20, 20, 119) 14.73%, rgb(20, 20, 146) 35.66%, rgb(20, 20, 156) 47.96%, rgb(25, 32, 160) 51.07%, rgb(49, 93, 180) 67.99%, rgb(67, 137, 195) 82.37%, rgb(78, 164, 204) 93.49%, rgb(82, 174, 207) 100%);
@@ -1433,39 +1309,44 @@ Version: 1.0
 }
 .p-sticky-banner__txt {
   flex: 1;
-  font-size: 1.625rem;
+  font-size: clamp(15px, 2.66vw, 26px);
   line-height: 1.53;
-}
-@media only screen and (max-width: 768px) {
-  .p-sticky-banner__txt {
-    font-size: 0.9375rem;
-  }
 }
 .p-sticky-banner__button {
   position: relative;
   width: 252px;
   height: 49px;
   margin-top: 30px;
-  font-size: 1.125rem;
+  font-size: clamp(10px, 1.82vw, 18px);
   line-height: 49px;
   text-align: center;
 }
 @media only screen and (max-width: 768px) {
   .p-sticky-banner__button {
-    font-size: 0.875rem;
-    width: 39.86%;
-    margin-top: 0;
+    width: 47%;
     height: 37px;
+    margin-top: 0;
     line-height: 37px;
-  }
-}
-@media only screen and (max-width: 450px) {
-  .p-sticky-banner__button {
-    font-size: 0.625rem;
   }
 }
 .p-sticky-banner__button--square {
   border: 1px solid #fff;
+}
+@media only screen and (max-width: 768px) {
+  .p-sticky-banner__button--square {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .p-sticky-banner__button--square::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    border-width: 18.5px 0 18.5px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);
+    content: "";
+  }
 }
 .p-sticky-banner__button--arrow {
   background-color: rgba(255, 255, 255, 0.2);
@@ -1780,16 +1661,20 @@ Version: 1.0
 
 #sb_instagram .sbi_load_btn .sbi_btn_text {
   color: #141414;
-  font-size: 1.25rem;
-}
-@media only screen and (max-width: 768px) {
-  #sb_instagram .sbi_load_btn .sbi_btn_text {
-    font-size: 0.625rem;
-  }
+  font-size: clamp(10px, 1.95vw, 20px);
 }
 
 #sb_instagram #sbi_load .sbi_loader {
   background-color: #000000 !important;
+}
+
+#sb_instagram.sbi_small .sbi_playbtn,
+#sb_instagram.sbi_small .sbi_photo_wrap .svg-inline--fa.fa-play {
+  z-index: 0;
+}
+
+#sb_instagram.sbi_small .sbi_type_carousel .sbi_photo_wrap .fa-clone {
+  z-index: 0;
 }
 
 /*
@@ -2236,31 +2121,31 @@ Description: The 2023- theme for WordPress
 Version: 1.0
 */
 .p-product-nav {
-  margin-top: 80px;
+  margin-top: min(6.6vw, 80px);
   padding: 0 32px;
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-.p-product-nav::-webkit-scrollbar {
-  display: none;
 }
 @media only screen and (max-width: 768px) {
   .p-product-nav {
     margin-top: 0;
   }
 }
+.p-product-nav::-webkit-scrollbar {
+  display: none;
+}
 .p-product-nav__list {
-  margin: 0 auto;
-  width: 1200px;
   display: flex;
   justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
   border-bottom: 1px solid hsl(0, 0%, 20%);
 }
 @media only screen and (max-width: 768px) {
   .p-product-nav__list {
-    width: fit-content;
     justify-content: flex-start;
+    width: fit-content;
     border-bottom: none;
   }
 }
@@ -2270,8 +2155,8 @@ Version: 1.0
 }
 @media only screen and (max-width: 768px) {
   .p-product-nav__list-item {
-    white-space: nowrap;
     padding: 15px;
+    white-space: nowrap;
   }
 }
 .p-product-nav__list-item:first-child {
@@ -2312,7 +2197,7 @@ Version: 1.0
 }
 .p-product-section--concept {
   margin-top: 150px;
-  background-image: url(./assets/images/product/product_bg/product_concept_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_bg/product_concept_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--concept {
@@ -2321,44 +2206,44 @@ Version: 1.0
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--concept {
-    background-image: url(./assets/images/product/product_bg/product_concept_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_bg/product_concept_bg_sp.png);
   }
 }
 .p-product-section--feature {
-  background-image: url(./assets/images/product/product_bg/product_feature_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_bg/product_feature_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--feature {
-    background-image: url(./assets/images/product/product_bg/product_feature_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_bg/product_feature_bg_sp.png);
   }
 }
 .p-product-section--design {
-  background-image: url(./assets/images/product/product_bg/product_design_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_bg/product_design_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--design {
-    background-image: url(./assets/images/product/product_bg/product_design_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_bg/product_design_bg_sp.png);
   }
 }
 .p-product-section--nozzle {
-  background-image: url(./assets/images/product/product_bg/product_nozzle_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_bg/product_nozzle_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--nozzle {
-    background-image: url(./assets/images/product/product_bg/product_nozzle_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_bg/product_nozzle_bg_sp.png);
   }
 }
 .p-product-section--spec {
-  background-image: url(./assets/images/product/product_bg/product_spec_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_bg/product_spec_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--spec {
-    background-image: url(./assets/images/product/product_bg/product_spec_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_bg/product_spec_bg_sp.png);
   }
 }
 .p-product-section--concept-dryer {
   margin-top: 150px;
-  background-image: url(./assets/images/product/product_dryer_bg/product_concept_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_dryer_bg/product_concept_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--concept-dryer {
@@ -2367,39 +2252,39 @@ Version: 1.0
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--concept-dryer {
-    background-image: url(./assets/images/product/product_dryer_bg/product_concept_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_dryer_bg/product_concept_bg_sp.png);
   }
 }
 .p-product-section--care {
-  background-image: url(./assets/images/product/product_dryer_bg/product_care_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_dryer_bg/product_care_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--care {
-    background-image: url(./assets/images/product/product_dryer_bg/product_care_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_dryer_bg/product_care_bg_sp.png);
   }
 }
 .p-product-section--mode {
-  background-image: url(./assets/images/product/product_dryer_bg/product_mode_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_dryer_bg/product_mode_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--mode {
-    background-image: url(./assets/images/product/product_dryer_bg/product_mode_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_dryer_bg/product_mode_bg_sp.png);
   }
 }
 .p-product-section--nozzle-dryer {
-  background-image: url(./assets/images/product/product_dryer_bg/product_nozzle_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_dryer_bg/product_nozzle_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--nozzle-dryer {
-    background-image: url(./assets/images/product/product_dryer_bg/product_nozzle_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_dryer_bg/product_nozzle_bg_sp.png);
   }
 }
 .p-product-section--spec-dryer {
-  background-image: url(./assets/images/product/product_dryer_bg/product_spec_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_dryer_bg/product_spec_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-product-section--spec-dryer {
-    background-image: url(./assets/images/product/product_dryer_bg/product_spec_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/product/product_dryer_bg/product_spec_bg_sp.png);
   }
 }
 .p-product-section__container {
@@ -2827,12 +2712,11 @@ Version: 1.0
 }
 .p-top-introduction__text-content-lead {
   margin-top: 90px;
-  font-size: 1.5625rem;
+  font-size: clamp(12px, 2.4vw, 25px);
 }
 @media only screen and (max-width: 768px) {
   .p-top-introduction__text-content-lead {
     margin-top: 35px;
-    font-size: 0.75rem;
     text-align: center;
   }
 }
@@ -2905,43 +2789,43 @@ Version: 1.0
   }
 }
 .p-top-kv-section__kv-container--concept {
-  background-image: url(./assets/images/top/bg/concept_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/top/bg/concept_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-top-kv-section__kv-container--concept {
-    background-image: url(./assets/images/top/bg/concept_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/top/bg/concept_bg_sp.png);
   }
 }
 .p-top-kv-section__kv-container--ai-prostyle {
-  background-image: url(./assets/images/top/bg/ai_pro_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/top/bg/ai_pro_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-top-kv-section__kv-container--ai-prostyle {
-    background-image: url(./assets/images/top/bg/ai_pro_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/top/bg/ai_pro_bg_sp.png);
   }
 }
 .p-top-kv-section__kv-container--dryer {
-  background-image: url(./assets/images/top/bg/dryer_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/top/bg/dryer_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-top-kv-section__kv-container--dryer {
-    background-image: url(./assets/images/top/bg/dryer_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/top/bg/dryer_bg_sp.png);
   }
 }
 .p-top-kv-section__kv-container--salon {
-  background-image: url(./assets/images/top/bg/salon_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/top/bg/salon_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-top-kv-section__kv-container--salon {
-    background-image: url(./assets/images/top/bg/salon_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/top/bg/salon_bg_sp.png);
   }
 }
 .p-top-kv-section__kv-container--dealer {
-  background-image: url(./assets/images/top/bg/dealer_bg_pc.png);
+  background-image: url(/wp-content/themes/ecoala_renewal/assets/images/top/bg/dealer_bg_pc.png);
 }
 @media only screen and (max-width: 768px) {
   .p-top-kv-section__kv-container--dealer {
-    background-image: url(./assets/images/top/bg/dealer_bg_sp.png);
+    background-image: url(/wp-content/themes/ecoala_renewal/assets/images/top/bg/dealer_bg_sp.png);
   }
 }
 .p-top-kv-section__kv-container-inner {
@@ -3010,7 +2894,6 @@ Version: 1.0
 }
 @media only screen and (max-width: 768px) {
   .p-top-kv-section__product-name {
-    margin: 0 32px;
     text-align: right;
   }
 }
@@ -3748,7 +3631,7 @@ Version: 1.0
 }
 
 .slick-prev {
-  left: -25px;
+  display: none !important;
 }
 
 [dir=rtl] .slick-prev {
@@ -3765,7 +3648,7 @@ Version: 1.0
 }
 
 .slick-next {
-  right: -25px;
+  display: none !important;
 }
 
 [dir=rtl] .slick-next {

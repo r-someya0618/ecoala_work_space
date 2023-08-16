@@ -4,28 +4,28 @@
 @use "../../../foundation/_mixin" as *;
 
 .p-sticky-banner {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 15px 32px;
+  }
+  display: block;
+  opacity: 0;
   position: fixed;
   right: 0;
   bottom: 32px;
-  display: block;
+  z-index: 99;
   width: 330px;
   height: 215px;
   padding: 32px;
   color: $white_color;
-  z-index: 99;
-  opacity: 0;
   transition: all 1s;
   &.is-active {
     opacity: 1;
-  }
-  @include tablet {
-    display: flex;
-    width: 100%;
-    height: auto;
-    padding: 15px 32px;
-    justify-content: space-between;
-    align-items: center;
-    bottom: 0;
   }
 
   &--blue {
@@ -52,37 +52,48 @@
   }
   &__txt {
     flex: 1;
-    font-size: rem(26);
+    font-size: clamp(15px, 2.66vw, 26px);
     line-height: 1.53;
-    @include tablet {
-      font-size: rem(15);
-    }
   }
   &__button {
+    @include tablet {
+      width: 47%;
+      height: 37px;
+      margin-top: 0;
+      line-height: 37px;
+    }
     position: relative;
     width: 252px;
     height: 49px;
     margin-top: 30px;
-    font-size: rem(18);
+    font-size: clamp(10px, 1.82vw, 18px);
     line-height: 49px;
     text-align: center;
-    @include tablet {
-      font-size: rem(14);
-      width: 39.86%;
-      margin-top: 0;
-      height: 37px;
-      line-height: 37px;
-    }
-    @include mobile-l2 {
-      font-size: rem(10);
-    }
 
     &--square {
+      @include tablet {
+        border: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        &::after {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: -10px;
+          border-width: 18.5px 0 18.5px 10px;
+          border-style: solid;
+          border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);
+          content: '';
+        }
+      }
       border: 1px solid $white_color;
     }
     &--arrow {
       background-color: rgba(255, 255, 255, 0.2);
       &::after {
+        @include tablet {
+          right: -10px;
+          border-width: 18.5px 0 18.5px 10px;
+        }
         display: block;
         position: absolute;
         top: 0;
@@ -91,10 +102,6 @@
         border-style: solid;
         border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);
         content: '';
-        @include tablet {
-          right: -10px;
-          border-width: 18.5px 0 18.5px 10px;
-        }
       }
     }
   }

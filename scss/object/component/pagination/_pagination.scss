@@ -32,16 +32,13 @@
     }
   }
   &__item-link {
-    @include tablet {
-      font-size: rem(14);
-    }
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
     height: 25px;
-    font-size: rem(20);
+    font-size: clamp(14px, 2.21vw, 20px);
     transition: all 0.15s linear;
     &--list {
       width: 15px;

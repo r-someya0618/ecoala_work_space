@@ -27,33 +27,33 @@
     background-repeat: no-repeat;
     &--concept {
       @include tablet {
-        background-image: url(./assets/images/top/bg/concept_bg_sp.png);
+        background-image: url(#{$image-path}top/bg/concept_bg_sp.png);
       }
-      background-image: url(./assets/images/top/bg/concept_bg_pc.png);
+      background-image: url(#{$image-path}top/bg/concept_bg_pc.png);
     }
     &--ai-prostyle {
       @include tablet {
-        background-image: url(./assets/images/top/bg/ai_pro_bg_sp.png);
+        background-image: url(#{$image-path}top/bg/ai_pro_bg_sp.png);
       }
-      background-image: url(./assets/images/top/bg/ai_pro_bg_pc.png);
+      background-image: url(#{$image-path}top/bg/ai_pro_bg_pc.png);
     }
     &--dryer {
       @include tablet {
-        background-image: url(./assets/images/top/bg/dryer_bg_sp.png);
+        background-image: url(#{$image-path}top/bg/dryer_bg_sp.png);
       }
-      background-image: url(./assets/images/top/bg/dryer_bg_pc.png);
+      background-image: url(#{$image-path}top/bg/dryer_bg_pc.png);
     }
     &--salon {
       @include tablet {
-        background-image: url(./assets/images/top/bg/salon_bg_sp.png);
+        background-image: url(#{$image-path}top/bg/salon_bg_sp.png);
       }
-      background-image: url(./assets/images/top/bg/salon_bg_pc.png);
+      background-image: url(#{$image-path}top/bg/salon_bg_pc.png);
     }
     &--dealer {
       @include tablet {
-        background-image: url(./assets/images/top/bg/dealer_bg_sp.png);
+        background-image: url(#{$image-path}top/bg/dealer_bg_sp.png);
       }
-      background-image: url(./assets/images/top/bg/dealer_bg_pc.png);
+      background-image: url(#{$image-path}top/bg/dealer_bg_pc.png);
     }
   }
   &__kv-container-inner {
@@ -115,7 +115,6 @@
   }
   &__product-name {
     @include tablet {
-      margin: 0 32px;
       text-align: right;
     }
     &--white {

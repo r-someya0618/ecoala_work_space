@@ -4,29 +4,30 @@
 @use "../../../foundation/_mixin" as *;
 
 .c-button {
+  @include font_e;
   border: 1px solid $black_color;
   color: $black_color;
   text-align: center;
   cursor: pointer;
-  @include font_e;
+
   &:hover {
     opacity: $opacity-hover;
   }
+
   &--square {
     @include tablet {
       padding: 15px;
-      font-size: rem(14);
     }
     padding: 25px;
-    font-size: rem(25);
+    font-size: clamp(14px, 2.53vw, 25px);
   }
+
   &--round {
     @include tablet {
       padding: 5px;
-      font-size: rem(10);
     }
     padding: 8px;
     border-radius: 19px;
-    font-size: rem(20);
+    font-size: clamp(10px, 1.95vw, 20px);
   }
 }

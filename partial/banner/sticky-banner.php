@@ -1,6 +1,6 @@
 <!-- バナーパーツ -->
 <?php
-  $banner_pink = '<a class="p-sticky-banner p-sticky-banner--pink">
+  $banner_pink = '<a href="/salon/" class="p-sticky-banner p-sticky-banner--pink">
     <p class="p-sticky-banner__txt">
     もっとうるおう、<br>
     もっと美しく。
@@ -9,7 +9,7 @@
       購入・お試しはこちらから
     </div>
   </a>';
-  $banner_blue = '<a class="p-sticky-banner p-sticky-banner--blue">
+  $banner_blue = '<a href="/salon/" class="p-sticky-banner p-sticky-banner--blue">
   <p class="p-sticky-banner__txt">
     <span class="u-inline-block">わたしに「いい」が、</span>
     <span class="u-inline-block">いちばん「いい」。</span>

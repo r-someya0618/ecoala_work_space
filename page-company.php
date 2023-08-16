@@ -22,7 +22,7 @@ Template Name: company
     <p class="p-company__company-txt p-company__company-txt--contact">
       当社取扱い商品へのご質問やご相談につきましては、</br>こちらからお問合わせください。</p>
 
-    <a href="mailto:info@example.com" class="p-company__button c-button c-button--square">contact</a>
+    <a href="mailto:<?php echo get_field('contact_email_address'); ?>" class="p-company__button c-button c-button--square">contact</a>
   </section>
 </main>
 
