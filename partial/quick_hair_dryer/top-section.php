@@ -18,7 +18,7 @@
         <div class="p-product-section__container-inner p-product-section-container__inner">
           <h2 class="p-product-section__container-title c-txt--40">
             開発<br />
-            コンセプト
+            ストーリー
           </h2>
           <p class="p-product-section__container-txt c-txt--25">
             「高品質なものを<span class="u-narrow-text--mid">、</span>お求めやすい価格でご提供したい<span class="u-narrow-text--mid">」。</span><br />

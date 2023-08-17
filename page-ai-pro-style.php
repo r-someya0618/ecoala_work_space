@@ -43,11 +43,11 @@ $key_visuals = get_field('kv_ai');
   <!-- nav area start -->
   <nav class="p-product-nav">
     <ul class="p-product-nav__list c-nav-list">
-      <li data-list-id="top" class="p-product-nav__list-item c-nav-list__item">
-        AI Pro Style
+      <li data-list-id="top" class="p-product-nav__list-item c-nav-list__item is-active-ai">
+        iDryer
       </li>
       <li data-list-id="concept" class="p-product-nav__list-item c-nav-list__item">
-        CONCEPT
+        STORY
       </li>
       <li data-list-id="function" class="p-product-nav__list-item c-nav-list__item">
         高性能・高機能

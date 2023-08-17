@@ -67,6 +67,49 @@ foreach($slider_data as $key => $value) {
       </div>
     </section>
   </section>
+
+  <section class="p-top-topics l-container">
+    <h1 class="p-top-topics__heading c-heading-section--large c-heading-section--center">
+      TOPICS
+    </h1>
+    <?php
+    $args = [
+      'post_type' => 'post',
+      'posts_per_page' => 4
+    ];
+    $the_query = new WP_Query($args);
+    ?>
+    <div class="p-top-topics__posts-list">
+      <?php if ($the_query->have_posts()) : ?>
+        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+        <a class="p-top-topics__post-link-wrap" href="<?php echo get_permalink(); ?>">
+          <dl class="p-top-topics__posts-list-item c-posts-list-card">
+            <dd class="c-posts-list__thumbnail">
+              <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail(); ?>
+              <?php else : ?>
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/thumb.png" alt="">
+              <?php endif; ?>
+            </dd>
+            <dd class="p-top-topics__posts-list-date c-posts-list-card__date">
+              <time datetime="<?php the_time('Y/m/d'); ?>"><?php the_time('Y/m/d'); ?></time>
+            </dd>
+            <dt class="p-top-topics__posts-list-title c-posts-list-card__title">
+              <?php the_title(); ?>
+            </dt>
+          </dl>
+        </a>
+        <?php endwhile;
+        wp_reset_postdata(); ?>
+      <?php else : ?>
+        <div class="c-txt--30 c-txt--center u-margin__x--auto">記事が見つかりませんでした。</div>
+      <?php endif; ?>
+    </div>
+    <div class="p-top-topics__button c-button c-button--round">
+      <a href="/topics/">Read More</a>
+    </div>
+  </section>
+
   <section class="p-top-kv-section">
     <h1 class="p-top-kv-section__heading c-heading-section--large c-heading-section--center c-txt--font-e">
       CONCEPT
@@ -74,10 +117,11 @@ foreach($slider_data as $key => $value) {
     <div class="p-top-kv-section__kv-container p-top-kv-section__kv-container--concept">
       <div class="p-top-kv-section__kv-container-inner l-container l-container--wide">
         <section class="p-top-kv-section__card p-top-kv-section__card">
-          <h2 class="p-top-kv-section__card-title c-heading-section--small c-txt--font-e">ECOALA AI Pro Style</h2>
+          <h2 class="p-top-kv-section__card-title c-heading-section--small c-txt--font-e">ECOALAについて</h2>
           <p class="p-top-kv-section__card-txt c-txt--20">
-            わたし<span class="u-narrow-text">に</span>「いい<span class="u-narrow-text">」</span>が、いちば<span class="u-narrow-text">ん</span>「いい<span class="u-narrow-text">」</span>。<br>
-            未だかつてない次世代ドライヤーを目指しました。
+          ただ髪を乾かすだけではなく、<br />
+          多くの人が髪や頭皮の悩みから解き放たれ<br />
+          心や表情まで軽やかになれるような体験を。
           </p>
           <div class="p-top-kv-section__card-button
               c-button c-button--round">
@@ -107,9 +151,9 @@ foreach($slider_data as $key => $value) {
               いちば<span class="u-narrow-text--mid">ん</span>「いい<span class="u-narrow-text--mid">」</span>。
             </h3>
             <p class="p-top-kv-section__card-txt c-txt--20">
-              髪は一生もの。だから最適なヘアドライを届けたい。<br>
-              あなたの髪質・地肌に合わせた<br>
-              あなただけのドライヤーが誕生しました。
+              髪は一生もの。<br>
+              だから最適なヘアドライを届けたい。<br>
+              未だかつてない次世代ドライヤーが誕生しました。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
               <a href="/products/ai_pro_style/">Product Page</a>
@@ -206,20 +250,19 @@ foreach($slider_data as $key => $value) {
       <div class="p-top-kv-section__kv-container-inner l-container l-container--wide">
         <div class="p-top-kv-section__kv-contents p-top-kv-section__kv-contents--right">
           <h2 class="p-top-kv-section__product-name p-top-kv-section__product-name--white">
-            <div class="p-top-kv-section__product-name-inner u-inline-block c-txt--font-e-serif">
-              <span class="c-heading-section--product-name-sub">ECOALA</span><br>
+            <div class="p-top-kv-section__product-name-inner u-inline-block c-txt--font-e">
               <span class="c-heading-section--product-name">Quick Hair <br class="sp">Dryer</span>
             </div>
           </h2>
           <section class="p-top-kv-section__card p-top-kv-section__card--dryer p-top-kv-section__card--right">
             <h3 class="p-top-kv-section__card-title c-txt--30 c-txt--font-d">
-              ファミリーでも ひとりでも、<br>
-              髪と地肌に合わせたヘアケアを。
+            もっとうるおう、<br>
+            もっと美しく。
             </h3>
             <p class="p-top-kv-section__card-txt c-txt--20">
-              ノズルを付け替えれば、<br>
-              それぞれの髪と地肌に適したドライヤーに。<br>
-              気分やヘアスタイルで自由に楽しんで。
+            ファミリーでもひとりでも、<br>
+            髪と地肌に合わせたヘアケアを叶えるドライヤー。<br>
+            スタイリングや気分に合わせて楽しんで。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
               <a href="/products/quick_hair_dryer/">Product Page</a>
@@ -363,47 +406,6 @@ foreach($slider_data as $key => $value) {
     </div>
   </section>
 
-  <section class="p-top-topics l-container">
-    <h1 class="p-top-topics__heading c-heading-section--large c-heading-section--center">
-      TOPICS
-    </h1>
-    <?php
-    $args = [
-      'post_type' => 'post',
-      'posts_per_page' => 4
-    ];
-    $the_query = new WP_Query($args);
-    ?>
-    <div class="p-top-topics__posts-list">
-      <?php if ($the_query->have_posts()) : ?>
-        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <a class="p-top-topics__post-link-wrap" href="<?php echo get_permalink(); ?>">
-          <dl class="p-top-topics__posts-list-item c-posts-list-card">
-            <dd class="c-posts-list__thumbnail">
-              <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail(); ?>
-              <?php else : ?>
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/thumb.png" alt="">
-              <?php endif; ?>
-            </dd>
-            <dd class="p-top-topics__posts-list-date c-posts-list-card__date">
-              <time datetime="<?php the_time('Y/m/d'); ?>"><?php the_time('Y/m/d'); ?></time>
-            </dd>
-            <dt class="p-top-topics__posts-list-title c-posts-list-card__title">
-              <?php the_title(); ?>
-            </dt>
-          </dl>
-        </a>
-        <?php endwhile;
-        wp_reset_postdata(); ?>
-      <?php else : ?>
-        <div class="c-txt--30 c-txt--center u-margin__x--auto">記事が見つかりませんでした。</div>
-      <?php endif; ?>
-    </div>
-    <div class="p-top-topics__button c-button c-button--round">
-      <a href="/topics/">Read More</a>
-    </div>
-  </section>
   <section class="p-top-instagram">
     <h1 class="p-top-instagram__heading c-heading-section--large c-heading-section--center">
       INSTAGRAM

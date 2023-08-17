@@ -18,7 +18,7 @@
         <div class="p-product-section__container-inner p-product-section-container__inner">
           <h2 class="p-product-section__container-title c-txt--40">
             開発<br />
-            コンセプト
+            ストーリー
           </h2>
           <p class="p-product-section__container-txt c-txt--25">
             頭髪のプロ、熟練美容師と共同開発した新時代のドライヤー。髪や頭皮もお肌のように丁寧なケアができる、未だかつてないドライヤーが誕生しました。
