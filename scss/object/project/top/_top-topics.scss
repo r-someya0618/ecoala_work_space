@@ -38,6 +38,11 @@
     margin-top: 30px;
     line-height: 1.85;
   }
+  &__post-link-wrap {
+    &:hover {
+      opacity: $opacity-hover;
+    }
+  }
   &__button {
     @include tablet {
       width: 130px;

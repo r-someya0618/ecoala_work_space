@@ -13,7 +13,7 @@ $key_visuals = get_field('kv_ai');
 <main data-product="ai_pro">
   <!-- kv area start -->
   <div id="kv-area" class="p-product-kv">
-    <div data-kv="top" class="p-product-kv__item is-active">
+    <div data-kv="top" class="p-product-kv__item">
       <img class="pc" src="<?php echo $key_visuals['top']['pc_kv']; ?>" alt="" />
       <img class="sp is-active" src="<?php echo $key_visuals['top']['sp_kv']; ?>" alt="" />
     </div>
@@ -43,7 +43,7 @@ $key_visuals = get_field('kv_ai');
   <!-- nav area start -->
   <nav class="p-product-nav">
     <ul class="p-product-nav__list c-nav-list">
-      <li data-list-id="top" class="p-product-nav__list-item c-nav-list__item is-active-ai">
+      <li data-list-id="top" class="p-product-nav__list-item c-nav-list__item">
         AI Pro Style
       </li>
       <li data-list-id="concept" class="p-product-nav__list-item c-nav-list__item">

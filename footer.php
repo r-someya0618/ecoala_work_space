@@ -48,7 +48,7 @@
           </ul>
         </div>
         <div class="footer__link">
-          <a href="" class="footer__special-link">サロン・美容師の皆様へ</a>
+          <a href="/salon/" class="footer__special-link">サロン・美容師の皆様へ</a>
         </div>
       </div>
     </div>

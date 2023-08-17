@@ -41,7 +41,7 @@ $key_visuals = get_field('kv_dryer');
   <!-- nav area start -->
   <nav class="p-product-nav">
     <ul class="p-product-nav__list c-nav-list">
-      <li data-list-id="top" class="p-product-nav__list-item c-nav-list__item is-active-dryer">
+      <li data-list-id="top" class="p-product-nav__list-item c-nav-list__item">
         Quick Hair Dryer
       </li>
       <li data-list-id="concept" class="p-product-nav__list-item c-nav-list__item">

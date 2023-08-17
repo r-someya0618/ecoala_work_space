@@ -4,6 +4,10 @@
 @use "../../../foundation/_mixin" as *;
 
 .p-product-kv {
+  @include tablet {
+    height: auto;
+  }
+  height: 47.8vw;
   &__item {
     transition: opacity 0.8s;
     visibility: hidden;

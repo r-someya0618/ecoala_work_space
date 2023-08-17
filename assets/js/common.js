@@ -143,7 +143,6 @@ jQuery(function ($) {
           scrollleft: $(e).scrollLeft(),
           scrolltop: $(e).scrollTop(),
         });
-        console.log($(e).data());
         return false;
       });
       $(e).click(function (event) {
@@ -206,6 +205,8 @@ jQuery(function ($) {
 
   // 遷移を伴うプロダクトコンテンツの切り替え
   function changeProductContentsAtTransition(page, id, index) {
+    const kvElms = $('.p-product-kv__item');
+    kvElms.removeClass('.is-active');
     $('.p-product-nav__list-item').removeClass(
       page === 'ai' ? 'is-active-ai' : 'is-active-dryer'
     );
@@ -256,10 +257,10 @@ jQuery(function ($) {
         changeProductContentsAtTransition(pageType, 'concept', 1);
         break;
       case 3:
-        changeProductContentsAtTransition(pageType, 'feature', 2);
+        changeProductContentsAtTransition(pageType, 'function', 2);
         break;
       case 4:
-        changeProductContentsAtTransition(pageType, 'design', 3);
+        changeProductContentsAtTransition(pageType, 'feature', 3);
         break;
       case 5:
         changeProductContentsAtTransition(pageType, 'nozzle', 4);

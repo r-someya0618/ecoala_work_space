@@ -59,11 +59,11 @@ foreach($slider_data as $key => $value) {
           </p>
         </div>
         <div class="p-top-introduction__button c-button c-button--round">
-          <a href="/product/ai_pro_style/">Product Page</a>
+          <a href="/products/ai_pro_style/">Product Page</a>
         </div>
       </div>
       <div class="p-top-introduction__img-content">
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/top/product/product1.png" alt="">
+        <img src="<?php bloginfo('template_url'); ?>/assets/images/top/products/product1.png" alt="">
       </div>
     </section>
   </section>
@@ -81,7 +81,7 @@ foreach($slider_data as $key => $value) {
           </p>
           <div class="p-top-kv-section__card-button
               c-button c-button--round">
-            <a href="/product/ai_pro_style/">Read More</a>
+            <a href="/products/ai_pro_style/">Read More</a>
           </div>
         </section>
       </div>
@@ -112,7 +112,7 @@ foreach($slider_data as $key => $value) {
               あなただけのドライヤーが誕生しました。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
-              <a href="/product/ai_pro_style/">Product Page</a>
+              <a href="/products/ai_pro_style/">Product Page</a>
             </div>
           </section>
         </div>
@@ -134,7 +134,7 @@ foreach($slider_data as $key => $value) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/ai_pro_style/?section_id=3">Read More</a>
+              <a href="/products/ai_pro_style/?section_id=3">Read More</a>
             </div>
           </dd>
         </dl>
@@ -154,7 +154,7 @@ foreach($slider_data as $key => $value) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/ai_pro_style/?section_id=4">Read More</a>
+              <a href="/products/ai_pro_style/?section_id=4">Read More</a>
             </div>
           </dd>
         </dl>
@@ -174,7 +174,7 @@ foreach($slider_data as $key => $value) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/ai_pro_style/?section_id=5">Read More</a>
+              <a href="/products/ai_pro_style/?section_id=5">Read More</a>
             </div>
           </dd>
         </dl>
@@ -194,7 +194,7 @@ foreach($slider_data as $key => $value) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/ai_pro_style/?section_id=6">Read More</a>
+              <a href="/products/ai_pro_style/?section_id=6">Read More</a>
             </div>
           </dd>
         </dl>
@@ -222,7 +222,7 @@ foreach($slider_data as $key => $value) {
               気分やヘアスタイルで自由に楽しんで。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
-              <a href="/product/quick_hair_dryer/">Product Page</a>
+              <a href="/products/quick_hair_dryer/">Product Page</a>
             </div>
           </section>
         </div>
@@ -245,7 +245,7 @@ foreach($slider_data as $key => $value) {
           </dd>
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/quick_hair_dryer/?section_id=3">Read More</a>
+              <a href="/products/quick_hair_dryer/?section_id=3">Read More</a>
             </div>
           </dd>
         </dl>
@@ -264,7 +264,7 @@ foreach($slider_data as $key => $value) {
             髪や頭皮の状態に合わせて選べる多機能なモードを搭載。
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/quick_hair_dryer/?section_id=4">Read More</a>
+              <a href="/products/quick_hair_dryer/?section_id=4">Read More</a>
             </div>
           </dd>
         </dl>
@@ -283,7 +283,7 @@ foreach($slider_data as $key => $value) {
             自然の力を利用して今までにないサラサラのツヤ髪を作り出します。
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/quick_hair_dryer/?section_id=5">Read More</a>
+              <a href="/products/quick_hair_dryer/?section_id=5">Read More</a>
             </div>
           </dd>
         </dl>
@@ -302,7 +302,7 @@ foreach($slider_data as $key => $value) {
             万が一のトラブルに備えた安心保証を全てのお客様にご提供いたします。
           <dd>
             <div class="p-top-feature-section__card-button c-button c-button--round">
-              <a href="/product/quick_hair_dryer/?section_id=6">Read More</a>
+              <a href="/products/quick_hair_dryer/?section_id=6">Read More</a>
             </div>
           </dd>
         </dl>
@@ -328,7 +328,7 @@ foreach($slider_data as $key => $value) {
               是非、お近くのサロンでお試しください。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
-              <a href="/product/salon/">Read More</a>
+              <a href="/salon/">Read More</a>
             </div>
           </section>
         </div>
@@ -354,7 +354,7 @@ foreach($slider_data as $key => $value) {
               詳しくはお問い合わせください。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
-              <a href="/product/dealer/">Read More</a>
+              <a href="/dealer/">Read More</a>
             </div>
           </section>
         </div>
@@ -377,6 +377,7 @@ foreach($slider_data as $key => $value) {
     <div class="p-top-topics__posts-list">
       <?php if ($the_query->have_posts()) : ?>
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+        <a class="p-top-topics__post-link-wrap" href="<?php echo get_permalink(); ?>">
           <dl class="p-top-topics__posts-list-item c-posts-list-card">
             <dd class="c-posts-list__thumbnail">
               <?php if (has_post_thumbnail()) : ?>
@@ -392,6 +393,7 @@ foreach($slider_data as $key => $value) {
               <?php the_title(); ?>
             </dt>
           </dl>
+        </a>
         <?php endwhile;
         wp_reset_postdata(); ?>
       <?php else : ?>
