@@ -63,7 +63,7 @@ foreach($slider_data as $key => $value) {
         </div>
       </div>
       <div class="p-top-introduction__img-content">
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/top/products/product1.png" alt="">
+        <img src="<?php bloginfo('template_url'); ?>/assets/images/top/product/product1.png" alt="">
       </div>
     </section>
   </section>
