@@ -54,7 +54,7 @@ foreach($slider_data as $key => $value) {
             自分だけのiDryerがついに誕生。
           </p>
           <p class="p-top-introduction__text-content-line">
-            わたし<span class="u-narrow-text--mid">に</span>「いい<span class="u-narrow-text--mid">」</span>が、いちば<span class="u-narrow-text--mid">ん</span>「いい<span class="u-narrow-text--mid"></span>」</span>。 <br>
+            わたし<span class="u-narrow-text--mid">に</span>「いい<span class="u-narrow-text--mid">」</span>が<span class="u-narrow-text--mid">、</span>いちば<span class="u-narrow-text--mid">ん</span>「いい<span class="u-narrow-text--mid"></span><span class="u-narrow-text--mid">」</span>。 </span><br>
             それが、自分だけのiDryer。
           </p>
         </div>

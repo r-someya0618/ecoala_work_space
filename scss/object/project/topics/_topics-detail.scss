@@ -9,9 +9,10 @@
     padding: 0 32px;
   }
   margin: 130px 0 250px;
-
+  padding: 0 16px;
   &__heading {
     margin-top: 70px;
+    padding-bottom: 10px;
     border-bottom: 1px solid $black_color;
   }
 
@@ -24,7 +25,7 @@
     @include tablet {
       margin-bottom: 50px;
     }
-    margin-top: 60px;
+    margin-top: clamp(45px, 6.83vw, 60px);
     margin-bottom: 100px;
     text-align: center;
   }

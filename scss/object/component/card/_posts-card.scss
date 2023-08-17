@@ -31,10 +31,7 @@
 }
 
 .c-posts-list-card {
-  @include tablet {
-    width: 45%;
-  }
-  width: 255px;
+  width: clamp(138px, 23vw, 255px);
   &__date {
     color: $gray_color_2;
     font-size: clamp(12px, 2.08vw, 20px);

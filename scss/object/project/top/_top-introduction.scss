@@ -29,9 +29,9 @@
   &__text-content {
     @include tablet {
       order: 2;
-      width: 100%;
+      margin: 0 auto;
     }
-    width: 35.8%;
+    width: clamp(310px, 100vw, 430px);
   }
   &__text-content-heading {
     @include tablet {

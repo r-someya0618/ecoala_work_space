@@ -957,12 +957,7 @@ Version: 1.0
 }
 
 .c-posts-list-card {
-  width: 255px;
-}
-@media only screen and (max-width: 768px) {
-  .c-posts-list-card {
-    width: 45%;
-  }
+  width: clamp(138px, 23vw, 255px);
 }
 .c-posts-list-card__date {
   color: #888;
@@ -1280,7 +1275,7 @@ Version: 1.0
   position: fixed;
   right: 0;
   bottom: 32px;
-  z-index: 99;
+  z-index: -1;
   width: 330px;
   height: 215px;
   padding: 32px;
@@ -1300,6 +1295,7 @@ Version: 1.0
 }
 .p-sticky-banner.is-active {
   opacity: 1;
+  z-index: 99;
 }
 .p-sticky-banner--blue {
   background: linear-gradient(57deg, rgb(20, 20, 96) 0%, rgb(20, 20, 119) 14.73%, rgb(20, 20, 146) 35.66%, rgb(20, 20, 156) 47.96%, rgb(25, 32, 160) 51.07%, rgb(49, 93, 180) 67.99%, rgb(67, 137, 195) 82.37%, rgb(78, 164, 204) 93.49%, rgb(82, 174, 207) 100%);
@@ -2541,7 +2537,7 @@ Version: 1.0
 }
 .p-top-feature-section__card {
   display: flex;
-  width: 690;
+  width: 690px;
   margin-top: 100px;
 }
 @media only screen and (max-width: 768px) {
@@ -2647,7 +2643,7 @@ Version: 1.0
 }
 .p-top-instagram__button {
   width: 260px;
-  margin: 100px auto 0;
+  margin: 70px auto 0;
 }
 @media only screen and (max-width: 768px) {
   .p-top-instagram__button {
@@ -2693,12 +2689,12 @@ Version: 1.0
   }
 }
 .p-top-introduction__text-content {
-  width: 35.8%;
+  width: clamp(310px, 100vw, 430px);
 }
 @media only screen and (max-width: 768px) {
   .p-top-introduction__text-content {
     order: 2;
-    width: 100%;
+    margin: 0 auto;
   }
 }
 .p-top-introduction__text-content-heading {
@@ -2785,7 +2781,6 @@ Version: 1.0
   .p-top-kv-section__kv-container {
     height: 100vw;
     margin-top: 70px;
-    background-size: contain;
   }
 }
 .p-top-kv-section__kv-container--concept {
@@ -2950,6 +2945,7 @@ Version: 1.0
   .p-top-topics__posts-list {
     flex-wrap: wrap;
     margin-top: 0;
+    padding: 0 32px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -2994,6 +2990,7 @@ Version: 1.0
 */
 .p-topics-detail {
   margin: 130px 0 250px;
+  padding: 0 16px;
 }
 @media only screen and (max-width: 768px) {
   .p-topics-detail {
@@ -3003,6 +3000,7 @@ Version: 1.0
 }
 .p-topics-detail__heading {
   margin-top: 70px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #141414;
 }
 .p-topics-detail__date {
@@ -3010,7 +3008,7 @@ Version: 1.0
   margin-bottom: 45px;
 }
 .p-topics-detail__top-image {
-  margin-top: 60px;
+  margin-top: clamp(45px, 6.83vw, 60px);
   margin-bottom: 100px;
   text-align: center;
 }
@@ -3040,11 +3038,11 @@ Version: 1.0
 */
 .p-topics-index {
   margin: 130px 0 250px;
+  padding: 0 16px;
 }
 @media only screen and (max-width: 768px) {
   .p-topics-index {
     margin: 60px 0 80px;
-    padding: 0 32px;
   }
 }
 .p-topics-index__pagination {
@@ -3486,6 +3484,7 @@ Version: 1.0
 /* オリジナルCSSここから */
 /* Slider */
 .slick-slider {
+  margin-top: -1px;
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -3814,18 +3813,8 @@ Version: 1.0
   letter-spacing: -0.1rem;
 }
 .u-narrow-text--mid {
-  letter-spacing: -1rem;
-}
-@media only screen and (max-width: 768px) {
-  .u-narrow-text--mid {
-    letter-spacing: -0.2rem;
-  }
+  letter-spacing: clamp(-1rem, -0.83vw, -0.2rem);
 }
 .u-narrow-text--hard {
-  letter-spacing: -1.5rem;
-}
-@media only screen and (max-width: 768px) {
-  .u-narrow-text--hard {
-    letter-spacing: -0.5rem;
-  }
+  letter-spacing: clamp(-1.5rem, -2vw, -0.5rem);
 }
