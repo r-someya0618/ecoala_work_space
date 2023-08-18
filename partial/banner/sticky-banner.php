@@ -1,28 +1,30 @@
 <!-- バナーパーツ -->
 <?php
-  $banner_pink = '<a href="/salon/" class="p-sticky-banner p-sticky-banner--pink">
-    <p class="p-sticky-banner__txt">
-    もっとうるおう、<br>
-    もっと美しく。
-    </p>
-    <div class="p-sticky-banner__button p-sticky-banner__button--square">
-      購入・お試しはこちらから
-    </div>
-  </a>';
-  $banner_blue = '<a href="/salon/" class="p-sticky-banner p-sticky-banner--blue">
-  <p class="p-sticky-banner__txt">
-    <span class="u-inline-block">わたしに「いい」が、</span>
-    <span class="u-inline-block">いちばん「いい」。</span>
-    </p>
-  <div class="p-sticky-banner__button p-sticky-banner__button--arrow">
-    購入・お試しはこちらから
+  $banner_type = 'blue';
+  if (strpos($_SERVER['REQUEST_URI'] , 'products/quick_hair_dryer/')) {
+    $banner_type = 'pink';
+  }
+
+  if ($banner_type === 'blue'):?>
+  <a href="/salon/" class="p-sticky-banner p-sticky-banner--blue">
+  <div class="p-sticky-banner__close-button">
+  </div>
+  <div class="p-sticky-banner__i-dryer-logo">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/iDryer_banner_logo.svg" alt="iDryer">
+  </div>
+  <div class="p-sticky-banner__button p-sticky-banner__button--blue p-sticky-banner__button--arrow">
+    購入・お試しはこちら
   </div>
   </a>
-  ';
-
-  if (strpos($_SERVER['REQUEST_URI'] , 'products/quick_hair_dryer/')) {
-    echo $banner_pink;
-  } else if ($_SERVER['REQUEST_URI'] !== '/dealer/') {
-    echo $banner_blue;
-  }
-?>
+  <?php else: ?>
+  <a href="/salon/" class="p-sticky-banner p-sticky-banner--pink">
+    <div class="p-sticky-banner__close-button">
+    </div>
+    <div class="p-sticky-banner__quick-hair-dryer-logo c-txt--center">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/qDryer_banner_logo.svg" alt="iDryer">
+    </div>
+    <div class="p-sticky-banner__button p-sticky-banner__button--pink p-sticky-banner__button--arrow">
+      購入・お試しはこちら
+    </div>
+  </a>
+  <?php endif; ?>

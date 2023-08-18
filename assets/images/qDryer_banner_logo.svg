@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228.03 104.72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: Avenir-Heavy, Avenir;
+        font-size: 44.04px;
+        font-weight: 800;
+        letter-spacing: .03em;
+      }
+    </style>
+  </defs>
+  <g id="_追従ボタン" data-name="追従ボタン">
+    <text class="cls-1" transform="translate(0 37.61)"><tspan x="0" y="0">Quick Hair</tspan><tspan x="53.35" y="48">Dryer</tspan></text>
+  </g>
+</svg>

@@ -19,9 +19,8 @@
   right: 0;
   bottom: 32px;
   z-index: -1;
-  width: 330px;
-  height: 215px;
-  padding: 32px;
+  width: 280px;
+  padding: 42px 29px 29px;
   color: $white_color;
   transition: all 1s;
   &.is-active {
@@ -30,6 +29,7 @@
   }
 
   &--blue {
+    height: 280px;
     background: linear-gradient(
       57deg,
       rgba(20, 20, 96, 1) 0%,
@@ -44,6 +44,7 @@
     );
   }
   &--pink {
+    height: 242px;
     background: linear-gradient(
       57deg,
       rgba(182, 0, 116, 1) 0%,
@@ -53,8 +54,21 @@
   }
   &__txt {
     flex: 1;
-    font-size: clamp(15px, 2.66vw, 26px);
+    font-size: clamp(15px, 2.66vw, 44px);
     line-height: 1.53;
+    font-weight: bold;
+  }
+  &__i-dryer-logo {
+    img {
+      width: 219px;
+      height: 129px;
+    }
+  }
+  &__quick-hair-dryer-logo {
+    img {
+      width: 228px;
+      height: 104px;
+    }
   }
   &__button {
     @include tablet {
@@ -64,30 +78,19 @@
       line-height: 37px;
     }
     position: relative;
-    width: 252px;
+    width: 211px;
     height: 49px;
-    margin-top: 30px;
     font-size: clamp(10px, 1.82vw, 18px);
     line-height: 49px;
     text-align: center;
 
-    &--square {
-      @include tablet {
-        border: none;
-        background-color: rgba(255, 255, 255, 0.2);
-        &::after {
-          display: block;
-          position: absolute;
-          top: 0;
-          right: -10px;
-          border-width: 18.5px 0 18.5px 10px;
-          border-style: solid;
-          border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);
-          content: '';
-        }
-      }
-      border: 1px solid $white_color;
+    &--pink {
+      margin-top: 20px;
     }
+    &--blue {
+      margin-top: 30px;
+    }
+
     &--arrow {
       background-color: rgba(255, 255, 255, 0.2);
       &::after {
@@ -104,6 +107,34 @@
         border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);
         content: '';
       }
+    }
+  }
+
+  &__close-button {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.75);
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2px; /* 棒の幅（太さ） */
+      height: 11px; /* 棒の高さ */
+      background: $white_color;
+    }
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 }

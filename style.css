@@ -1276,9 +1276,8 @@ Version: 1.0
   right: 0;
   bottom: 32px;
   z-index: -1;
-  width: 330px;
-  height: 215px;
-  padding: 32px;
+  width: 280px;
+  padding: 42px 29px 29px;
   color: #fff;
   transition: all 1s;
 }
@@ -1298,21 +1297,31 @@ Version: 1.0
   z-index: 99;
 }
 .p-sticky-banner--blue {
+  height: 280px;
   background: linear-gradient(57deg, rgb(20, 20, 96) 0%, rgb(20, 20, 119) 14.73%, rgb(20, 20, 146) 35.66%, rgb(20, 20, 156) 47.96%, rgb(25, 32, 160) 51.07%, rgb(49, 93, 180) 67.99%, rgb(67, 137, 195) 82.37%, rgb(78, 164, 204) 93.49%, rgb(82, 174, 207) 100%);
 }
 .p-sticky-banner--pink {
+  height: 242px;
   background: linear-gradient(57deg, rgb(182, 0, 116) 0%, rgb(255, 0, 167) 44.14%, rgb(255, 182, 213) 95.24%);
 }
 .p-sticky-banner__txt {
   flex: 1;
-  font-size: clamp(15px, 2.66vw, 26px);
+  font-size: clamp(15px, 2.66vw, 44px);
   line-height: 1.53;
+  font-weight: bold;
+}
+.p-sticky-banner__i-dryer-logo img {
+  width: 219px;
+  height: 129px;
+}
+.p-sticky-banner__quick-hair-dryer-logo img {
+  width: 228px;
+  height: 104px;
 }
 .p-sticky-banner__button {
   position: relative;
-  width: 252px;
+  width: 211px;
   height: 49px;
-  margin-top: 30px;
   font-size: clamp(10px, 1.82vw, 18px);
   line-height: 49px;
   text-align: center;
@@ -1325,24 +1334,11 @@ Version: 1.0
     line-height: 37px;
   }
 }
-.p-sticky-banner__button--square {
-  border: 1px solid #fff;
+.p-sticky-banner__button--pink {
+  margin-top: 20px;
 }
-@media only screen and (max-width: 768px) {
-  .p-sticky-banner__button--square {
-    border: none;
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  .p-sticky-banner__button--square::after {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: -10px;
-    border-width: 18.5px 0 18.5px 10px;
-    border-style: solid;
-    border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);
-    content: "";
-  }
+.p-sticky-banner__button--blue {
+  margin-top: 30px;
 }
 .p-sticky-banner__button--arrow {
   background-color: rgba(255, 255, 255, 0.2);
@@ -1362,6 +1358,32 @@ Version: 1.0
     right: -10px;
     border-width: 18.5px 0 18.5px 10px;
   }
+}
+.p-sticky-banner__close-button {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.75);
+}
+.p-sticky-banner__close-button::before, .p-sticky-banner__close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px; /* 棒の幅（太さ） */
+  height: 11px; /* 棒の高さ */
+  background: #fff;
+}
+.p-sticky-banner__close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.p-sticky-banner__close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /*
