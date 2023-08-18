@@ -101,6 +101,19 @@ jQuery(function ($) {
     });
   }
 
+  // バナー非表示
+  $('.p-sticky-banner').removeClass('is-hide');
+  $('[data-trigger="banner-close"]').click(function (e) {
+    console.log($(this).parent());
+    e.preventDefault();
+    $(this).parent().addClass('is-hide');
+  });
+  $('[data-trigger="love-stock-close"]').click(function (e) {
+    console.log($(this).parent());
+    e.preventDefault();
+    $(this).parent().addClass('is-hide');
+  });
+
   // PCのみ
   $(window).on('load resize', function () {
     const windowWidth = window.innerWidth;
