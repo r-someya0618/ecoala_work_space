@@ -59,6 +59,11 @@ jQuery(function ($) {
     dots: true, //ドット部分を表示する
   });
 
+  $('.salon-slider').slick({
+    arrows: true,
+    dots: true, //ドット部分を表示する
+  });
+
   // バナー表示
   const kvArea = $('#kv-area');
   const winH = $(window).height();

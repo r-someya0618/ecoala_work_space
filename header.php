@@ -6,8 +6,8 @@
 <meta name="description" content="<?php bloginfo( 'description' ); ?>" />
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="format-detection" content="telephone=no">
-<link href="<?php bloginfo('template_directory'); ?>/assets/img/favicon.ico" rel="shortcut icon">
-<link href="<?php bloginfo('template_url'); ?>/assets/img/icon.png" rel="apple-touch-icon-precomposed">
+<link href="<?php bloginfo('template_directory'); ?>/assets/images/favicon.ico" rel="shortcut icon">
+<link href="<?php bloginfo('template_url'); ?>/assets/images/icon.png" rel="apple-touch-icon-precomposed">
 <link href="<?php bloginfo('stylesheet_url'); ?>?20230803" rel="stylesheet">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

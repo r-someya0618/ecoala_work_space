@@ -342,6 +342,9 @@ Version: 1.0
 .l-container--wide {
   max-width: 1632px;
 }
+.l-container--slider {
+  max-width: 1380px;
+}
 
 .l-container-flex {
   display: flex;
@@ -1499,154 +1502,6 @@ Version: 1.0
   .p-company__button {
     width: 66.67%;
     margin: 30px auto 0;
-  }
-}
-
-/*
-Theme Name: ECOALA RENEWAL 2023
-Author: high5
-Description: The 2023- theme for WordPress
-Version: 1.0
-*/
-.p-dealer-introduction {
-  margin-top: 200px;
-}
-@media only screen and (max-width: 768px) {
-  .p-dealer-introduction {
-    margin-top: 120px;
-  }
-}
-.p-dealer-introduction__heading {
-  line-height: 1.67;
-}
-.p-dealer-introduction__txt {
-  margin-top: 90px;
-  padding: 0 32px;
-  line-height: 2;
-}
-@media only screen and (max-width: 768px) {
-  .p-dealer-introduction__txt {
-    margin-top: 50px;
-  }
-}
-.p-dealer-introduction__movie {
-  position: relative;
-  height: 0;
-  margin-top: 100px;
-  padding-top: 56.12%;
-  overflow: hidden;
-  line-height: 2;
-}
-@media only screen and (max-width: 768px) {
-  .p-dealer-introduction__movie {
-    margin-top: 37px;
-  }
-}
-.p-dealer-introduction__movie iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0 32px;
-}
-.p-dealer-introduction__contents {
-  padding: 0 32px;
-}
-.p-dealer-introduction__contents-item {
-  display: flex;
-  margin-top: 100px;
-}
-@media only screen and (max-width: 768px) {
-  .p-dealer-introduction__contents-item {
-    margin-top: 55px;
-  }
-}
-.p-dealer-introduction__contents-txt {
-  flex: 1;
-  margin-left: 6.06%;
-}
-.p-dealer-introduction__contents-thumb {
-  width: 43.5%;
-}
-.p-dealer-introduction__contents-txt-body {
-  margin-top: 50px;
-  line-height: 1.8;
-}
-@media only screen and (max-width: 768px) {
-  .p-dealer-introduction__contents-txt-body {
-    margin-top: 13px;
-    line-height: 1.5;
-  }
-}
-
-.p-dealer-tobe {
-  margin-top: 250px;
-}
-@media only screen and (max-width: 768px) {
-  .p-dealer-tobe {
-    margin-top: 85px;
-  }
-}
-.p-dealer-tobe__container {
-  padding: 0 32px;
-}
-.p-dealer-tobe__title {
-  line-height: 1.67;
-}
-.p-dealer-tobe__txt {
-  margin-top: 85px;
-  line-height: 2;
-}
-@media only screen and (max-width: 768px) {
-  .p-dealer-tobe__txt {
-    margin-top: 55px;
-  }
-}
-.p-dealer-tobe__slider {
-  margin-top: 95px;
-  padding: 160px 0;
-  background: #ededed;
-}
-@media only screen and (max-width: 1200px) {
-  .p-dealer-tobe__slider {
-    margin-top: 41px;
-    padding: 0 16px;
-  }
-}
-
-.p-dealer-contact {
-  margin-top: 250px;
-  margin-bottom: 250px;
-  padding: 0 32px;
-}
-@media only screen and (max-width: 768px) {
-  .p-dealer-contact {
-    margin-top: 85px;
-    margin-bottom: 125px;
-  }
-}
-.p-dealer-contact__title {
-  line-height: 1.67;
-}
-.p-dealer-contact__txt {
-  margin-top: 85px;
-  line-height: 2;
-}
-@media only screen and (max-width: 768px) {
-  .p-dealer-contact__txt {
-    margin-top: 55px;
-  }
-}
-.p-dealer-contact__button {
-  display: block;
-  width: 500px;
-  margin: 95px auto 0;
-}
-@media only screen and (max-width: 768px) {
-  .p-dealer-contact__button {
-    width: 80.3%;
-    margin-top: 30px;
   }
 }
 
@@ -3387,6 +3242,258 @@ Version: 1.0
     transform: translateY(0);
   }
 }
+/*
+Theme Name: ECOALA RENEWAL 2023
+Author: high5
+Description: The 2023- theme for WordPress
+Version: 1.0
+*/
+.p-vendor-introduction {
+  margin-top: 190px;
+}
+@media only screen and (max-width: 768px) {
+  .p-vendor-introduction {
+    margin-top: 120px;
+  }
+}
+.p-vendor-introduction__heading {
+  line-height: 1.67;
+}
+.p-vendor-introduction__txt {
+  margin-top: 90px;
+  padding: 0 32px;
+  line-height: 2;
+}
+@media only screen and (max-width: 768px) {
+  .p-vendor-introduction__txt {
+    margin-top: 50px;
+  }
+}
+.p-vendor-introduction__movie {
+  position: relative;
+  height: 0;
+  margin-top: 100px;
+  padding-top: 56.12%;
+  overflow: hidden;
+  line-height: 2;
+}
+@media only screen and (max-width: 768px) {
+  .p-vendor-introduction__movie {
+    margin-top: 37px;
+  }
+}
+.p-vendor-introduction__movie iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 32px;
+}
+.p-vendor-introduction__contents {
+  padding: 0 32px;
+}
+.p-vendor-introduction__contents-item {
+  display: flex;
+  margin-top: 100px;
+}
+@media only screen and (max-width: 768px) {
+  .p-vendor-introduction__contents-item {
+    margin-top: 55px;
+  }
+}
+.p-vendor-introduction__contents-txt {
+  flex: 1;
+  margin-left: 6.06%;
+}
+.p-vendor-introduction__contents-thumb {
+  width: 43.5%;
+}
+.p-vendor-introduction__contents-txt-body {
+  margin-top: 50px;
+  line-height: 1.8;
+}
+@media only screen and (max-width: 768px) {
+  .p-vendor-introduction__contents-txt-body {
+    margin-top: 13px;
+    line-height: 1.5;
+  }
+}
+
+.p-vendor-tobe {
+  margin-top: 250px;
+}
+@media only screen and (max-width: 768px) {
+  .p-vendor-tobe {
+    margin-top: 85px;
+  }
+}
+.p-vendor-tobe__container {
+  padding: 0 32px;
+}
+.p-vendor-tobe__title {
+  line-height: 1.67;
+}
+.p-vendor-tobe__txt {
+  margin-top: 85px;
+  line-height: 2;
+}
+@media only screen and (max-width: 768px) {
+  .p-vendor-tobe__txt {
+    margin-top: 55px;
+  }
+}
+.p-vendor-tobe__slider {
+  margin-top: 95px;
+  padding: 160px 0;
+  background: #ededed;
+}
+@media only screen and (max-width: 1200px) {
+  .p-vendor-tobe__slider {
+    margin-top: 41px;
+    padding: 0 16px;
+  }
+}
+
+.p-vendor-contact {
+  margin-top: 250px;
+  margin-bottom: 250px;
+  padding: 0 32px;
+}
+@media only screen and (max-width: 768px) {
+  .p-vendor-contact {
+    margin-top: 85px;
+    margin-bottom: 125px;
+  }
+}
+.p-vendor-contact__title {
+  line-height: 1.67;
+}
+.p-vendor-contact__txt {
+  margin-top: 85px;
+  line-height: 2;
+}
+@media only screen and (max-width: 768px) {
+  .p-vendor-contact__txt {
+    margin-top: 55px;
+  }
+}
+.p-vendor-contact__button {
+  display: block;
+  width: 500px;
+  margin: 95px auto 0;
+}
+@media only screen and (max-width: 768px) {
+  .p-vendor-contact__button {
+    width: 80.3%;
+    margin-top: 30px;
+  }
+}
+
+.p-vendor-slider {
+  background-color: #ededed;
+}
+.p-vendor-slider__container {
+  padding: clamp(80px, 15.62vw, 163px) clamp(32px, 9.76vw, 90px) clamp(50px, 9.76vw, 105px);
+}
+.p-vendor-slider__slider-item-content {
+  display: flex;
+  background: #fff;
+  height: min(100vw, 700px);
+  padding: clamp(20px, 4.88vw, 55px);
+  align-items: flex-end;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .p-vendor-slider__slider-item-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.p-vendor-slider__slider-item-img-wrap {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.p-vendor-slider__slider-item-img {
+  margin-right: clamp(16px, 3vw, 30px);
+}
+.p-vendor-slider__slider-item-img--1 {
+  padding-left: clamp(0px, 1.62vw, 25px);
+}
+.p-vendor-slider__slider-item-img--1 img {
+  width: clamp(200px, 46.2vw, 511px);
+  height: clamp(136px, 40.62vw, 488px);
+}
+.p-vendor-slider__slider-item-img--2 {
+  padding-left: clamp(0px, 5.07vw, 78px);
+}
+.p-vendor-slider__slider-item-img--2 img {
+  width: clamp(130px, 38.6vw, 393px);
+  height: clamp(156px, 30.9vw, 478px);
+}
+.p-vendor-slider__slider-item-img--3 img {
+  width: clamp(150px, 45.9vw, 556px);
+  height: clamp(180px, 41.73vw, 461px);
+}
+.p-vendor-slider__slider-item-img--4 {
+  padding-left: clamp(0px, 5.07vw, 70px);
+}
+.p-vendor-slider__slider-item-img--4 img {
+  width: clamp(150px, 45.9vw, 520px);
+  height: clamp(180px, 41.73vw, 545px);
+}
+.p-vendor-slider__slider-item-img--5 {
+  padding-left: clamp(0px, 5.07vw, 90px);
+}
+.p-vendor-slider__slider-item-img--5 img {
+  width: clamp(150px, 45.9vw, 475px);
+  height: clamp(180px, 41.73vw, 420px);
+}
+.p-vendor-slider__slider-item-txt-wrap {
+  width: min(100%, 407px);
+}
+.p-vendor-slider__slider-item-num img {
+  width: clamp(48px, 9.4vw, 97px);
+  height: clamp(34px, 6.6vw, 68px);
+}
+.p-vendor-slider__slider-item-title {
+  margin-top: clamp(15px, 2.92vw, 30px);
+  line-height: 1.73;
+}
+.p-vendor-slider__slider-item-txt {
+  margin-top: clamp(20px, 3.9vw, 40px);
+  line-height: 2;
+}
+.p-vendor-slider .slick-arrow::before {
+  content: "" !important;
+}
+.p-vendor-slider .slick-prev,
+.p-vendor-slider .slick-next {
+  display: block !important;
+  z-index: 2;
+}
+.p-vendor-slider .slick-prev {
+  right: calc(clamp(30px, 5.2vw, 50px) * -1);
+}
+.p-vendor-slider .slick-next {
+  left: calc(clamp(30px, 5.2vw, 50px) * -1);
+}
+.p-vendor-slider .slick-next::before {
+  content: "";
+  display: block;
+  width: clamp(15px, 4.5vw, 25px);
+  height: clamp(25px, 4.8vw, 50px);
+  background: url(/wp-content/themes/ecoala_renewal/assets/images/arrow-l.svg) no-repeat;
+}
+.p-vendor-slider .slick-prev::before {
+  content: "";
+  display: block;
+  width: clamp(15px, 4.5vw, 25px);
+  height: clamp(25px, 4.8vw, 50px);
+  background: url(/wp-content/themes/ecoala_renewal/assets/images/arrow-r.svg) no-repeat;
+}
+
 /*
 Theme Name: ECOALA RENEWAL 2023
 Author: high5
