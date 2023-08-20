@@ -126,6 +126,7 @@
 }
 
 .p-vendor-slider {
+  margin-top: clamp(50px, 9.76vw, 100px);
   background-color: $gray_color_8;
   &__container {
     padding: clamp(80px, 15.62vw, 163px) clamp(32px, 9.76vw, 90px)

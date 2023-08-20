@@ -166,7 +166,7 @@ $data = get_field('salon');
     </div>
   </section>
   <!-- ショップリスト -->
-  <section class="p-vendor-shop-list">
+  <section id="shoplist" class="p-vendor-shop-list">
     <div class="p-vendor-shop-list__tab-wrap is-salon-active">
       <ul class="p-vendor-shop-list__tab l-container--middle">
         <li data-tab="salon" class="p-vendor-shop-list__tab-item c-txt--45 c-txt--font-e">SALON</li>

@@ -54,14 +54,14 @@ jQuery(function ($) {
   });
 
   $('.slider').slick({
-    autoplay: true, //自動再生する
-    autoplaySpeed: 4000, //自動再生するスピード 4秒
-    dots: true, //ドット部分を表示する
+    autoplay: true,
+    autoplaySpeed: 4000,
+    dots: true,
   });
 
   $('.salon-slider').slick({
     arrows: true,
-    dots: true, //ドット部分を表示する
+    dots: true,
   });
 
   // バナー表示
@@ -315,8 +315,21 @@ jQuery(function ($) {
     $('.p-vendor-shop-list__salon-list-inner').removeClass('is-active');
     $(`[data-area-id='${areaId}']`).addClass('is-active');
   });
-  // SALONのコンテンツの地域表示切り替え
-
+  // SALONのスクロール
+  //URLのハッシュ値を取得
+  var urlHash = location.hash;
+  //ハッシュ値があればページ内スクロール
+  if (urlHash) {
+    //スクロールを0に戻す
+    $('body,html').stop().scrollTop(0);
+    setTimeout(function () {
+      //ロード時の処理を待ち、時間差でスクロール実行
+      const target = $(urlHash);
+      const herderHight = $('.header').height();
+      const position = target.offset().top - herderHight;
+      $('body,html').stop().animate({ scrollTop: position }, 500);
+    }, 100);
+  }
   // if ($('body').hasClass('home')) {
   //   $('body').addClass('white');
   //   $('#logo_img').attr(

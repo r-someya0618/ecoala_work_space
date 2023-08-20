@@ -3394,6 +3394,7 @@ Version: 1.0
 }
 
 .p-vendor-slider {
+  margin-top: clamp(50px, 9.76vw, 100px);
   background-color: #ededed;
 }
 .p-vendor-slider__container {
