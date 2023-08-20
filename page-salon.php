@@ -5,7 +5,7 @@ Template Name: salon
 ?>
 <?php
 get_header();
-$data = get_field('salon')
+$data = get_field('salon');
 ?>
 
 <main>
@@ -143,8 +143,52 @@ $data = get_field('salon')
       </ul>
     </div>
   </section>
-  <section class="">
+  <section class="p-vendor-shop-search l-container">
+    <h1 class="p-vendor-shop-search__heading c-heading-section c-heading-section--center">
+      お取り扱い店舗一覧
+    </h1>
+    <p class="p-vendor-shop-search__txt c-txt--center c-txt--25">
+      エコアラをご購入・体験ご希望のお客様は<br>
+      直接各店舗へお問い合わせください。
+    </p>
+    <div class="p-vendor-shop-search__search-container l-container">
+      <div id="map" class="p-vendor-shop-search__map">
+      </div>
+      <div class="p-vendor-shop-search__search-form">
+        <h2 class="p-vendor-shop-search__search-form-heading c-txt--30">お近くのサロン検索</h2>
+        <div class="p-vendor-shop-search__search-form-input-wrap">
+          <input id="pac-input" class="p-vendor-shop-search__search-form-input c-txt--25" placeholder="住所" type="text">
+          <button class="p-vendor-shop-search__search-button" type="submit">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/search-icon.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ショップリスト -->
+  <section class="p-vendor-shop-list">
+    <div class="p-vendor-shop-list__tab-wrap is-salon-active">
+      <ul class="p-vendor-shop-list__tab l-container--middle">
+        <li data-tab="salon" class="p-vendor-shop-list__tab-item c-txt--45 c-txt--font-e">SALON</li>
+        <li data-tab="hotel" class="p-vendor-shop-list__tab-item c-txt--45 c-txt--font-e">HOTEL</li>
+      </ul>
+    </div>
+    <div class="p-vendor-shop-list__container">
+      <ul class="p-vendor-shop-list__area-list l-container">
+        <li data-area-id="1" class="p-vendor-shop-list__area-list-item c-txt--25 is-active">関東</li>
+        <!-- salonページじゃなかったら表示しない -->
+        <li data-area-id="2" class="p-vendor-shop-list__area-list-item c-txt--25">中部</li>
+        <li data-area-id="3" class="p-vendor-shop-list__area-list-item c-txt--25">近畿</li>
+        <li data-area-id="4" class="p-vendor-shop-list__area-list-item c-txt--25">九州</li>
+      </ul>
+      <!-- SALON start -->
+      <?php get_template_part('partial/salon/salon-list'); ?>
+      <!-- SALON end -->
 
+      <!-- HOTEL start -->
+      <?php get_template_part('partial/salon/hotel-list'); ?>
+      <!-- HOTEL end -->
+    </div>
   </section>
 </main>
 
