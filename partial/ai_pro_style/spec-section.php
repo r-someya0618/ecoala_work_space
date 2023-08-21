@@ -5,13 +5,13 @@ $nots = get_field('notes');
 $note_items = [];
 
 if ($nots) {
-// 設定のあるものだけを抽出
-foreach ($nots as $value) {
-  if (strlen($value) === 0) {
-    continue;
+  // 設定のあるものだけを抽出
+  foreach ($nots as $value) {
+    if (strlen($value) === 0) {
+      continue;
+    }
+    array_push($note_items, $value);
   }
-  array_push($note_items, $value);
-}
 }
 ?>
 <div data-section-name="spec" class="p-product-content-wrap">
