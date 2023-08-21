@@ -2668,9 +2668,8 @@ Version: 1.0
   }
 }
 .p-top-introduction__img-content {
-  width: 46.25%;
+  width: min(50vw, 669px);
   padding-top: 25px;
-  padding-right: 75px;
 }
 @media only screen and (max-width: 768px) {
   .p-top-introduction__img-content {
@@ -2826,7 +2825,7 @@ Version: 1.0
   left: 16px;
 }
 .p-top-kv-section__card--right {
-  right: 16px;
+  right: 32px;
 }
 @media only screen and (max-width: 768px) {
   .p-top-kv-section__product-name {
@@ -2838,6 +2837,20 @@ Version: 1.0
 }
 .p-top-kv-section__product-name-inner {
   text-align: left;
+  margin-top: 60px;
+  letter-spacing: 3.5px;
+}
+.p-top-kv-section__product-name-logo {
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .p-top-kv-section__product-name-logo {
+    text-align: right;
+  }
+}
+.p-top-kv-section__product-name-logo img {
+  width: min(50vw, 310px);
+  height: 188px;
 }
 .p-top-kv-section__card-title {
   line-height: 1.6;

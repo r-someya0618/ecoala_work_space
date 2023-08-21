@@ -63,9 +63,8 @@
       margin: 0 auto;
       padding-right: 0;
     }
-    width: 46.25%;
+    width: min(50vw, 669px);
     padding-top: 25px;
-    padding-right: 75px;
   }
   &__button {
     @include tablet {

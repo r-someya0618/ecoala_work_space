@@ -109,7 +109,7 @@
     }
 
     &--right {
-      right: 16px;
+      right: 32px;
     }
   }
   &__product-name {
@@ -122,6 +122,18 @@
   }
   &__product-name-inner {
     text-align: left;
+    margin-top: 60px;
+    letter-spacing: 3.5px;
+  }
+  &__product-name-logo {
+    text-align: center;
+    @include tablet {
+      text-align: right;
+    }
+    img {
+      width: min(50vw, 310px);
+      height: 188px;
+    }
   }
   &__card-title {
     line-height: 1.6;

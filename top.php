@@ -11,7 +11,7 @@ $slider_data = get_field('top_slider');
 $slider_imgs = [];
 
 // スライダー画像の設定のあるものだけを抽出
-foreach($slider_data as $key => $value) {
+foreach ($slider_data as $key => $value) {
   if (!$value['slider_img_pc'] || !$value['slider_img_sp']) {
     continue;
   }
@@ -23,12 +23,12 @@ foreach($slider_data as $key => $value) {
   <section id="kv-area" class="c-slider">
     <!-- スライダー部 -->
     <ul class="slider full">
-        <?php foreach($slider_imgs as $img):?>
-          <li>
-            <img class="pc" src="<?php echo $img['slider_img_pc']?>" alt="">
-            <img class="sp" src="<?php echo $img['slider_img_sp']?>" alt="">
-          </li>
-        <?php endforeach;?>
+      <?php foreach ($slider_imgs as $img) : ?>
+        <li>
+          <img class="pc" src="<?php echo $img['slider_img_pc'] ?>" alt="">
+          <img class="sp" src="<?php echo $img['slider_img_sp'] ?>" alt="">
+        </li>
+      <?php endforeach; ?>
     </ul>
   </section>
   <section class="p-top-introduction l-container">
@@ -63,7 +63,10 @@ foreach($slider_data as $key => $value) {
         </div>
       </div>
       <div class="p-top-introduction__img-content">
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/top/product/product1.png" alt="">
+        <picture>
+          <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/product/product1.webp" type="image/webp">
+          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/product/product1.png" alt="">
+        </picture>
       </div>
     </section>
   </section>
@@ -82,23 +85,23 @@ foreach($slider_data as $key => $value) {
     <div class="p-top-topics__posts-list">
       <?php if ($the_query->have_posts()) : ?>
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <a class="p-top-topics__post-link-wrap" href="<?php echo get_permalink(); ?>">
-          <dl class="p-top-topics__posts-list-item c-posts-list-card">
-            <dd class="c-posts-list__thumbnail">
-              <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail(); ?>
-              <?php else : ?>
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/thumb.png" alt="">
-              <?php endif; ?>
-            </dd>
-            <dd class="p-top-topics__posts-list-date c-posts-list-card__date">
-              <time datetime="<?php the_time('Y/m/d'); ?>"><?php the_time('Y/m/d'); ?></time>
-            </dd>
-            <dt class="p-top-topics__posts-list-title c-posts-list-card__title">
-              <?php the_title(); ?>
-            </dt>
-          </dl>
-        </a>
+          <a class="p-top-topics__post-link-wrap" href="<?php echo get_permalink(); ?>">
+            <dl class="p-top-topics__posts-list-item c-posts-list-card">
+              <dd class="c-posts-list__thumbnail">
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail(); ?>
+                <?php else : ?>
+                  <img src="<?php bloginfo('template_url'); ?>/assets/images/thumb.png" alt="">
+                <?php endif; ?>
+              </dd>
+              <dd class="p-top-topics__posts-list-date c-posts-list-card__date">
+                <time datetime="<?php the_time('Y/m/d'); ?>"><?php the_time('Y/m/d'); ?></time>
+              </dd>
+              <dt class="p-top-topics__posts-list-title c-posts-list-card__title">
+                <?php the_title(); ?>
+              </dt>
+            </dl>
+          </a>
         <?php endwhile;
         wp_reset_postdata(); ?>
       <?php else : ?>
@@ -119,9 +122,9 @@ foreach($slider_data as $key => $value) {
         <section class="p-top-kv-section__card p-top-kv-section__card">
           <h2 class="p-top-kv-section__card-title c-heading-section--small c-txt--font-e">ECOALAについて</h2>
           <p class="p-top-kv-section__card-txt c-txt--20">
-          ただ髪を乾かすだけではなく、<br />
-          多くの人が髪や頭皮の悩みから解き放たれ<br />
-          心や表情まで軽やかになれるような体験を。
+            ただ髪を乾かすだけではなく、<br />
+            多くの人が髪や頭皮の悩みから解き放たれ<br />
+            心や表情まで軽やかになれるような体験を。
           </p>
           <div class="p-top-kv-section__card-button
               c-button c-button--round">
@@ -140,9 +143,8 @@ foreach($slider_data as $key => $value) {
       <div class="p-top-kv-section__kv-container-inner l-container l-container--wide">
         <div class="p-top-kv-section__kv-contents p-top-kv-section__kv-contents--right">
           <h2 class="p-top-kv-section__product-name">
-            <div class="p-top-kv-section__product-name-inner u-inline-block c-txt--font-e-serif">
-              <span class="c-heading-section--product-name-sub">ECOALA</span><br>
-              <span class="c-heading-section--product-name">AI Pro Style</span>
+            <div class="p-top-kv-section__product-name-logo">
+              <img src="<?php bloginfo('template_url'); ?>/assets/images/top/product/iDryer_logo.svg" alt="">
             </div>
           </h2>
           <section class="p-top-kv-section__card p-top-kv-section__card--ai-prostyle p-top-kv-section__card--right">
@@ -166,7 +168,10 @@ foreach($slider_data as $key => $value) {
     <section class="p-top-feature-section l-container l-container--wide">
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb1.png" alt="">
+          <picture>
+            <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb1.webp" type="image/webp">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb1.png" alt="">
+          </picture>
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
@@ -186,7 +191,10 @@ foreach($slider_data as $key => $value) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb2.png" alt="">
+          <picture>
+            <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb2.webp" type="image/webp">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb2.png" alt="">
+          </picture>
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
@@ -206,7 +214,10 @@ foreach($slider_data as $key => $value) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb3.png" alt="">
+          <picture>
+            <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb3.webp" type="image/webp">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb3.png" alt="">
+          </picture>
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
@@ -226,7 +237,10 @@ foreach($slider_data as $key => $value) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb4.png" alt="">
+          <picture>
+            <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb4.webp" type="image/webp">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/thumb4.png" alt="">
+          </picture>
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
@@ -256,13 +270,13 @@ foreach($slider_data as $key => $value) {
           </h2>
           <section class="p-top-kv-section__card p-top-kv-section__card--dryer p-top-kv-section__card--right">
             <h3 class="p-top-kv-section__card-title c-txt--30 c-txt--font-d">
-            もっとうるおう、<br>
-            もっと美しく。
+              もっとうるおう、<br>
+              もっと美しく。
             </h3>
             <p class="p-top-kv-section__card-txt c-txt--20">
-            ファミリーでもひとりでも、<br>
-            髪と地肌に合わせたヘアケアを叶えるドライヤー。<br>
-            スタイリングや気分に合わせて楽しんで。
+              ファミリーでもひとりでも、<br>
+              髪と地肌に合わせたヘアケアを叶えるドライヤー。<br>
+              スタイリングや気分に合わせて楽しんで。
             </p>
             <div class="p-top-kv-section__card-button c-button c-button--round">
               <a href="/products/quick_hair_dryer/">Product Page</a>
@@ -275,7 +289,10 @@ foreach($slider_data as $key => $value) {
     <section class="p-top-feature-section l-container l-container--wide">
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb1.png" alt="">
+          <picture>
+            <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb1.webp" type="image/webp">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb1.png" alt="">
+          </picture>
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
@@ -296,6 +313,7 @@ foreach($slider_data as $key => $value) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
+          <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb2.webp" type="image/webp">
           <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb2.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
@@ -315,6 +333,7 @@ foreach($slider_data as $key => $value) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
+          <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb3.webp" type="image/webp">
           <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb3.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
@@ -334,6 +353,7 @@ foreach($slider_data as $key => $value) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
+          <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb4.webp" type="image/webp">
           <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb4.png" alt="">
         </div>
         <dl class="p-top-feature-section__card-body">
