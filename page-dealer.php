@@ -37,8 +37,14 @@ $data = get_field('dealer')
       <!--  -->
       <div class="p-vendor-introduction__contents-item">
         <div class="p-vendor-introduction__contents-thumb">
-          <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/dummy.png" alt="" />
-          <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/sp_dummy.png" alt="" />
+          <picture class="pc">
+          <!-- <source srcset="<?php //bloginfo('template_url'); ?>/assets/images/top/card/dummy.webp" type="image/webp"> -->
+            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/dummy.png" alt="" />
+          </picture>
+          <picture class="sp">
+          <!-- <source srcset="<?php //bloginfo('template_url'); ?>/assets/images/top/card/sp_dummy.webp" type="image/webp"> -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/sp_dummy.png" alt="" />
+          </picture>
         </div>
         <div class="p-vendor-introduction__contents-txt">
           <h2 class="p-vendor-introduction__contents-heading c-heading-section--dealer-intro-card">
@@ -53,8 +59,14 @@ $data = get_field('dealer')
       <!--  -->
       <div class="p-vendor-introduction__contents-item">
         <div class="p-vendor-introduction__contents-thumb">
-          <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/dummy.png" alt="" />
-          <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/sp_dummy.png" alt="" />
+        <picture class="pc">
+          <!-- <source srcset="<?php //bloginfo('template_url'); ?>/assets/images/top/card/dummy.webp" type="image/webp"> -->
+            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/dummy.png" alt="" />
+          </picture>
+          <picture class="sp">
+          <!-- <source srcset="<?php //bloginfo('template_url'); ?>/assets/images/top/card/sp_dummy.webp" type="image/webp"> -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/sp_dummy.png" alt="" />
+          </picture>
         </div>
         <div class="p-vendor-introduction__contents-txt">
           <h2 class="p-vendor-introduction__contents-heading c-heading-section--dealer-intro-card">
@@ -69,8 +81,14 @@ $data = get_field('dealer')
       <!--  -->
       <div class="p-vendor-introduction__contents-item">
         <div class="p-vendor-introduction__contents-thumb">
-          <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/dummy.png" alt="" />
-          <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/sp_dummy.png" alt="" />
+        <picture class="pc">
+          <!-- <source srcset="<?php //bloginfo('template_url'); ?>/assets/images/top/card/dummy.webp" type="image/webp"> -->
+            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/dummy.png" alt="" />
+          </picture>
+          <picture class="sp">
+          <!-- <source srcset="<?php //bloginfo('template_url'); ?>/assets/images/top/card/sp_dummy.webp" type="image/webp"> -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dealer/sp_dummy.png" alt="" />
+          </picture>
         </div>
         <div class="p-vendor-introduction__contents-txt">
           <h2 class="p-vendor-introduction__contents-heading c-heading-section--dealer-intro-card">

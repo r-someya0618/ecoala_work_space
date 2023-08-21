@@ -313,8 +313,10 @@ foreach ($slider_data as $key => $value) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb2.webp" type="image/webp">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb2.png" alt="">
+          <picture>
+            <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb2.webp" type="image/webp">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb2.png" alt="">
+          </picture>
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
@@ -333,8 +335,10 @@ foreach ($slider_data as $key => $value) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb3.webp" type="image/webp">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb3.png" alt="">
+          <picture>
+            <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb3.webp" type="image/webp">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb3.png" alt="">
+          </picture>
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
@@ -353,8 +357,10 @@ foreach ($slider_data as $key => $value) {
 
       <div class="p-top-feature-section__card">
         <div class="p-top-feature-section__card-thumb">
-          <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb4.webp" type="image/webp">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb4.png" alt="">
+          <picture>
+            <source srcset="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb4.webp" type="image/webp">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/top/card/dryer_thumb4.png" alt="">
+          </picture>
         </div>
         <dl class="p-top-feature-section__card-body">
           <dt class="p-top-feature-section__card-title c-txt--30 c-txt--font-d">
